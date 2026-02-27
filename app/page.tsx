@@ -11,6 +11,22 @@ export default function Home() {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <Link
+          href="/business-tools/salary-negotiation-calculator"
+          className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
+          style={{
+            backgroundColor: "var(--surface)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <div className="text-2xl mb-2">📉</div>
+          <h2 className="font-semibold text-lg mb-1" style={{ color: "var(--text)" }}>
+            Salary Negotiation Calculator
+          </h2>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            See the shocking lifetime cost of not negotiating your salary — with compounding
+          </p>
+        </Link>
+        <Link
           href="/finance-tools/subscription-calculator"
           className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
           style={{
