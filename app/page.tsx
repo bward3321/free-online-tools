@@ -11,6 +11,22 @@ export default function Home() {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <Link
+          href="/design-tools/pixel-art-editor"
+          className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
+          style={{
+            backgroundColor: "var(--surface)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <div className="text-2xl mb-2">🎨</div>
+          <h2 className="font-semibold text-lg mb-1" style={{ color: "var(--text)" }}>
+            Pixel Art Editor & Favicon Generator
+          </h2>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            Draw pixel art, design favicons, and export complete icon packages
+          </p>
+        </Link>
+        <Link
           href="/image-tools/image-compressor"
           className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
           style={{
