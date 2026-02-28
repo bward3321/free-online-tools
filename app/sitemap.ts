@@ -20,6 +20,7 @@ const mainToolRoutes = [
   "/developer-tools/base64-encoder-decoder",
   "/developer-tools/url-encoder-decoder",
   "/developer-tools/hash-generator",
+  "/design-tools/color-picker",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -41,6 +42,16 @@ const variantRoutes = [
   "/design-tools/favicon-generator",
   "/design-tools/icon-maker",
   "/design-tools/pixel-art-maker",
+  // Color picker variants
+  "/design-tools/hex-to-rgb",
+  "/design-tools/rgb-to-hex",
+  "/design-tools/color-converter",
+  "/design-tools/color-palette-generator",
+  "/design-tools/contrast-checker",
+  "/design-tools/hsl-to-hex",
+  "/design-tools/hex-color-codes",
+  "/design-tools/rgba-to-hex",
+  "/design-tools/image-color-picker",
   // Finance tool variants
   "/finance-tools/cancel-subscriptions-save-money",
   "/finance-tools/how-much-do-i-spend-on-subscriptions",
