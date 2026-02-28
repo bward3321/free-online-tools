@@ -123,6 +123,22 @@ export default function Home() {
           </p>
         </Link>
         <Link
+          href="/developer-tools/json-formatter"
+          className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
+          style={{
+            backgroundColor: "var(--surface)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <div className="text-2xl mb-2">🔧</div>
+          <h2 className="font-semibold text-lg mb-1" style={{ color: "var(--text)" }}>
+            JSON Formatter & Validator
+          </h2>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            Format, validate, minify, and convert JSON — with tree view, diff tool, and auto-fix for common errors
+          </p>
+        </Link>
+        <Link
           href="/construction/concrete-calculator"
           className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
           style={{
