@@ -106,6 +106,38 @@ export default function Home() {
             Calculate exactly how much concrete you need for any project
           </p>
         </Link>
+        <Link
+          href="/business-tools/true-hourly-rate-calculator"
+          className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
+          style={{
+            backgroundColor: "var(--surface)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <div className="text-2xl mb-2">⏱️</div>
+          <h2 className="font-semibold text-lg mb-1" style={{ color: "var(--text)" }}>
+            True Hourly Rate Calculator
+          </h2>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            Your salary says one number, but your TRUE hourly rate factors in commute, overtime, and work expenses
+          </p>
+        </Link>
+        <Link
+          href="/utility-tools/qr-code-generator"
+          className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
+          style={{
+            backgroundColor: "var(--surface)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <div className="text-2xl mb-2">📱</div>
+          <h2 className="font-semibold text-lg mb-1" style={{ color: "var(--text)" }}>
+            QR Code Generator
+          </h2>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            Create custom QR codes with colors, logos, WiFi sharing, vCards, and batch generation — 100% free
+          </p>
+        </Link>
       </div>
     </main>
   );
