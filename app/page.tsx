@@ -42,10 +42,18 @@ const categories = [
 export default function Home() {
   return (
     <main className="max-w-[1100px] mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-4" style={{ color: "var(--text)" }}>
+      <h1
+        className="text-4xl font-bold mb-4 text-center"
+        style={{
+          background: "linear-gradient(to right, #1a1a2e, #059669)",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          color: "transparent",
+        }}
+      >
         Free Online Tools
       </h1>
-      <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>
+      <p className="text-lg mb-8 text-center" style={{ color: "var(--text-muted)" }}>
         Instant-use calculators, converters, and tools. No signup required.
       </p>
 
