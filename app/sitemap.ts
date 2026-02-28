@@ -8,6 +8,7 @@ const BASE_URL = "https://everyfreetool.com";
 const mainToolRoutes = [
   "/business-tools/salary-negotiation-calculator",
   "/business-tools/meeting-cost-calculator",
+  "/business-tools/true-hourly-rate-calculator",
   "/construction/concrete-calculator",
   "/design-tools/pixel-art-editor",
   "/finance-tools/subscription-calculator",
@@ -24,6 +25,11 @@ const variantRoutes = [
   // Meeting cost variants
   "/business-tools/how-much-do-meetings-cost",
   "/business-tools/meeting-cost-timer",
+  // True hourly rate variants
+  "/business-tools/real-hourly-wage-calculator",
+  "/business-tools/salary-to-hourly-calculator",
+  "/business-tools/what-do-i-actually-make-per-hour",
+  "/business-tools/commute-cost-calculator",
   // Design tool variants
   "/design-tools/favicon-generator",
   "/design-tools/icon-maker",
