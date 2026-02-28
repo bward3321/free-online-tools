@@ -14,6 +14,7 @@ const mainToolRoutes = [
   "/finance-tools/subscription-calculator",
   "/image-tools/image-compressor",
   "/utility-tools/qr-code-generator",
+  "/utility-tools/password-generator",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -52,6 +53,12 @@ const variantRoutes = [
   "/utility-tools/qr-code-generator-with-logo",
   "/utility-tools/vcard-qr-code-generator",
   "/utility-tools/bulk-qr-code-generator",
+  // Password generator variants
+  "/utility-tools/password-strength-checker",
+  "/utility-tools/passphrase-generator",
+  "/utility-tools/random-password-generator",
+  "/utility-tools/strong-password-generator",
+  "/utility-tools/pin-generator",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
