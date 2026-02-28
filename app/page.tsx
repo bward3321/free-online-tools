@@ -218,6 +218,22 @@ export default function Home() {
             Encode, decode, and parse URLs with a visual breakdown of every component
           </p>
         </Link>
+        <Link
+          href="/developer-tools/hash-generator"
+          className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
+          style={{
+            backgroundColor: "var(--surface)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <div className="text-2xl mb-2">#️⃣</div>
+          <h2 className="font-semibold text-lg mb-1" style={{ color: "var(--text)" }}>
+            Hash Generator
+          </h2>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            Generate MD5, SHA-1, SHA-256, SHA-512 hashes for text and files — with HMAC and checksum verification
+          </p>
+        </Link>
       </div>
     </main>
   );

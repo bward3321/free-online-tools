@@ -19,6 +19,7 @@ const mainToolRoutes = [
   "/developer-tools/json-formatter",
   "/developer-tools/base64-encoder-decoder",
   "/developer-tools/url-encoder-decoder",
+  "/developer-tools/hash-generator",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -84,6 +85,15 @@ const variantRoutes = [
   "/developer-tools/base64-to-image",
   "/developer-tools/base64-encode",
   "/developer-tools/base64-decode",
+  // Hash generator variants
+  "/developer-tools/md5-hash-generator",
+  "/developer-tools/sha256-hash-generator",
+  "/developer-tools/sha1-hash-generator",
+  "/developer-tools/sha512-hash-generator",
+  "/developer-tools/file-checksum-calculator",
+  "/developer-tools/hmac-generator",
+  "/developer-tools/hash-checker",
+  "/developer-tools/checksum-verifier",
   // URL encoder/decoder variants
   "/developer-tools/url-encoder",
   "/developer-tools/url-decoder",
