@@ -13,6 +13,7 @@ const mainToolRoutes = [
   "/design-tools/pixel-art-editor",
   "/finance-tools/subscription-calculator",
   "/image-tools/image-compressor",
+  "/utility-tools/qr-code-generator",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -45,6 +46,12 @@ const variantRoutes = [
   "/image-tools/convert-image",
   "/image-tools/crop-image",
   "/image-tools/resize-image",
+  // QR code generator variants
+  "/utility-tools/wifi-qr-code-generator",
+  "/utility-tools/free-qr-code-generator",
+  "/utility-tools/qr-code-generator-with-logo",
+  "/utility-tools/vcard-qr-code-generator",
+  "/utility-tools/bulk-qr-code-generator",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
