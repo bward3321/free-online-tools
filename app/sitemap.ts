@@ -18,6 +18,7 @@ const mainToolRoutes = [
   "/writing-tools/word-counter",
   "/developer-tools/json-formatter",
   "/developer-tools/base64-encoder-decoder",
+  "/developer-tools/url-encoder-decoder",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -83,6 +84,13 @@ const variantRoutes = [
   "/developer-tools/base64-to-image",
   "/developer-tools/base64-encode",
   "/developer-tools/base64-decode",
+  // URL encoder/decoder variants
+  "/developer-tools/url-encoder",
+  "/developer-tools/url-decoder",
+  "/developer-tools/url-parser",
+  "/developer-tools/percent-encoding",
+  "/developer-tools/urlencode",
+  "/developer-tools/urldecode",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

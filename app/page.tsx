@@ -202,6 +202,22 @@ export default function Home() {
             Encode and decode Base64 text, files, and images instantly — with data URI output and live preview
           </p>
         </Link>
+        <Link
+          href="/developer-tools/url-encoder-decoder"
+          className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
+          style={{
+            backgroundColor: "var(--surface)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <div className="text-2xl mb-2">🔗</div>
+          <h2 className="font-semibold text-lg mb-1" style={{ color: "var(--text)" }}>
+            URL Encoder & Decoder
+          </h2>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            Encode, decode, and parse URLs with a visual breakdown of every component
+          </p>
+        </Link>
       </div>
     </main>
   );
