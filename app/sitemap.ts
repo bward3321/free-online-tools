@@ -15,6 +15,7 @@ const mainToolRoutes = [
   "/image-tools/image-compressor",
   "/utility-tools/qr-code-generator",
   "/utility-tools/password-generator",
+  "/writing-tools/word-counter",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -59,6 +60,12 @@ const variantRoutes = [
   "/utility-tools/random-password-generator",
   "/utility-tools/strong-password-generator",
   "/utility-tools/pin-generator",
+  // Word counter variants
+  "/writing-tools/character-counter",
+  "/writing-tools/letter-counter",
+  "/writing-tools/word-count",
+  "/writing-tools/text-counter",
+  "/writing-tools/social-media-character-counter",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

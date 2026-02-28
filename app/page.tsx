@@ -107,6 +107,22 @@ export default function Home() {
           </p>
         </Link>
         <Link
+          href="/writing-tools/word-counter"
+          className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
+          style={{
+            backgroundColor: "var(--surface)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <div className="text-2xl mb-2">📝</div>
+          <h2 className="font-semibold text-lg mb-1" style={{ color: "var(--text)" }}>
+            Word & Character Counter
+          </h2>
+          <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            Count words, characters, sentences, and paragraphs — with reading time, keyword density, and social media limits
+          </p>
+        </Link>
+        <Link
           href="/construction/concrete-calculator"
           className="block p-6 rounded-2xl border hover:shadow-lg transition-shadow"
           style={{
