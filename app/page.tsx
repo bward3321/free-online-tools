@@ -22,6 +22,7 @@ const categories = [
       { href: "/developer-tools/base64-encoder-decoder", emoji: "\uD83D\uDD04", title: "Base64 Encoder & Decoder", desc: "Encode and decode Base64 text, files, and images instantly \u2014 with data URI output and live preview" },
       { href: "/developer-tools/url-encoder-decoder", emoji: "\uD83D\uDD17", title: "URL Encoder & Decoder", desc: "Encode, decode, and parse URLs with a visual breakdown of every component" },
       { href: "/developer-tools/hash-generator", emoji: "#\uFE0F\u20E3", title: "Hash Generator & Checksum Tool", desc: "Generate MD5, SHA-1, SHA-256, SHA-512 hashes for text and files \u2014 with HMAC and checksum verification" },
+      { href: "/developer-tools/regex-tester", emoji: "\uD83D\uDD0D", title: "Regex Tester & Debugger", desc: "Test, debug, and visualize regular expressions in real-time \u2014 with a common patterns library and plain-English explainer" },
     ],
   },
   {
