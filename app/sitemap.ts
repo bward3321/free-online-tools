@@ -22,6 +22,7 @@ const mainToolRoutes = [
   "/developer-tools/hash-generator",
   "/design-tools/color-picker",
   "/developer-tools/regex-tester",
+  "/writing-tools/markdown-editor",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -121,6 +122,13 @@ const variantRoutes = [
   "/developer-tools/regex-cheat-sheet",
   "/developer-tools/regex-patterns",
   "/developer-tools/regex-debugger",
+  // Markdown editor variants
+  "/writing-tools/markdown-previewer",
+  "/writing-tools/markdown-to-html",
+  "/writing-tools/html-to-markdown",
+  "/writing-tools/markdown-table-generator",
+  "/writing-tools/readme-editor",
+  "/writing-tools/online-text-editor",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

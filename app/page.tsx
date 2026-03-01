@@ -31,6 +31,7 @@ const categories = [
     name: "Everyday Tools",
     tools: [
       { href: "/writing-tools/word-counter", emoji: "\uD83D\uDCDD", title: "Word & Character Counter", desc: "Count words, characters, sentences, and paragraphs \u2014 with reading time, keyword density, and social media limits" },
+      { href: "/writing-tools/markdown-editor", emoji: "\u270D\uFE0F", title: "Markdown Editor", desc: "Write and preview Markdown in real-time with formatting toolbar, visual table builder, and rich text export" },
       { href: "/image-tools/image-compressor", emoji: "\uD83D\uDDBC\uFE0F", title: "Image Compressor & Toolkit", desc: "Compress, resize, convert, and crop images \u2014 all in your browser" },
       { href: "/utility-tools/qr-code-generator", emoji: "\uD83D\uDCF1", title: "QR Code Generator", desc: "Create custom QR codes with colors, logos, WiFi sharing, vCards, and batch generation \u2014 100% free" },
       { href: "/utility-tools/password-generator", emoji: "\uD83D\uDD10", title: "Password Generator & Strength Checker", desc: "Generate uncrackable passwords, memorable passphrases, and PINs \u2014 then check how long they\u2019d take to crack" },
