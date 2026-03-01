@@ -23,6 +23,7 @@ const mainToolRoutes = [
   "/design-tools/color-picker",
   "/developer-tools/regex-tester",
   "/writing-tools/markdown-editor",
+  "/design-tools/css-gradient-generator",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -129,6 +130,14 @@ const variantRoutes = [
   "/writing-tools/markdown-table-generator",
   "/writing-tools/readme-editor",
   "/writing-tools/online-text-editor",
+  // CSS gradient generator variants
+  "/design-tools/linear-gradient-generator",
+  "/design-tools/radial-gradient-generator",
+  "/design-tools/conic-gradient-generator",
+  "/design-tools/gradient-color-palette",
+  "/design-tools/tailwind-gradient-generator",
+  "/design-tools/text-gradient-generator",
+  "/design-tools/animated-gradient-generator",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

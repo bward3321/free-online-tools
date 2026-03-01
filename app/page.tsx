@@ -37,6 +37,7 @@ const categories = [
       { href: "/utility-tools/password-generator", emoji: "\uD83D\uDD10", title: "Password Generator & Strength Checker", desc: "Generate uncrackable passwords, memorable passphrases, and PINs \u2014 then check how long they\u2019d take to crack" },
       { href: "/design-tools/color-picker", emoji: "\uD83C\uDFA8", title: "Color Picker & Converter", desc: "Pick colors, convert between HEX/RGB/HSL, check contrast accessibility, and generate palettes" },
       { href: "/design-tools/pixel-art-editor", emoji: "\u270F\uFE0F", title: "Pixel Art Editor & Favicon Generator", desc: "Draw pixel art, design favicons, and export complete icon packages" },
+      { href: "/design-tools/css-gradient-generator", emoji: "\uD83C\uDF08", title: "CSS Gradient Generator", desc: "Create linear, radial, conic & mesh gradients with live preview, 120+ presets, and instant CSS/Tailwind code" },
       { href: "/construction/concrete-calculator", emoji: "\uD83C\uDFD7\uFE0F", title: "Concrete Calculator", desc: "Calculate exactly how much concrete you need for any project" },
     ],
   },
