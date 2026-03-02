@@ -54,12 +54,16 @@ const categories = [
 ];
 
 export default function Home() {
+  const totalTools = categories.reduce((sum, cat) => sum + cat.tools.length, 0);
+
   return (
     <main className="max-w-[1100px] mx-auto px-4 py-16">
       <h1
         className="text-4xl font-bold mb-4 text-center"
         style={{
-          background: "linear-gradient(to right, #1a1a2e, #059669)",
+          background: "linear-gradient(90deg, #059669, #0d9488, #0284c7, #7c3aed, #059669, #0d9488)",
+          backgroundSize: "300% 100%",
+          animation: "gradient-flow 10s ease infinite",
           WebkitBackgroundClip: "text",
           backgroundClip: "text",
           color: "transparent",
@@ -67,12 +71,15 @@ export default function Home() {
       >
         Free Online Tools
       </h1>
-      <p className="mb-8 text-center" style={{ color: "var(--text-muted)", fontSize: "18px" }}>
+      <p className="mb-4 text-center" style={{ color: "var(--text-muted)", fontSize: "18px" }}>
         Instant-use calculators, converters, and tools. No signup required.
+      </p>
+      <p className="mb-8 text-center" style={{ fontSize: "16px", fontWeight: 600, color: "var(--text-muted)" }}>
+        <span style={{ color: "#059669", fontWeight: 700 }}>{totalTools}</span> free tools and counting
       </p>
 
       {/* Jump nav pills */}
-      <JumpNav categories={categories.map(({ id, emoji, name }) => ({ id, emoji, name }))} />
+      <JumpNav categories={categories.map(({ id, emoji, name, tools }) => ({ id, emoji, name, count: tools.length }))} />
 
       {/* Category sections */}
       <div className="space-y-16">
