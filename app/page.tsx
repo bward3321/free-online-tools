@@ -26,6 +26,14 @@ const categories = [
     ],
   },
   {
+    id: "math-conversion",
+    emoji: "\uD83D\uDCD0",
+    name: "Math & Conversion Tools",
+    tools: [
+      { href: "/conversion-tools/unit-converter", emoji: "\uD83D\uDCD0", title: "Universal Unit Converter", desc: "Convert 200+ units \u2014 length, weight, temperature, volume, speed, area, digital storage & more" },
+    ],
+  },
+  {
     id: "everyday-tools",
     emoji: "\uD83D\uDD27",
     name: "Everyday Tools",
