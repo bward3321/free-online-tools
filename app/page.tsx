@@ -11,6 +11,7 @@ const categories = [
       { href: "/business-tools/salary-negotiation-calculator", emoji: "\uD83D\uDCB8", title: "Salary Loss Calculator", desc: "See the shocking lifetime cost of not negotiating your salary \u2014 with compounding" },
       { href: "/business-tools/meeting-cost-calculator", emoji: "\u23F1\uFE0F", title: "Meeting Cost Calculator", desc: "See what meetings really cost with live timer, annual projections, and shareable results" },
       { href: "/business-tools/true-hourly-rate-calculator", emoji: "\uD83D\uDCB0", title: "True Hourly Rate Calculator", desc: "Your salary says one number, but your TRUE hourly rate factors in commute, overtime, and work expenses" },
+      { href: "/business-tools/invoice-generator", emoji: "\uD83E\uDDFE", title: "Invoice Generator", desc: "Create professional invoices with your logo, line items, taxes & discounts. Download as PDF instantly. No signup required." },
     ],
   },
   {

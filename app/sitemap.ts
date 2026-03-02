@@ -26,6 +26,7 @@ const mainToolRoutes = [
   "/design-tools/css-gradient-generator",
   "/writing-tools/lorem-ipsum-generator",
   "/conversion-tools/unit-converter",
+  "/business-tools/invoice-generator",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -197,6 +198,12 @@ const variantRoutes = [
   "/conversion-tools/psi-to-bar",
   "/conversion-tools/bar-to-psi",
   "/conversion-tools/mpg-to-l-per-100km",
+  // Invoice generator variants
+  "/business-tools/freelance-invoice-generator",
+  "/business-tools/receipt-generator",
+  "/business-tools/estimate-generator",
+  "/business-tools/contractor-invoice-template",
+  "/business-tools/consulting-invoice-generator",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
