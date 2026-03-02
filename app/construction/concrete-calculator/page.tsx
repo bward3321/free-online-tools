@@ -47,6 +47,15 @@ export default function ConcreteCalculatorPage() {
         }}
       />
       <Calculator />
+
+      <div className="min-h-0" style={{ backgroundColor: "var(--bg)" }}>
+        <div className="max-w-[800px] mx-auto px-4 pb-8">
+          <a href="/construction-tools/fence-calculator" className="block rounded-xl border p-4 hover:shadow-md transition-shadow" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
+            <p className="font-semibold" style={{ fontSize: "17px", color: "var(--text)" }}>🪵 Planning a fence?</p>
+            <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>Calculate all your fence materials — posts, rails, pickets, hardware & costs — with our Fence Calculator →</p>
+          </a>
+        </div>
+      </div>
     </>
   );
 }

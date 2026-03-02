@@ -27,6 +27,7 @@ const mainToolRoutes = [
   "/writing-tools/lorem-ipsum-generator",
   "/conversion-tools/unit-converter",
   "/business-tools/invoice-generator",
+  "/construction-tools/fence-calculator",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -204,6 +205,13 @@ const variantRoutes = [
   "/business-tools/estimate-generator",
   "/business-tools/contractor-invoice-template",
   "/business-tools/consulting-invoice-generator",
+  // Fence calculator variants
+  "/construction-tools/wood-fence-calculator",
+  "/construction-tools/vinyl-fence-calculator",
+  "/construction-tools/chain-link-fence-calculator",
+  "/construction-tools/fence-post-calculator",
+  "/construction-tools/fence-cost-estimator",
+  "/construction-tools/privacy-fence-calculator",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

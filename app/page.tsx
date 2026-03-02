@@ -48,7 +48,15 @@ const categories = [
       { href: "/design-tools/pixel-art-editor", emoji: "\u270F\uFE0F", title: "Pixel Art Editor & Favicon Generator", desc: "Draw pixel art, design favicons, and export complete icon packages" },
       { href: "/design-tools/css-gradient-generator", emoji: "\uD83C\uDF08", title: "CSS Gradient Generator", desc: "Create linear, radial, conic & mesh gradients with live preview, 120+ presets, and instant CSS/Tailwind code" },
       { href: "/writing-tools/lorem-ipsum-generator", emoji: "\uD83D\uDCDC", title: "Lorem Ipsum Generator", desc: "Generate placeholder text in 10 styles — Classic Latin, Business, Tech, Hipster, Pirate & more. Copy as text, HTML, or Markdown." },
+    ],
+  },
+  {
+    id: "construction-tools",
+    emoji: "\uD83C\uDFD7\uFE0F",
+    name: "Construction Tools",
+    tools: [
       { href: "/construction/concrete-calculator", emoji: "\uD83C\uDFD7\uFE0F", title: "Concrete Calculator", desc: "Calculate exactly how much concrete you need for any project" },
+      { href: "/construction-tools/fence-calculator", emoji: "\uD83E\uDEB5", title: "Fence Calculator", desc: "Estimate fence materials, posts, rails, pickets & costs for wood, vinyl, chain link, and more. Get a complete shopping list instantly." },
     ],
   },
 ];
