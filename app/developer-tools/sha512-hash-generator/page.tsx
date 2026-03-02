@@ -20,25 +20,25 @@ export default function Sha512HashGeneratorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">SHA-512 Hash Generator &mdash; Generate SHA-512 Hashes Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Generate SHA-512 hashes for any text or file. SHA-512 produces a 512-bit (128 hex character) hash &mdash; the strongest hash in the SHA-2 family.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Maximum Security Hashing</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>SHA-512 produces the longest hash in the SHA-2 family &mdash; a 512-bit (64-byte) output rendered as 128 hexadecimal characters. Part of the SHA-2 family designed by the NSA, SHA-512 processes input in 1024-bit blocks through 80 rounds of operations using 64-bit words. This makes it <strong style={{ color: "var(--text)" }}>naturally faster on 64-bit processors</strong> than SHA-256, which uses 32-bit words despite the larger output.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Maximum Security Hashing</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>SHA-512 produces the longest hash in the SHA-2 family &mdash; a 512-bit (64-byte) output rendered as 128 hexadecimal characters. Part of the SHA-2 family designed by the NSA, SHA-512 processes input in 1024-bit blocks through 80 rounds of operations using 64-bit words. This makes it <strong style={{ color: "var(--text)" }}>naturally faster on 64-bit processors</strong> than SHA-256, which uses 32-bit words despite the larger output.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">SHA-512 vs SHA-256</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Both are cryptographically secure with no known practical attacks. SHA-512 offers <strong style={{ color: "var(--text)" }}>higher collision resistance</strong> (2^256 vs 2^128 for SHA-256) and is <strong style={{ color: "var(--text)" }}>faster on 64-bit CPUs</strong>. The tradeoff is a longer output (128 vs 64 hex characters) and slightly more storage. For most applications, SHA-256 is sufficient, but SHA-512 is preferred for government, military, and high-assurance systems.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">SHA-512 vs SHA-256</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Both are cryptographically secure with no known practical attacks. SHA-512 offers <strong style={{ color: "var(--text)" }}>higher collision resistance</strong> (2^256 vs 2^128 for SHA-256) and is <strong style={{ color: "var(--text)" }}>faster on 64-bit CPUs</strong>. The tradeoff is a longer output (128 vs 64 hex characters) and slightly more storage. For most applications, SHA-256 is sufficient, but SHA-512 is preferred for government, military, and high-assurance systems.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Where SHA-512 Is Used</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}><strong style={{ color: "var(--text)" }}>TLS/SSL:</strong> Many TLS cipher suites use SHA-384 and SHA-512 for handshake integrity. <strong style={{ color: "var(--text)" }}>SSH:</strong> SHA-512 is used in SSH key fingerprints and authentication. <strong style={{ color: "var(--text)" }}>Password hashing:</strong> Linux systems use SHA-512 in <code style={{ color: "#8BE9FD" }}>crypt()</code> for <code style={{ color: "#8BE9FD" }}>/etc/shadow</code>. <strong style={{ color: "var(--text)" }}>Ed25519:</strong> The popular signing algorithm uses SHA-512 internally.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Where SHA-512 Is Used</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}><strong style={{ color: "var(--text)" }}>TLS/SSL:</strong> Many TLS cipher suites use SHA-384 and SHA-512 for handshake integrity. <strong style={{ color: "var(--text)" }}>SSH:</strong> SHA-512 is used in SSH key fingerprints and authentication. <strong style={{ color: "var(--text)" }}>Password hashing:</strong> Linux systems use SHA-512 in <code style={{ color: "#8BE9FD" }}>crypt()</code> for <code style={{ color: "#8BE9FD" }}>/etc/shadow</code>. <strong style={{ color: "var(--text)" }}>Ed25519:</strong> The popular signing algorithm uses SHA-512 internally.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#BD93F91a", borderColor: "#BD93F940" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Enter text below to generate its SHA-512 hash.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Enter text below to generate its SHA-512 hash.</p>
           </div>
         </div>
       </div>

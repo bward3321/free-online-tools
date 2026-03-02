@@ -20,25 +20,25 @@ export default function HashCheckerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Hash Checker &mdash; Compare and Verify Hashes Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Compare two hashes side by side. Auto-detects the algorithm, strips whitespace, normalizes case, and highlights the first difference if they don&apos;t match.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Safe Hash Comparison</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Comparing hashes by eye is error-prone &mdash; 64 hexadecimal characters are easy to misread. This tool normalizes both inputs (strips whitespace, converts to lowercase) and performs a precise character-by-character comparison. If the hashes don&apos;t match, it highlights exactly where they diverge, saving you from staring at two nearly-identical strings trying to spot the difference.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Safe Hash Comparison</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Comparing hashes by eye is error-prone &mdash; 64 hexadecimal characters are easy to misread. This tool normalizes both inputs (strips whitespace, converts to lowercase) and performs a precise character-by-character comparison. If the hashes don&apos;t match, it highlights exactly where they diverge, saving you from staring at two nearly-identical strings trying to spot the difference.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Common Comparison Mistakes</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The most common causes of false mismatches: <strong style={{ color: "var(--text)" }}>trailing newlines</strong> from copy-paste, <strong style={{ color: "var(--text)" }}>extra spaces</strong> around the hash, <strong style={{ color: "var(--text)" }}>case differences</strong> (some tools output uppercase, others lowercase), and <strong style={{ color: "var(--text)" }}>encoding confusion</strong> (comparing hex to Base64). This tool handles all of these automatically.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Common Comparison Mistakes</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The most common causes of false mismatches: <strong style={{ color: "var(--text)" }}>trailing newlines</strong> from copy-paste, <strong style={{ color: "var(--text)" }}>extra spaces</strong> around the hash, <strong style={{ color: "var(--text)" }}>case differences</strong> (some tools output uppercase, others lowercase), and <strong style={{ color: "var(--text)" }}>encoding confusion</strong> (comparing hex to Base64). This tool handles all of these automatically.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Auto Algorithm Detection</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The tool automatically identifies the hash algorithm based on length: 32 hex chars = MD5, 40 = SHA-1, 64 = SHA-256, 96 = SHA-384, 128 = SHA-512. This helps you confirm both hashes are the same algorithm before comparing, catching a common error where users accidentally compare hashes from different algorithms.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Auto Algorithm Detection</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The tool automatically identifies the hash algorithm based on length: 32 hex chars = MD5, 40 = SHA-1, 64 = SHA-256, 96 = SHA-384, 128 = SHA-512. This helps you confirm both hashes are the same algorithm before comparing, catching a common error where users accidentally compare hashes from different algorithms.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste two hashes below to compare them.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste two hashes below to compare them.</p>
           </div>
         </div>
       </div>

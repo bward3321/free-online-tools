@@ -33,20 +33,20 @@ export default function BulkQrCodeGeneratorPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#2563EB" }}>Home</a><span>/</span><span>Utility Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Bulk QR Code Generator &mdash; Create Multiple QR Codes at Once</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Paste up to 50 URLs and generate all QR codes in one click. Download as a ZIP file. A premium feature at other tools &mdash; free here.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">How Batch Generation Works</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Paste your URLs into the text area, one per line. The tool generates a QR code for each URL using your selected colors and error correction level. Click <strong style={{ color: "var(--text)" }}>&ldquo;Download All as ZIP&rdquo;</strong> to get every QR code as a PNG in a single ZIP archive.</p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>All generation happens in your browser &mdash; no URLs are sent to any server. The ZIP file is created client-side using JSZip and downloaded directly.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">How Batch Generation Works</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Paste your URLs into the text area, one per line. The tool generates a QR code for each URL using your selected colors and error correction level. Click <strong style={{ color: "var(--text)" }}>&ldquo;Download All as ZIP&rdquo;</strong> to get every QR code as a PNG in a single ZIP archive.</p>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>All generation happens in your browser &mdash; no URLs are sent to any server. The ZIP file is created client-side using JSZip and downloaded directly.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Common Use Cases</h2>
-              <div className="space-y-2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Common Use Cases</h2>
+              <div className="space-y-2" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 {[
                   "Marketing campaigns — unique QR per channel or ad placement",
                   "Product labels — one QR code per SKU linking to product info",
@@ -61,7 +61,7 @@ export default function BulkQrCodeGeneratorPage() {
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#2563EB1a", borderColor: "#2563EB40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste your URLs below to generate QR codes in bulk &mdash; batch mode is already selected.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste your URLs below to generate QR codes in bulk &mdash; batch mode is already selected.</p>
           </div>
         </div>
       </div>

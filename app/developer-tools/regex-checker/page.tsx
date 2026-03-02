@@ -20,25 +20,25 @@ export default function RegexCheckerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Regex Checker &mdash; Check and Validate Regular Expressions Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Paste any regex pattern to instantly check if it&apos;s valid. Get plain-English error messages for syntax mistakes, then test against your own text with real-time match highlighting.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Why Check Your Regex?</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Regex syntax is notoriously easy to get wrong. A misplaced parenthesis, a forgotten escape character, or an ambiguous quantifier can silently break your pattern. This tool validates your regex <strong style={{ color: "var(--text)" }}>as you type</strong>, catching errors before they reach your code. The error messages are translated from cryptic JavaScript exceptions into clear explanations.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Why Check Your Regex?</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Regex syntax is notoriously easy to get wrong. A misplaced parenthesis, a forgotten escape character, or an ambiguous quantifier can silently break your pattern. This tool validates your regex <strong style={{ color: "var(--text)" }}>as you type</strong>, catching errors before they reach your code. The error messages are translated from cryptic JavaScript exceptions into clear explanations.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Common Regex Mistakes</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The most frequent errors: <strong style={{ color: "var(--text)" }}>unmatched groups</strong> (opening parenthesis without closing), <strong style={{ color: "var(--text)" }}>nothing to repeat</strong> (quantifier with no preceding token), <strong style={{ color: "var(--text)" }}>invalid escapes</strong> (backslash followed by a character that isn&apos;t a recognized escape), and <strong style={{ color: "var(--text)" }}>unmatched character classes</strong> (opening bracket without closing). Each error is shown with a specific fix suggestion.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Common Regex Mistakes</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The most frequent errors: <strong style={{ color: "var(--text)" }}>unmatched groups</strong> (opening parenthesis without closing), <strong style={{ color: "var(--text)" }}>nothing to repeat</strong> (quantifier with no preceding token), <strong style={{ color: "var(--text)" }}>invalid escapes</strong> (backslash followed by a character that isn&apos;t a recognized escape), and <strong style={{ color: "var(--text)" }}>unmatched character classes</strong> (opening bracket without closing). Each error is shown with a specific fix suggestion.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Real-Time Validation Feedback</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Every keystroke triggers validation using JavaScript&apos;s native RegExp constructor. Valid patterns show a green checkmark. Invalid patterns show a red indicator with a human-readable error. The tool also highlights syntax elements in different colors &mdash; character classes in cyan, groups in green, quantifiers in orange &mdash; so you can visually verify your pattern&apos;s structure.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Real-Time Validation Feedback</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Every keystroke triggers validation using JavaScript&apos;s native RegExp constructor. Valid patterns show a green checkmark. Invalid patterns show a red indicator with a human-readable error. The tool also highlights syntax elements in different colors &mdash; character classes in cyan, groups in green, quantifiers in orange &mdash; so you can visually verify your pattern&apos;s structure.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste your regex pattern below to check it.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste your regex pattern below to check it.</p>
           </div>
         </div>
       </div>

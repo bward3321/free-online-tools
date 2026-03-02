@@ -25,14 +25,14 @@ function SEOContent() {
   return (
     <div className="max-w-[1200px] mx-auto px-4 pb-12">
       <div className="rounded-2xl border p-6 md:p-8 mb-12" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>What is a Favicon and Why Does Your Website Need One?</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>What is a Favicon and Why Does Your Website Need One?</h2>
         <div className="space-y-4 text-sm" style={{ color: "var(--text-muted)" }}>
           <p>A favicon (short for &ldquo;favorites icon&rdquo;) is the small icon that appears in browser tabs, bookmarks, and search results next to your website&apos;s name. It&apos;s one of the most important yet overlooked branding elements of any website. A well-designed favicon makes your site look professional, helps users find your tab among dozens of open tabs, and reinforces brand recognition.</p>
 
           <h3 className="text-lg font-semibold mt-6 mb-3" style={{ color: "var(--text)" }}>Every Favicon Size You Need</h3>
           <p>Modern browsers and devices use favicons at many different sizes. Providing the right sizes ensures your icon looks crisp everywhere:</p>
           <div className="overflow-x-auto">
-            <table className="w-full text-xs border-collapse mt-2">
+            <table className="w-full border-collapse mt-2">
               <thead>
                 <tr style={{ borderBottom: "1px solid var(--border)" }}>
                   <th className="text-left py-2 pr-4">Size</th>
@@ -81,7 +81,7 @@ function SEOContent() {
 
       {/* FAQs */}
       <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
         <div className="space-y-3">
           {faqs.map((faq) => (
             <details key={faq.q} className="group rounded-xl border" style={{ borderColor: "var(--border)", backgroundColor: "var(--surface)" }}>
@@ -97,7 +97,7 @@ function SEOContent() {
 
       {/* Pro Tips */}
       <div className="mb-12">
-        <h2 className="text-xl font-semibold mb-4" style={{ color: "var(--text)" }}>Pro Tips</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-semibold mb-4" style={{ color: "var(--text)" }}>Pro Tips</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
             { title: "Keep It Simple", desc: "Favicons display at 16x16px in browser tabs. Complex designs become unreadable. Stick to 2-4 colors max." },
@@ -108,7 +108,7 @@ function SEOContent() {
           ].map((tip) => (
             <div key={tip.title} className="rounded-xl border p-4" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
               <div className="font-medium text-sm mb-1" style={{ color: "var(--text)" }}>{tip.title}</div>
-              <div className="text-xs" style={{ color: "var(--text-muted)" }}>{tip.desc}</div>
+              <div style={{ color: "var(--text-muted)", fontSize: "15px" }}>{tip.desc}</div>
             </div>
           ))}
         </div>
@@ -116,7 +116,7 @@ function SEOContent() {
 
       {/* Related Tools */}
       <div className="mb-12">
-        <h2 className="text-xl font-semibold mb-4" style={{ color: "var(--text)" }}>Related Tools</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-semibold mb-4" style={{ color: "var(--text)" }}>Related Tools</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {[
             { name: "Pixel Art Editor", desc: "Full-featured pixel art editor for any project", href: "/design-tools/pixel-art-editor" },
@@ -127,7 +127,7 @@ function SEOContent() {
               style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
               <div>
                 <div className="font-medium text-sm" style={{ color: "var(--text)" }}>{tool.name}</div>
-                <div className="text-xs" style={{ color: "var(--text-muted)" }}>{tool.desc}</div>
+                <div style={{ color: "var(--text-muted)", fontSize: "15px" }}>{tool.desc}</div>
               </div>
             </a>
           ))}

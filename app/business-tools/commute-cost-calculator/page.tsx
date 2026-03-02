@@ -35,7 +35,7 @@ export default function CommuteCostCalculatorPage() {
       {/* Article-first with commute focus */}
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#DC2626" }}>Home</a>
             <span>/</span>
             <span>Business Tools</span>
@@ -49,17 +49,17 @@ export default function CommuteCostCalculatorPage() {
 
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>The Full Cost of Commuting</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3" style={{ color: "var(--text)" }}>The Full Cost of Commuting</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 Most people think their commute costs whatever they spend on gas. In reality, the average American commuter spends <strong style={{ color: "var(--text)" }}>$6,700 per year</strong> on the full range of commute costs: fuel, insurance, maintenance, depreciation, parking, and tolls (Census/FinanceBuzz data). For many urban commuters, parking alone costs $100-250/month.
               </p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 But the financial cost is only half the story. The average round-trip commute of 55 minutes per day consumes <strong style={{ color: "var(--text)" }}>238 hours per year</strong> &mdash; nearly 6 full 40-hour work weeks. That&apos;s time you&apos;re giving to your employer for free, and it dramatically reduces your true hourly rate.
               </p>
             </section>
 
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>Commute Costs by the Numbers</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3" style={{ color: "var(--text)" }}>Commute Costs by the Numbers</h2>
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { stat: "$6,700", desc: "Average annual commute cost" },
@@ -69,25 +69,25 @@ export default function CommuteCostCalculatorPage() {
                 ].map((item, i) => (
                   <div key={i} className="text-center p-3 rounded-xl" style={{ backgroundColor: "var(--bg)" }}>
                     <p className="font-bold" style={{ fontSize: "24px", color: "#DC2626" }}>{item.stat}</p>
-                    <p style={{ fontSize: "13px", color: "var(--text-muted)" }}>{item.desc}</p>
+                    <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>{item.desc}</p>
                   </div>
                 ))}
               </div>
             </section>
 
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>Is Your Commute Worth It?</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3" style={{ color: "var(--text)" }}>Is Your Commute Worth It?</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 Here&apos;s the question most people never ask: would you accept a job that paid $6,700 less per year and required you to work 6 extra unpaid weeks? That&apos;s what a typical commute costs. For someone with a 90-minute round-trip commute, the numbers are even more dramatic: $9,000+ in expenses and 375+ hours per year.
               </p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 Use the calculator below to see exactly how much your commute costs in both time and money &mdash; and how it affects your true hourly rate. Then try the &ldquo;Remote job&rdquo; scenario to see what your rate would be without the commute.
               </p>
             </section>
           </article>
 
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#DC26261a", borderColor: "#DC262640" }}>
-            <p className="font-semibold" style={{ fontSize: "16px", color: "var(--text)" }}>
+            <p className="font-semibold" style={{ fontSize: "17px", color: "var(--text)" }}>
               Use the calculator below to see the full cost of your commute &mdash; and how going remote could change everything.
             </p>
           </div>

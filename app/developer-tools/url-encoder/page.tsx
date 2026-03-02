@@ -20,17 +20,17 @@ export default function UrlEncoderPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">URL Encoder &mdash; Percent-Encode Text for URLs Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Type or paste text and see the URL-encoded output in real time. Choose between component encoding (for query values), full URL encoding (preserves structure), or full percent-encoding (every non-alphanumeric character).</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">When to Use URL Encoding</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>URL encoding is required whenever you include user input, special characters, or non-ASCII text in a URL. Common scenarios include <strong style={{ color: "var(--text)" }}>building API query strings</strong>, <strong style={{ color: "var(--text)" }}>encoding OAuth redirect URIs</strong>, preparing <strong style={{ color: "var(--text)" }}>UTM parameters</strong> for marketing campaigns, and handling <strong style={{ color: "var(--text)" }}>file paths with spaces</strong>. Without encoding, characters like <code style={{ color: "#8BE9FD" }}>&amp;</code>, <code style={{ color: "#8BE9FD" }}>=</code>, and <code style={{ color: "#8BE9FD" }}>#</code> break URL structure.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">When to Use URL Encoding</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>URL encoding is required whenever you include user input, special characters, or non-ASCII text in a URL. Common scenarios include <strong style={{ color: "var(--text)" }}>building API query strings</strong>, <strong style={{ color: "var(--text)" }}>encoding OAuth redirect URIs</strong>, preparing <strong style={{ color: "var(--text)" }}>UTM parameters</strong> for marketing campaigns, and handling <strong style={{ color: "var(--text)" }}>file paths with spaces</strong>. Without encoding, characters like <code style={{ color: "#8BE9FD" }}>&amp;</code>, <code style={{ color: "#8BE9FD" }}>=</code>, and <code style={{ color: "#8BE9FD" }}>#</code> break URL structure.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Three Encoding Modes</h2>
-              <div className="space-y-2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Three Encoding Modes</h2>
+              <div className="space-y-2" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 {[
                   ["Component (encodeURIComponent)", "Encodes everything except A-Z, a-z, 0-9, -, _, ., !, ~, *, ', (, ). Use for query parameter values, form data, and any single URL component."],
                   ["Full URL (encodeURI)", "Preserves URL structure characters like :, /, ?, #, &, =. Use when encoding a complete URL while keeping it navigable."],
@@ -41,8 +41,8 @@ export default function UrlEncoderPage() {
               </div>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Code Examples</h2>
-              <div className="space-y-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Code Examples</h2>
+              <div className="space-y-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 <div><strong style={{ color: "var(--text)" }}>JavaScript:</strong> <code style={{ color: "#8BE9FD" }}>encodeURIComponent(&apos;hello world&apos;)</code> &rarr; <code style={{ color: "#50FA7B" }}>hello%20world</code></div>
                 <div><strong style={{ color: "var(--text)" }}>Python:</strong> <code style={{ color: "#8BE9FD" }}>urllib.parse.quote(&apos;hello world&apos;)</code></div>
                 <div><strong style={{ color: "var(--text)" }}>PHP:</strong> <code style={{ color: "#8BE9FD" }}>urlencode(&apos;hello world&apos;)</code> (uses + for spaces) or <code style={{ color: "#8BE9FD" }}>rawurlencode()</code> (uses %20)</div>
@@ -51,7 +51,7 @@ export default function UrlEncoderPage() {
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Start typing below &mdash; the encoder is already active.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Start typing below &mdash; the encoder is already active.</p>
           </div>
         </div>
       </div>

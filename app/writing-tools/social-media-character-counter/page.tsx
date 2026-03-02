@@ -33,15 +33,15 @@ export default function SocialMediaCharacterCounterPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#4F46E5" }}>Home</a><span>/</span><span>Writing Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Social Media Character Counter &mdash; Check Limits for Every Platform</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Write your post once and instantly see whether it fits on Twitter, Instagram, LinkedIn, TikTok, Facebook, Threads, YouTube, and more. Real-time fit/overflow indicators for 15 platforms.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Platform Character Limits (2026)</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Every social media platform has different character limits, and they change frequently. Here&apos;s the current landscape:</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Platform Character Limits (2026)</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Every social media platform has different character limits, and they change frequently. Here&apos;s the current landscape:</p>
               <div className="grid grid-cols-2 gap-2" style={{ fontSize: "15px", color: "var(--text-muted)" }}>
                 {[
                   ["X (Twitter)", "280 chars"],
@@ -63,9 +63,9 @@ export default function SocialMediaCharacterCounterPage() {
               </div>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Optimal vs. Maximum Length</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The maximum character limit and the optimal posting length are very different. Research shows that shorter posts tend to get more engagement:</p>
-              <div className="space-y-2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Optimal vs. Maximum Length</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The maximum character limit and the optimal posting length are very different. Research shows that shorter posts tend to get more engagement:</p>
+              <div className="space-y-2" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 {[
                   "X (Twitter): 280 max, but 70-100 chars get highest engagement",
                   "Instagram: 2,200 max, but first 125 chars visible before 'More' — put your hook there",
@@ -78,7 +78,7 @@ export default function SocialMediaCharacterCounterPage() {
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#4F46E51a", borderColor: "#4F46E540" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Type or paste your post below &mdash; the social media limits panel is already open.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Type or paste your post below &mdash; the social media limits panel is already open.</p>
           </div>
         </div>
       </div>

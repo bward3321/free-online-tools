@@ -20,25 +20,25 @@ export default function UrlDecoderPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">URL Decoder &mdash; Decode Percent-Encoded URLs Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Paste any URL-encoded string and see the decoded text instantly. Automatically handles double-encoding, plus-as-space, and malformed percent sequences.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Common Decoding Scenarios</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Developers frequently need to decode URLs when <strong style={{ color: "var(--text)" }}>reading server logs</strong> that show encoded request URLs, <strong style={{ color: "var(--text)" }}>debugging API responses</strong> with encoded redirect URIs, <strong style={{ color: "var(--text)" }}>analyzing analytics data</strong> with encoded UTM parameters, examining <strong style={{ color: "var(--text)" }}>OAuth callback URLs</strong>, and understanding <strong style={{ color: "var(--text)" }}>encoded query strings</strong> from browser developer tools.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Common Decoding Scenarios</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Developers frequently need to decode URLs when <strong style={{ color: "var(--text)" }}>reading server logs</strong> that show encoded request URLs, <strong style={{ color: "var(--text)" }}>debugging API responses</strong> with encoded redirect URIs, <strong style={{ color: "var(--text)" }}>analyzing analytics data</strong> with encoded UTM parameters, examining <strong style={{ color: "var(--text)" }}>OAuth callback URLs</strong>, and understanding <strong style={{ color: "var(--text)" }}>encoded query strings</strong> from browser developer tools.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Double-Encoding Explained</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Double encoding is one of the most frustrating URL issues. It happens when a string gets encoded twice &mdash; a space becomes <code style={{ color: "#8BE9FD" }}>%20</code> first, then the <code style={{ color: "#8BE9FD" }}>%</code> gets encoded to <code style={{ color: "#8BE9FD" }}>%25</code>, resulting in <code style={{ color: "#8BE9FD" }}>%2520</code>. This tool <strong style={{ color: "var(--text)" }}>automatically detects double-encoding</strong> and offers buttons to decode once, twice, or recursively until fully decoded.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Double-Encoding Explained</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Double encoding is one of the most frustrating URL issues. It happens when a string gets encoded twice &mdash; a space becomes <code style={{ color: "#8BE9FD" }}>%20</code> first, then the <code style={{ color: "#8BE9FD" }}>%</code> gets encoded to <code style={{ color: "#8BE9FD" }}>%25</code>, resulting in <code style={{ color: "#8BE9FD" }}>%2520</code>. This tool <strong style={{ color: "var(--text)" }}>automatically detects double-encoding</strong> and offers buttons to decode once, twice, or recursively until fully decoded.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Graceful Error Handling</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Not all encoded strings are valid. Malformed percent sequences (like <code style={{ color: "#8BE9FD" }}>%ZZ</code>) or incomplete UTF-8 byte sequences will cause standard decoders to throw errors. This tool <strong style={{ color: "var(--text)" }}>decodes what it can</strong> and leaves invalid sequences as-is, so you can still read the majority of the decoded content.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Graceful Error Handling</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Not all encoded strings are valid. Malformed percent sequences (like <code style={{ color: "#8BE9FD" }}>%ZZ</code>) or incomplete UTF-8 byte sequences will cause standard decoders to throw errors. This tool <strong style={{ color: "var(--text)" }}>decodes what it can</strong> and leaves invalid sequences as-is, so you can still read the majority of the decoded content.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste your encoded string below &mdash; the decoder is already active.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste your encoded string below &mdash; the decoder is already active.</p>
           </div>
         </div>
       </div>

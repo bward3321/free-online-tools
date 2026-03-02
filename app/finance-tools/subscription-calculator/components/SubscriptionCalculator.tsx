@@ -276,7 +276,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
         {/* Header */}
         <div className="flex items-start justify-between mb-6">
           <div>
-            <nav className="text-xs mb-2" style={{ color: "var(--text-muted)" }}>
+            <nav className="mb-2" style={{ color: "var(--text-muted)" }}>
               <a href="/" className="hover:opacity-70 transition-opacity" style={{ color: "var(--color-accent)" }}>Home</a>
               <span className="mx-1.5">/</span>
               <span>Finance Tools</span>
@@ -287,7 +287,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
             <p className="text-base md:text-lg max-w-2xl" style={{ color: "var(--text-muted)" }}>{subtitle}</p>
           </div>
           <div className="flex items-center gap-2 flex-shrink-0">
-            <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium" style={{ backgroundColor: "var(--surface-alt)", color: "var(--text-muted)" }}>
+            <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full font-medium text-sm" style={{ backgroundColor: "var(--surface-alt)", color: "var(--text-muted)" }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
               100% client-side
             </div>
@@ -324,11 +324,11 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
               />
             </div>
             <div className="flex gap-2">
-              <button onClick={selectPopular} className="px-4 py-2 rounded-xl text-xs font-medium border transition-colors hover:opacity-80 whitespace-nowrap" style={{ borderColor: "var(--color-accent)", color: "var(--color-accent)" }}>
+              <button onClick={selectPopular} className="px-4 py-2 rounded-xl font-medium text-sm border transition-colors hover:opacity-80 whitespace-nowrap" style={{ borderColor: "var(--color-accent)", color: "var(--color-accent)" }}>
                 {"⚡"} Select Popular
               </button>
               {checkedCount > 0 && (
-                <button onClick={clearAll} className="px-4 py-2 rounded-xl text-xs font-medium border transition-colors hover:opacity-80 whitespace-nowrap" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+                <button onClick={clearAll} className="px-4 py-2 rounded-xl font-medium text-sm border transition-colors hover:opacity-80 whitespace-nowrap" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
                   Clear All
                 </button>
               )}
@@ -339,7 +339,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
               <button
                 key={c.key}
                 onClick={() => setCategory(c.key)}
-                className="px-3 py-1.5 rounded-lg text-xs font-medium border transition-colors whitespace-nowrap flex-shrink-0"
+                className="px-3 py-1.5 rounded-lg font-medium text-sm border transition-colors whitespace-nowrap flex-shrink-0"
                 style={{
                   borderColor: category === c.key ? "var(--color-accent)" : "var(--border)",
                   backgroundColor: category === c.key ? "var(--color-accent)" : "var(--surface)",
@@ -353,7 +353,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
         </div>
 
         {/* Updated date */}
-        <div className="text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+        <div className="mb-4" style={{ color: "var(--text-muted)" }}>
           {"✓"} Prices verified February 2026 &mdash; {filtered.length} services shown
         </div>
 
@@ -396,7 +396,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
                 {/* Info */}
                 <div className="flex-1 min-w-0">
                   <div className="text-sm font-semibold truncate" style={{ color: "var(--text)" }}>{sub.name}</div>
-                  <div className="text-xs truncate" style={{ color: "var(--text-muted)" }}>
+                  <div className="truncate" style={{ color: "var(--text-muted)" }}>
                     {sub.plan}
                     {showCancelDifficulty && (
                       <span className="ml-2 inline-flex items-center gap-0.5">
@@ -455,7 +455,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
             <div className="flex items-center gap-1">
               <span className="text-sm" style={{ color: "var(--text-muted)" }}>$</span>
               <input type="number" inputMode="decimal" placeholder="0.00" value={newPrice} onChange={e => setNewPrice(e.target.value)} className="w-20 px-2 py-2 rounded-lg border text-sm outline-none" style={{ backgroundColor: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} />
-              <span className="text-xs" style={{ color: "var(--text-muted)" }}>/mo</span>
+              <span style={{ color: "var(--text-muted)" }}>/mo</span>
             </div>
             <button onClick={addCustom} className="px-4 py-2 rounded-lg text-sm font-medium text-white" style={{ backgroundColor: "var(--color-accent)" }}>Add</button>
             <button onClick={() => setShowAddCustom(false)} className="px-3 py-2 rounded-lg text-sm" style={{ color: "var(--text-muted)" }}>Cancel</button>
@@ -493,7 +493,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
                 { label: "10-Year", value: tenYearTotal, dec: 0, highlight: true },
               ].map(item => (
                 <div key={item.label} className="rounded-xl border p-4 text-center" style={{ backgroundColor: "var(--surface)", borderColor: item.highlight ? "#DC2626" : "var(--border)" }}>
-                  <div className="text-xs font-medium mb-1" style={{ color: "var(--text-muted)" }}>{item.label}</div>
+                  <div className="font-medium text-sm mb-1" style={{ color: "var(--text-muted)" }}>{item.label}</div>
                   <div className={`font-bold tabular-nums ${item.highlight ? "text-xl md:text-2xl" : "text-lg"}`} style={{ color: item.highlight ? "#DC2626" : "var(--text)" }}>
                     {formatCurrency(item.value, item.dec)}
                   </div>
@@ -538,13 +538,13 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
                 <div className="space-y-2">
                   {ranked.slice(0, 5).map((r, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold" style={{ backgroundColor: i === 0 ? "#DC2626" : "var(--surface-alt)", color: i === 0 ? "#fff" : "var(--text-muted)" }}>{i + 1}</span>
+                      <span className="w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold" style={{ backgroundColor: i === 0 ? "#DC2626" : "var(--surface-alt)", color: i === 0 ? "#fff" : "var(--text-muted)" }}>{i + 1}</span>
                       <span className="flex-1 text-sm" style={{ color: "var(--text)" }}>
                         {r.name} <span style={{ color: "var(--text-muted)" }}>&mdash; {r.plan}</span>
                       </span>
                       <span className="text-sm font-semibold tabular-nums" style={{ color: "var(--text)" }}>
                         {formatCurrency(r.price)}/mo
-                        <span className="text-xs font-normal ml-1" style={{ color: "var(--text-muted)" }}>({formatCurrency(r.price * 12, 0)}/yr)</span>
+                        <span className="font-normal ml-1" style={{ color: "var(--text-muted)" }}>({formatCurrency(r.price * 12, 0)}/yr)</span>
                       </span>
                     </div>
                   ))}
@@ -557,18 +557,18 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
               <h3 className="text-sm font-semibold mb-3" style={{ color: "var(--text)" }}>vs. US Average</h3>
               <div className="flex items-end gap-4 mb-3">
                 <div>
-                  <div className="text-xs" style={{ color: "var(--text-muted)" }}>Your monthly</div>
+                  <div style={{ color: "var(--text-muted)" }}>Your monthly</div>
                   <div className="text-xl font-bold tabular-nums" style={{ color: "var(--text)" }}>{formatCurrency(monthlyTotal)}</div>
                 </div>
                 <div>
-                  <div className="text-xs" style={{ color: "var(--text-muted)" }}>US average</div>
+                  <div style={{ color: "var(--text-muted)" }}>US average</div>
                   <div className="text-xl font-bold tabular-nums" style={{ color: "var(--text-muted)" }}>{formatCurrency(usAverage, 0)}</div>
                 </div>
                 <div className="ml-auto text-right">
                   <div className={`text-lg font-bold ${vsAveragePercent > 10 ? "text-red-500" : vsAveragePercent < -10 ? "text-green-500" : ""}`} style={{ color: Math.abs(vsAveragePercent) <= 10 ? "var(--text-muted)" : undefined }}>
                     {vsAveragePercent > 0 ? "+" : ""}{vsAveragePercent.toFixed(0)}%
                   </div>
-                  <div className="text-xs" style={{ color: "var(--text-muted)" }}>
+                  <div style={{ color: "var(--text-muted)" }}>
                     {vsAveragePercent > 10 ? "above average" : vsAveragePercent < -10 ? "below average" : "about average"}
                   </div>
                 </div>
@@ -578,7 +578,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
                 {/* Average marker */}
                 <div className="absolute top-0 h-full w-0.5" style={{ left: "50%", backgroundColor: "var(--text-muted)" }} />
               </div>
-              <div className="flex justify-between text-xs mt-1" style={{ color: "var(--text-muted)" }}>
+              <div className="flex justify-between text-sm mt-1" style={{ color: "var(--text-muted)" }}>
                 <span>$0</span>
                 <span>US avg: $219</span>
                 <span>$438+</span>
@@ -651,7 +651,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
         {!articleMode && (
           <article className="mb-12">
             <div className="rounded-2xl border p-6 md:p-8" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>The True Cost of Your Subscriptions</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>The True Cost of Your Subscriptions</h2>
               <div className="prose max-w-none space-y-4 text-sm leading-relaxed" style={{ color: "var(--text)" }}>
                 <p>The average American household spends between $219 and $280 per month on subscriptions, according to surveys by C+R Research and Reviews.org. That range translates to $2,628&ndash;$3,360 per year &mdash; or $13,140&ndash;$16,800 over five years. Yet 89% of consumers dramatically underestimate their total, guessing around $80&ndash;$100 per month when the real number is double or triple that.</p>
                 <p>The phenomenon is called <strong>subscription creep</strong>: individual charges of $5, $10, or $15 per month feel painless in isolation. But they compound silently. A household with Netflix, Spotify, Amazon Prime, a gym membership, iCloud+, ChatGPT Plus, and a couple of news subscriptions can easily hit $200+/month without realizing it.</p>
@@ -677,7 +677,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
 
         {/* ─── FAQ ─── */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
           <div className="space-y-3">
             {[
               { q: "How much does the average person spend on subscriptions?", a: "The average American household spends between $219 and $280 per month on subscriptions, including streaming, music, software, delivery memberships, gym, and more. Most people significantly underestimate their total \u2014 guessing around $80\u2013100/month when the real number is double or triple that." },
@@ -715,7 +715,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
                 <span className="text-xl flex-shrink-0 mt-0.5">{tool.icon}</span>
                 <div>
                   <div className="font-medium text-sm" style={{ color: "var(--text)" }}>{tool.name}</div>
-                  <div className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>{tool.desc}</div>
+                  <div style={{ color: "var(--text-muted)" }}>{tool.desc}</div>
                 </div>
               </a>
             ))}
@@ -723,7 +723,7 @@ export default function SubscriptionCalculator({ title, subtitle, defaultCategor
         </section>
 
         {/* Footer */}
-        <footer className="border-t pt-8 pb-4 text-center text-xs" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+        <footer className="border-t pt-8 pb-4 text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
           <p>Free Online Tools &mdash; Free calculators and tools for everyone.</p>
           <p className="mt-1">No signup required. No ads. No tracking.</p>
         </footer>

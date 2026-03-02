@@ -33,19 +33,19 @@ export default function VCardQrCodeGeneratorPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#2563EB" }}>Home</a><span>/</span><span>Utility Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">vCard QR Code Generator &mdash; Create a Digital Business Card</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Generate a QR code that adds your contact info to any phone when scanned. Include your name, phone, email, company, website, and address.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">What Is a vCard?</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>vCard (Virtual Card) is a standardized file format for sharing contact information electronically. Originally developed in 1995, the <strong style={{ color: "var(--text)" }}>vCard 3.0 format</strong> is now universally supported by iOS Contacts, Android Contacts, Google Contacts, Microsoft Outlook, and virtually every contact management application.</p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>When encoded in a QR code, scanning it with any modern smartphone automatically opens the Contacts app with all your information pre-filled. The recipient simply taps &ldquo;Save&rdquo; &mdash; no manual typing, no misspelled email addresses, no forgotten details.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">What Is a vCard?</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>vCard (Virtual Card) is a standardized file format for sharing contact information electronically. Originally developed in 1995, the <strong style={{ color: "var(--text)" }}>vCard 3.0 format</strong> is now universally supported by iOS Contacts, Android Contacts, Google Contacts, Microsoft Outlook, and virtually every contact management application.</p>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>When encoded in a QR code, scanning it with any modern smartphone automatically opens the Contacts app with all your information pre-filled. The recipient simply taps &ldquo;Save&rdquo; &mdash; no manual typing, no misspelled email addresses, no forgotten details.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Where to Use Your vCard QR Code</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Where to Use Your vCard QR Code</h2>
               <div className="grid grid-cols-2 gap-3" style={{ fontSize: "15px", color: "var(--text-muted)" }}>
                 {["Business cards (back side)", "Email signature", "Portfolio website", "Resume / CV", "LinkedIn profile", "Conference badge", "Marketing materials", "Networking events"].map((place, i) => (
                   <div key={i} className="flex items-center gap-2 py-1"><span style={{ color: "#16A34A" }}>&#x2713;</span><span>{place}</span></div>
@@ -54,7 +54,7 @@ export default function VCardQrCodeGeneratorPage() {
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#2563EB1a", borderColor: "#2563EB40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Fill in your contact details below to generate your vCard QR code.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Fill in your contact details below to generate your vCard QR code.</p>
           </div>
         </div>
       </div>

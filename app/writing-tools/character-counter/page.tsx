@@ -33,25 +33,25 @@ export default function CharacterCounterPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#4F46E5" }}>Home</a><span>/</span><span>Writing Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Character Counter &mdash; Count Characters With and Without Spaces</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Count characters in real-time as you type or paste. See totals with and without spaces, and check your text against every social media platform&apos;s character limit.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Why Character Count Matters</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Character limits are everywhere online. <strong style={{ color: "var(--text)" }}>X (Twitter)</strong> limits posts to 280 characters. <strong style={{ color: "var(--text)" }}>Instagram</strong> captions max out at 2,200 characters, but only the first 125 are visible before &ldquo;More.&rdquo; <strong style={{ color: "var(--text)" }}>Google</strong> truncates meta titles after about 60 characters and meta descriptions after 160.</p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Writing to these limits is part craft, part math. A character counter lets you see exactly where you stand against every platform simultaneously, so you can write once and check everywhere.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Why Character Count Matters</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Character limits are everywhere online. <strong style={{ color: "var(--text)" }}>X (Twitter)</strong> limits posts to 280 characters. <strong style={{ color: "var(--text)" }}>Instagram</strong> captions max out at 2,200 characters, but only the first 125 are visible before &ldquo;More.&rdquo; <strong style={{ color: "var(--text)" }}>Google</strong> truncates meta titles after about 60 characters and meta descriptions after 160.</p>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Writing to these limits is part craft, part math. A character counter lets you see exactly where you stand against every platform simultaneously, so you can write once and check everywhere.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Characters vs. Characters Without Spaces</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Most platforms count spaces as characters. When checking against a Twitter limit of 280, &ldquo;Hello World&rdquo; counts as 11 characters (including the space), not 10. However, some contexts &mdash; like SMS billing or certain form fields &mdash; count only non-space characters.</p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>This tool shows both counts prominently so you always have the right number for your use case.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Characters vs. Characters Without Spaces</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Most platforms count spaces as characters. When checking against a Twitter limit of 280, &ldquo;Hello World&rdquo; counts as 11 characters (including the space), not 10. However, some contexts &mdash; like SMS billing or certain form fields &mdash; count only non-space characters.</p>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>This tool shows both counts prominently so you always have the right number for your use case.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#4F46E51a", borderColor: "#4F46E540" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Start typing or paste your text below to count characters instantly.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Start typing or paste your text below to count characters instantly.</p>
           </div>
         </div>
       </div>

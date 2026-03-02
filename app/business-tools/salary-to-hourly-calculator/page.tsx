@@ -35,7 +35,7 @@ export default function SalaryToHourlyCalculatorPage() {
       {/* Article-first with salary reference table */}
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#DC2626" }}>Home</a>
             <span>/</span>
             <span>Business Tools</span>
@@ -49,8 +49,8 @@ export default function SalaryToHourlyCalculatorPage() {
 
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>Quick Salary to Hourly Reference Table</h2>
-              <p className="mb-4" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Standard conversion (salary &divide; 2,080 hours) vs. estimated true rate with a typical 55-min commute, 5hr/wk overtime, and moderate expenses:</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3" style={{ color: "var(--text)" }}>Quick Salary to Hourly Reference Table</h2>
+              <p className="mb-4" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Standard conversion (salary &divide; 2,080 hours) vs. estimated true rate with a typical 55-min commute, 5hr/wk overtime, and moderate expenses:</p>
               <div className="overflow-x-auto">
                 <table className="w-full" style={{ fontSize: "15px" }}>
                   <thead>
@@ -80,22 +80,22 @@ export default function SalaryToHourlyCalculatorPage() {
                   </tbody>
                 </table>
               </div>
-              <p className="mt-3 text-xs" style={{ color: "var(--text-muted)" }}>True rate estimates assume 55-min round-trip commute, 5hr/wk unpaid overtime, 30-min prep, 30-min lunch, and $500-800/mo in work expenses. Your actual number depends on your specific situation.</p>
+              <p className="mt-3" style={{ color: "var(--text-muted)" }}>True rate estimates assume 55-min round-trip commute, 5hr/wk unpaid overtime, 30-min prep, 30-min lunch, and $500-800/mo in work expenses. Your actual number depends on your specific situation.</p>
             </section>
 
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>Beyond the Simple Conversion</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3" style={{ color: "var(--text)" }}>Beyond the Simple Conversion</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 Every payroll site offers the basic salary-to-hourly calculation: divide by 2,080 and you&apos;re done. But that number is <strong style={{ color: "var(--text)" }}>dangerously misleading</strong> because it pretends your job only takes 40 hours per week.
               </p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 In reality, the average American spends 55 minutes per day commuting (2024 Census), 48% of workers put in more than 40 hours weekly (BLS), and work-related expenses like gas, parking, lunches, and clothing average $8,000-$15,000 per year. When you divide your <em>actual take-home</em> by your <em>actual hours</em>, the result is 25-40% lower than the simple conversion suggests.
               </p>
             </section>
           </article>
 
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#DC26261a", borderColor: "#DC262640" }}>
-            <p className="font-semibold" style={{ fontSize: "16px", color: "var(--text)" }}>
+            <p className="font-semibold" style={{ fontSize: "17px", color: "var(--text)" }}>
               Use the calculator below to see your <em>true</em> salary-to-hourly conversion &mdash; the real number, not the simple one.
             </p>
           </div>

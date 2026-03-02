@@ -292,7 +292,7 @@ export default function UrlEncoderDecoder({
 
   /* ── Render helpers ── */
   const copyBtn = (text: string, label: string, small?: boolean) => (
-    <button onClick={() => copy(text, label)} className={`${small ? "px-2 py-1 text-xs" : "px-3 py-1.5 text-sm"} rounded-lg font-semibold transition-colors`}
+    <button onClick={() => copy(text, label)} className={`${small ? "px-2 py-1 text-sm" : "px-3 py-1.5 text-sm"} rounded-lg font-semibold transition-colors`}
       style={{ backgroundColor: copied === label ? `${C.encode}30` : `${C.accent}20`, color: copied === label ? C.encode : C.accent }}>
       {copied === label ? "Copied!" : "Copy"}
     </button>
@@ -319,7 +319,7 @@ export default function UrlEncoderDecoder({
         {/* ── Header ── */}
         {!articleMode && (
           <>
-            <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+            <nav className="flex items-center gap-1 text-sm mb-4" style={{ color: "var(--text-muted)" }}>
               <a href="/" className="hover:underline" style={{ color: C.accent }}>Home</a><span>/</span><span>Developer Tools</span>
             </nav>
             <h1 className="text-3xl md:text-4xl font-bold mb-3">{title}</h1>
@@ -346,16 +346,16 @@ export default function UrlEncoderDecoder({
                 <button key={m} onClick={() => setEncMode(m)} className="px-3 py-2 rounded-lg text-sm transition-colors text-left"
                   style={{ backgroundColor: encMode === m ? `${C.accent}15` : "var(--surface)", color: encMode === m ? C.accent : "var(--text-muted)", border: `1px solid ${encMode === m ? C.accent + "50" : "var(--border)"}` }}>
                   <span className="font-bold block">{label}</span>
-                  <span className="text-xs">{desc}</span>
+                  <span className="text-sm">{desc}</span>
                 </button>
               ))}
             </div>
 
             {/* Toolbar */}
             <div className="flex flex-wrap items-center gap-2 mb-3">
-              <span className="text-xs" style={{ color: "var(--text-muted)" }}>Spaces:</span>
+              <span style={{ color: "var(--text-muted)" }}>Spaces:</span>
               {(["%20", "+"] as const).map((s) => (
-                <button key={s} onClick={() => setSpaceAs(s)} className="px-2 py-1 rounded text-xs font-bold"
+                <button key={s} onClick={() => setSpaceAs(s)} className="px-2 py-1 rounded text-sm font-bold"
                   style={{ backgroundColor: spaceAs === s ? `${C.accent}20` : "var(--surface)", color: spaceAs === s ? C.accent : "var(--text-muted)" }}>
                   {s}
                 </button>
@@ -393,9 +393,9 @@ export default function UrlEncoderDecoder({
             {dblEncoded && (
               <div className="rounded-xl border p-3 mb-4 flex flex-wrap items-center gap-2 text-sm" style={{ backgroundColor: "#FFB86C15", borderColor: "#FFB86C40" }}>
                 <span>{"\u26A0\uFE0F"} Double-encoded input detected</span>
-                <button onClick={() => { const r = urlDecode(input, spaceAs); if (r.ok) setInput(r.result); }} className="px-2 py-1 rounded text-xs font-bold" style={{ backgroundColor: `${C.decode}20`, color: C.decode }}>Decode Once</button>
-                <button onClick={() => { let s = input; for (let i = 0; i < 2; i++) { const r = urlDecode(s, spaceAs); if (r.ok) s = r.result; else break; } setInput(s); }} className="px-2 py-1 rounded text-xs font-bold" style={{ backgroundColor: `${C.decode}20`, color: C.decode }}>Decode Twice</button>
-                <button onClick={() => setInput(decodeFully(input))} className="px-2 py-1 rounded text-xs font-bold" style={{ backgroundColor: `${C.decode}20`, color: C.decode }}>Decode Fully</button>
+                <button onClick={() => { const r = urlDecode(input, spaceAs); if (r.ok) setInput(r.result); }} className="px-2 py-1 rounded text-sm font-bold" style={{ backgroundColor: `${C.decode}20`, color: C.decode }}>Decode Once</button>
+                <button onClick={() => { let s = input; for (let i = 0; i < 2; i++) { const r = urlDecode(s, spaceAs); if (r.ok) s = r.result; else break; } setInput(s); }} className="px-2 py-1 rounded text-sm font-bold" style={{ backgroundColor: `${C.decode}20`, color: C.decode }}>Decode Twice</button>
+                <button onClick={() => setInput(decodeFully(input))} className="px-2 py-1 rounded text-sm font-bold" style={{ backgroundColor: `${C.decode}20`, color: C.decode }}>Decode Fully</button>
               </div>
             )}
 
@@ -404,12 +404,12 @@ export default function UrlEncoderDecoder({
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-semibold" style={{ color: dir === "encode" ? C.encode : C.decode }}>{dir === "encode" ? "Plain Text" : "Encoded Input"}</span>
-                  <span className="text-xs" style={{ color: "var(--text-muted)" }}>{input.length} chars</span>
+                  <span style={{ color: "var(--text-muted)" }}>{input.length} chars</span>
                 </div>
                 <textarea value={input} onChange={(e) => setInput(e.target.value)}
                   placeholder={dir === "encode" ? "Enter text to encode..." : "Paste URL-encoded text to decode..."}
                   className="w-full rounded-xl border p-4 resize-y focus:outline-none"
-                  style={{ backgroundColor: editorBg, borderColor: "var(--border)", color: "var(--text)", fontFamily: MONO, fontSize: "14px", lineHeight: "1.6", minHeight: "280px" }}
+                  style={{ backgroundColor: editorBg, borderColor: "var(--border)", color: "var(--text)", fontFamily: MONO, fontSize: "15px", lineHeight: "1.6", minHeight: "280px" }}
                   aria-label={dir === "encode" ? "Text to encode" : "Encoded text to decode"} />
               </div>
               <div className="flex md:flex-col items-center justify-center py-2">
@@ -425,7 +425,7 @@ export default function UrlEncoderDecoder({
                   {output && copyBtn(output, "out-inline", true)}
                 </div>
                 <div className="w-full rounded-xl border p-4 overflow-auto"
-                  style={{ backgroundColor: editorBg, borderColor: error ? C.error : "var(--border)", fontFamily: MONO, fontSize: "14px", lineHeight: "1.6", minHeight: "280px", whiteSpace: "pre-wrap", wordBreak: "break-all" }}
+                  style={{ backgroundColor: editorBg, borderColor: error ? C.error : "var(--border)", fontFamily: MONO, fontSize: "15px", lineHeight: "1.6", minHeight: "280px", whiteSpace: "pre-wrap", wordBreak: "break-all" }}
                   role="region" aria-label="Output" aria-live="polite">
                   {error ? <span style={{ color: C.error }}>{"\u26A0\uFE0F"} {error}</span> : output ? <span>{output}</span> : <span style={{ color: "var(--text-muted)" }}>{dir === "encode" ? "Encoded output appears here\u2026" : "Decoded text appears here\u2026"}</span>}
                 </div>
@@ -446,14 +446,14 @@ export default function UrlEncoderDecoder({
             <input value={parserUrl} onChange={(e) => setParserUrl(e.target.value)}
               placeholder="https://api.example.com:8080/v1/users/search?name=John%20Doe&role=admin#results"
               className="w-full rounded-xl border px-4 py-3 mb-4 focus:outline-none"
-              style={{ backgroundColor: editorBg, borderColor: parseError ? C.error : "var(--border)", color: "var(--text)", fontFamily: MONO, fontSize: "14px" }}
+              style={{ backgroundColor: editorBg, borderColor: parseError ? C.error : "var(--border)", color: "var(--text)", fontFamily: MONO, fontSize: "15px" }}
               aria-label="URL to parse" />
             {parseError && <p className="text-sm mb-4" style={{ color: C.error }}>{"\u26A0\uFE0F"} {parseError}</p>}
 
             {parts && (
               <div className="space-y-4 mb-6">
                 {/* Color-coded URL */}
-                <div className="rounded-xl border p-4 overflow-auto" style={{ backgroundColor: editorBg, borderColor: "var(--border)", fontFamily: MONO, fontSize: "14px", lineHeight: "1.8", wordBreak: "break-all" }}>
+                <div className="rounded-xl border p-4 overflow-auto" style={{ backgroundColor: editorBg, borderColor: "var(--border)", fontFamily: MONO, fontSize: "15px", lineHeight: "1.8", wordBreak: "break-all" }}>
                   <span style={{ color: C.protocol }}>{parts.protocol}</span>
                   <span style={{ color: "var(--text-muted)" }}>://</span>
                   <span style={{ color: C.host }}>{parts.host}</span>
@@ -501,12 +501,12 @@ export default function UrlEncoderDecoder({
                       {parts.params.length > 0 && (
                         <>
                           <button onClick={() => copy(JSON.stringify(Object.fromEntries(parts.params.map((p) => [p.key, p.val])), null, 2), "obj")}
-                            className="px-2 py-1 text-xs rounded-lg font-semibold"
+                            className="px-2 py-1 text-sm rounded-lg font-semibold"
                             style={{ backgroundColor: copied === "obj" ? `${C.encode}30` : `${C.accent}20`, color: copied === "obj" ? C.encode : C.accent }}>
                             {copied === "obj" ? "Copied!" : "Copy as Object"}
                           </button>
                           <button onClick={() => copy(["const params = new URLSearchParams();", ...parts.params.map((p) => `params.set(${JSON.stringify(p.key)}, ${JSON.stringify(p.val)});`)].join("\n"), "usp")}
-                            className="px-2 py-1 text-xs rounded-lg font-semibold"
+                            className="px-2 py-1 text-sm rounded-lg font-semibold"
                             style={{ backgroundColor: copied === "usp" ? `${C.encode}30` : `${C.accent}20`, color: copied === "usp" ? C.encode : C.accent }}>
                             {copied === "usp" ? "Copied!" : "URLSearchParams"}
                           </button>
@@ -525,9 +525,9 @@ export default function UrlEncoderDecoder({
                           <input value={p.val} onChange={(e) => updateParam(p.id, "val", e.target.value)} placeholder="value"
                             className="flex-1 min-w-0 rounded-lg border px-3 py-1.5 text-sm focus:outline-none"
                             style={{ backgroundColor: editorBg, borderColor: "var(--border)", color: C.paramVal, fontFamily: MONO }} />
-                          <button onClick={() => moveParam(p.id, -1)} disabled={i === 0} className="flex-shrink-0 px-1.5 py-1 rounded text-xs disabled:opacity-30" style={{ color: "var(--text-muted)" }}>{"\u25B2"}</button>
-                          <button onClick={() => moveParam(p.id, 1)} disabled={i === parts.params.length - 1} className="flex-shrink-0 px-1.5 py-1 rounded text-xs disabled:opacity-30" style={{ color: "var(--text-muted)" }}>{"\u25BC"}</button>
-                          <button onClick={() => removeParam(p.id)} className="flex-shrink-0 px-1.5 py-1 rounded text-xs" style={{ color: C.error }}>{"\u2715"}</button>
+                          <button onClick={() => moveParam(p.id, -1)} disabled={i === 0} className="flex-shrink-0 px-1.5 py-1 rounded text-sm disabled:opacity-30" style={{ color: "var(--text-muted)" }}>{"\u25B2"}</button>
+                          <button onClick={() => moveParam(p.id, 1)} disabled={i === parts.params.length - 1} className="flex-shrink-0 px-1.5 py-1 rounded text-sm disabled:opacity-30" style={{ color: "var(--text-muted)" }}>{"\u25BC"}</button>
+                          <button onClick={() => removeParam(p.id)} className="flex-shrink-0 px-1.5 py-1 rounded text-sm" style={{ color: C.error }}>{"\u2715"}</button>
                         </div>
                       ))}
                     </div>
@@ -547,7 +547,7 @@ export default function UrlEncoderDecoder({
               {toolBtn("Decode", () => setBatchDir("decode"), batchDir === "decode", C.decode)}
               <span className="mx-1 border-l h-6 inline-block" style={{ borderColor: "var(--border)" }} />
               {(["component", "fullurl", "all"] as EncMode[]).map((m) => (
-                <button key={m} onClick={() => setBatchMode(m)} className="px-2 py-1.5 rounded-lg text-xs font-bold"
+                <button key={m} onClick={() => setBatchMode(m)} className="px-2 py-1.5 rounded-lg text-sm font-bold"
                   style={{ backgroundColor: batchMode === m ? `${C.accent}20` : "var(--surface)", color: batchMode === m ? C.accent : "var(--text-muted)", border: "1px solid var(--border)" }}>
                   {m === "component" ? "Component" : m === "fullurl" ? "Full URL" : "All"}
                 </button>
@@ -571,12 +571,12 @@ export default function UrlEncoderDecoder({
                 <label className="text-sm font-semibold mb-2 block" style={{ color: batchDir === "encode" ? C.encode : C.decode }}>Input (one per line)</label>
                 <textarea value={batchIn} onChange={(e) => setBatchIn(e.target.value)} placeholder="Enter one string per line..."
                   className="w-full rounded-xl border p-4 resize-y focus:outline-none"
-                  style={{ backgroundColor: editorBg, borderColor: "var(--border)", color: "var(--text)", fontFamily: MONO, fontSize: "14px", lineHeight: "1.6", minHeight: "280px" }} />
+                  style={{ backgroundColor: editorBg, borderColor: "var(--border)", color: "var(--text)", fontFamily: MONO, fontSize: "15px", lineHeight: "1.6", minHeight: "280px" }} />
               </div>
               <div>
                 <label className="text-sm font-semibold mb-2 block" style={{ color: batchDir === "encode" ? C.decode : C.encode }}>Output</label>
                 <div className="w-full rounded-xl border p-4 overflow-auto"
-                  style={{ backgroundColor: editorBg, borderColor: "var(--border)", fontFamily: MONO, fontSize: "14px", lineHeight: "1.6", minHeight: "280px", whiteSpace: "pre-wrap", wordBreak: "break-all" }}>
+                  style={{ backgroundColor: editorBg, borderColor: "var(--border)", fontFamily: MONO, fontSize: "15px", lineHeight: "1.6", minHeight: "280px", whiteSpace: "pre-wrap", wordBreak: "break-all" }}>
                   {batchOut || <span style={{ color: "var(--text-muted)" }}>Results appear here&hellip;</span>}
                 </div>
               </div>
@@ -630,25 +630,25 @@ export default function UrlEncoderDecoder({
           <>
             <article className="space-y-6 my-10">
               <section className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <h2 className="text-2xl font-bold mb-3">What Is URL Encoding?</h2>
+                <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">What Is URL Encoding?</h2>
                 <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>
                   URL encoding, also called <strong style={{ color: "var(--text)" }}>percent-encoding</strong>, is the process of replacing characters that aren&apos;t allowed in URLs with a <code style={{ color: C.accent }}>%</code> followed by two hexadecimal digits representing the character&apos;s byte value. For example, a space becomes <code style={{ color: C.accent }}>%20</code> and an ampersand becomes <code style={{ color: C.accent }}>%26</code>. This is defined by RFC 3986 and is essential for constructing valid URLs that contain special characters, international text, or reserved characters used as data.
                 </p>
               </section>
               <section className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <h2 className="text-2xl font-bold mb-3">encodeURIComponent vs encodeURI</h2>
+                <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">encodeURIComponent vs encodeURI</h2>
                 <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>
                   JavaScript provides two URL encoding functions that confuse many developers. <code style={{ color: C.accent }}>encodeURI()</code> encodes a <strong style={{ color: "var(--text)" }}>complete URL</strong> while preserving characters that have structural meaning (<code style={{ color: C.accent }}>/ ? # &amp; =</code>). Use it when you have a full URL and want to make it safe without breaking its structure. <code style={{ color: C.accent }}>encodeURIComponent()</code> encodes <strong style={{ color: "var(--text)" }}>everything except unreserved characters</strong> &mdash; use it when encoding a single component like a query parameter value. Using the wrong one is a common bug: if you use <code style={{ color: C.accent }}>encodeURI</code> on a query value containing <code style={{ color: C.accent }}>&amp;</code>, it won&apos;t encode it, breaking your URL structure.
                 </p>
               </section>
               <section className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <h2 className="text-2xl font-bold mb-3">The Space Encoding Debate: %20 vs +</h2>
+                <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">The Space Encoding Debate: %20 vs +</h2>
                 <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>
                   Both <code style={{ color: C.accent }}>%20</code> and <code style={{ color: C.accent }}>+</code> represent spaces in URLs, but they come from different standards. <code style={{ color: C.accent }}>%20</code> is the RFC 3986 standard and works everywhere. <code style={{ color: C.accent }}>+</code> comes from the older <code style={{ color: C.accent }}>application/x-www-form-urlencoded</code> format used by HTML form submissions. In practice, most servers accept both in query strings. Use <code style={{ color: C.accent }}>%20</code> as the default &mdash; it&apos;s more universally compatible, especially in path segments where <code style={{ color: C.accent }}>+</code> is treated as a literal plus sign.
                 </p>
               </section>
               <section className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <h2 className="text-2xl font-bold mb-3">Common Use Cases</h2>
+                <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Common Use Cases</h2>
                 <div className="space-y-2" style={{ fontSize: "17px", color: "var(--text-muted)" }}>
                   {[
                     ["API Query Strings", "Encode parameter values when building REST API requests"],
@@ -662,7 +662,7 @@ export default function UrlEncoderDecoder({
                 </div>
               </section>
               <section className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <h2 className="text-2xl font-bold mb-3">100% Client-Side &mdash; Your Data Stays Private</h2>
+                <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">100% Client-Side &mdash; Your Data Stays Private</h2>
                 <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>
                   All encoding, decoding, and URL parsing runs entirely in your browser using native JavaScript APIs. No data is ever sent to a server, stored, or logged. This makes it safe to encode sensitive values like API keys, authentication tokens, OAuth callback URLs, and query strings containing personal data. Close the tab and everything is gone.
                 </p>
@@ -670,19 +670,19 @@ export default function UrlEncoderDecoder({
             </article>
 
             <div className="mb-10">
-              <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Frequently Asked Questions</h2>
               <div className="space-y-2">
                 {FAQS.map((f, i) => (
                   <details key={i} className="rounded-xl border group" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                     <summary className="px-5 py-4 cursor-pointer font-semibold" style={{ fontSize: "16px" }}>{f.q}</summary>
-                    <div className="px-5 pb-4" style={{ fontSize: "16px", color: "var(--text-muted)" }}>{f.a}</div>
+                    <div className="px-5 pb-4" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>{f.a}</div>
                   </details>
                 ))}
               </div>
             </div>
 
             <div>
-              <h2 className="text-2xl font-bold mb-4">Related Tools</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Related Tools</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {RELATED.map((r) => (
                   <a key={r.href} href={r.href} className="block rounded-xl border p-4 hover:shadow-lg transition-shadow" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>

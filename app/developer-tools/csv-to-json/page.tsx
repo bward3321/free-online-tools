@@ -27,21 +27,21 @@ export default function CsvToJsonPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">CSV to JSON Converter &mdash; Convert CSV Data to JSON Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Paste CSV data and get a JSON array of objects instantly. Automatic header detection, type inference for numbers and booleans, and configurable delimiters.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">When You Need CSV to JSON</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Spreadsheet data lives in CSV. APIs consume JSON. When you need to import Excel or Google Sheets data into a web application, database seeding script, or API request body, this converter bridges the gap. Paste your CSV, copy the JSON output, and you&apos;re ready to go.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">When You Need CSV to JSON</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Spreadsheet data lives in CSV. APIs consume JSON. When you need to import Excel or Google Sheets data into a web application, database seeding script, or API request body, this converter bridges the gap. Paste your CSV, copy the JSON output, and you&apos;re ready to go.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Automatic Type Detection</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>CSV treats everything as text. This converter automatically detects <strong style={{ color: "var(--text)" }}>numbers</strong> (integers and decimals), <strong style={{ color: "var(--text)" }}>booleans</strong> (true/false), and <strong style={{ color: "var(--text)" }}>null</strong> values, converting them to their proper JSON types. Everything else stays as a string.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Automatic Type Detection</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>CSV treats everything as text. This converter automatically detects <strong style={{ color: "var(--text)" }}>numbers</strong> (integers and decimals), <strong style={{ color: "var(--text)" }}>booleans</strong> (true/false), and <strong style={{ color: "var(--text)" }}>null</strong> values, converting them to their proper JSON types. Everything else stays as a string.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste your CSV data below &mdash; the converter is already active.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste your CSV data below &mdash; the converter is already active.</p>
           </div>
         </div>
       </div>

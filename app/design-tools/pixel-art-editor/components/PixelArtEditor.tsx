@@ -81,7 +81,7 @@ function DarkModeToggle() {
 
 function PrivacyBadge() {
   return (
-    <div className="flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full border" style={{ borderColor: "var(--border)", color: "var(--text-muted)", backgroundColor: "var(--surface)" }}>
+    <div className="flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-full border" style={{ borderColor: "var(--border)", color: "var(--text-muted)", backgroundColor: "var(--surface)" }}>
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       100% client-side
     </div>
@@ -751,7 +751,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
           <div className="flex items-center gap-1 ml-auto">
             <button onClick={() => setZoom(z => Math.max(0.5, z - 0.25))} className="px-2 py-1.5 rounded-lg border text-sm"
               style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", color: "var(--text)" }}>-</button>
-            <span className="text-xs w-12 text-center" style={{ color: "var(--text-muted)" }}>{Math.round(zoom * 100)}%</span>
+            <span className="text-sm w-12 text-center" style={{ color: "var(--text-muted)" }}>{Math.round(zoom * 100)}%</span>
             <button onClick={() => setZoom(z => Math.min(4, z + 0.25))} className="px-2 py-1.5 rounded-lg border text-sm"
               style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", color: "var(--text)" }}>+</button>
           </div>
@@ -790,7 +790,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
             <div className="flex lg:flex-col gap-2">
               {/* Tools */}
               <div className="rounded-xl border p-3" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <div className="text-xs font-semibold mb-2 hidden lg:block" style={{ color: "var(--text-muted)" }}>Tools</div>
+                <div className="font-semibold text-sm mb-2 hidden lg:block" style={{ color: "var(--text-muted)" }}>Tools</div>
                 <div className="flex lg:flex-col flex-wrap gap-1">
                   {TOOL_CONFIG.map(tool => (
                     <button key={tool.id} onClick={() => setActiveTool(tool.id)}
@@ -810,11 +810,11 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
                 {/* Brush size */}
                 {(activeTool === "pencil" || activeTool === "eraser") && (
                   <div className="mt-2 pt-2 border-t hidden lg:block" style={{ borderColor: "var(--border)" }}>
-                    <div className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Brush: {brushSize}px</div>
+                    <div className="text-sm mb-1" style={{ color: "var(--text-muted)" }}>Brush: {brushSize}px</div>
                     <div className="flex gap-1">
                       {[1, 2, 3, 4].map(s => (
                         <button key={s} onClick={() => setBrushSize(s)}
-                          className="w-7 h-7 rounded-md text-xs font-semibold"
+                          className="w-7 h-7 rounded-md font-semibold text-sm"
                           style={{
                             backgroundColor: brushSize === s ? ACCENT : "var(--surface-alt)",
                             color: brushSize === s ? "#fff" : "var(--text)",
@@ -827,7 +827,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
                 {/* Shape fill toggle */}
                 {(activeTool === "rect" || activeTool === "circle") && (
                   <div className="mt-2 pt-2 border-t hidden lg:block" style={{ borderColor: "var(--border)" }}>
-                    <button onClick={() => setShapeFilled(!shapeFilled)} className="text-xs px-2 py-1 rounded-md"
+                    <button onClick={() => setShapeFilled(!shapeFilled)} className="px-2 py-1 text-sm rounded-md"
                       style={{ backgroundColor: shapeFilled ? ACCENT : "var(--surface-alt)", color: shapeFilled ? "#fff" : "var(--text)" }}>
                       {shapeFilled ? "Filled" : "Outline"}
                     </button>
@@ -837,7 +837,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
 
               {/* Colors */}
               <div className="rounded-xl border p-3" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <div className="text-xs font-semibold mb-2 hidden lg:block" style={{ color: "var(--text-muted)" }}>Colors</div>
+                <div className="font-semibold text-sm mb-2 hidden lg:block" style={{ color: "var(--text-muted)" }}>Colors</div>
 
                 {/* FG/BG swap */}
                 <div className="flex items-center gap-2 mb-2">
@@ -849,7 +849,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
                       className="absolute bottom-0 right-0 w-8 h-8 rounded-md border-2"
                       style={{ backgroundColor: bgColor, borderColor: "var(--surface)" }} title="Background color" />
                   </div>
-                  <button onClick={swapColors} className="text-xs px-2 py-1 rounded border"
+                  <button onClick={swapColors} className="px-2 py-1 text-sm rounded border"
                     style={{ borderColor: "var(--border)", color: "var(--text-muted)" }} title="Swap colors (X)">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 16V4M7 4L3 8M7 4l4 4M17 8v12M17 20l4-4M17 20l-4-4"/></svg>
                   </button>
@@ -870,16 +870,16 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
                         if (editingColor === "fg") setFgColor(v);
                         else setBgColor(v);
                       }
-                    }} className="mt-1 w-full px-2 py-1 rounded border text-xs font-mono outline-none"
+                    }} className="mt-1 w-full px-2 py-1 rounded border text-sm font-mono outline-none"
                       style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", color: "var(--text)" }} />
-                    <button onClick={() => setShowColorPicker(false)} className="mt-1 text-xs w-full py-1 rounded"
+                    <button onClick={() => setShowColorPicker(false)} className="mt-1 text-sm w-full py-1 rounded"
                       style={{ backgroundColor: ACCENT, color: "#fff" }}>Done</button>
                   </div>
                 )}
 
                 {/* Palette selector */}
                 <select value={activePalette} onChange={(e) => setActivePalette(Number(e.target.value))}
-                  className="w-full px-2 py-1 rounded border text-xs outline-none mb-2"
+                  className="w-full px-2 py-1 rounded border text-sm outline-none mb-2"
                   style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", color: "var(--text)" }}>
                   {PALETTES.map((p, i) => (
                     <option key={p.name} value={i}>{p.name}</option>
@@ -900,7 +900,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
                 {/* Color history */}
                 {colorHistory.length > 0 && (
                   <div className="mt-2 pt-2 border-t hidden lg:block" style={{ borderColor: "var(--border)" }}>
-                    <div className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Recent</div>
+                    <div className="text-sm mb-1" style={{ color: "var(--text-muted)" }}>Recent</div>
                     <div className="flex flex-wrap gap-1">
                       {colorHistory.map((c, i) => (
                         <button key={`${c}-${i}`} onClick={() => { setFgColor(c); }}
@@ -918,7 +918,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
           <div className="flex-1 min-w-0 order-1 lg:order-2">
             <div className="rounded-xl border p-4 flex flex-col items-center" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
               {/* Coordinate display */}
-              <div className="text-xs mb-2 font-mono" style={{ color: "var(--text-muted)" }}>
+              <div className="text-sm mb-2 font-mono" style={{ color: "var(--text-muted)" }}>
                 {hoverPixel ? `X: ${hoverPixel.x}, Y: ${hoverPixel.y}` : `${canvasW} x ${canvasH}`}
                 {historyIndex >= 0 && ` | Step ${historyIndex + 1}/${history.length}`}
               </div>
@@ -957,8 +957,8 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
               {/* Live Preview */}
               <div className="rounded-xl border p-4" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <div className="flex items-center justify-between mb-3">
-                  <div className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>Live Preview</div>
-                  <button onClick={() => setPreviewBgDark(!previewBgDark)} className="text-xs px-2 py-0.5 rounded border"
+                  <div className="font-semibold text-sm" style={{ color: "var(--text-muted)" }}>Live Preview</div>
+                  <button onClick={() => setPreviewBgDark(!previewBgDark)} className="text-sm px-2 py-0.5 rounded border"
                     style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
                     {previewBgDark ? "Light" : "Dark"} BG
                   </button>
@@ -966,7 +966,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
 
                 {/* Browser tab mockup */}
                 <div className="mb-3">
-                  <div className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Browser Tab</div>
+                  <div className="text-sm mb-1" style={{ color: "var(--text-muted)" }}>Browser Tab</div>
                   <div className="rounded-t-lg overflow-hidden border" style={{ borderColor: "var(--border)" }}>
                     <div className="px-2 py-1.5 flex items-center gap-2" style={{ backgroundColor: previewBgDark ? "#2d2d30" : "#e8e8e8" }}>
                       <div className="flex gap-1">
@@ -974,7 +974,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
                         <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#ffbd2e" }} />
                         <div className="w-2 h-2 rounded-full" style={{ backgroundColor: "#28c840" }} />
                       </div>
-                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs" style={{ backgroundColor: previewBgDark ? "#1e1e22" : "#fff", color: previewBgDark ? "#ccc" : "#333" }}>
+                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md text-sm" style={{ backgroundColor: previewBgDark ? "#1e1e22" : "#fff", color: previewBgDark ? "#ccc" : "#333" }}>
                         <img src={previewDataUrl} width="14" height="14" alt="" style={{ imageRendering: "pixelated" }} />
                         <span className="truncate max-w-[120px]">{siteName}</span>
                       </div>
@@ -984,13 +984,13 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
 
                 {/* Google search mockup */}
                 <div className="mb-3">
-                  <div className="text-xs mb-1" style={{ color: "var(--text-muted)" }}>Google Search</div>
+                  <div className="text-sm mb-1" style={{ color: "var(--text-muted)" }}>Google Search</div>
                   <div className="rounded-lg border p-2" style={{ borderColor: "var(--border)", backgroundColor: previewBgDark ? "#1e1e22" : "#fff" }}>
                     <div className="flex items-center gap-2">
                       <img src={previewDataUrl} width="28" height="28" alt="" style={{ imageRendering: "pixelated" }} />
                       <div>
-                        <div className="text-xs font-medium" style={{ color: previewBgDark ? "#8ab4f8" : "#1a0dab" }}>{siteName}</div>
-                        <div className="text-xs" style={{ color: previewBgDark ? "#bdc1c6" : "#4d5156" }}>mysite.com</div>
+                        <div className="font-medium text-sm" style={{ color: previewBgDark ? "#8ab4f8" : "#1a0dab" }}>{siteName}</div>
+                        <div style={{ color: previewBgDark ? "#bdc1c6" : "#4d5156" }}>mysite.com</div>
                       </div>
                     </div>
                   </div>
@@ -1008,23 +1008,23 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
                       <div className="flex-shrink-0 rounded" style={{ backgroundColor: previewBgDark ? "#2d2d30" : "#f0f0f0", padding: "4px" }}>
                         <img src={previewDataUrl} width={size} height={size} alt="" style={{ imageRendering: "pixelated" }} />
                       </div>
-                      <span className="text-xs" style={{ color: "var(--text-muted)" }}>{label}</span>
+                      <span style={{ color: "var(--text-muted)" }}>{label}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Site name */}
                 <div className="mt-3 pt-3 border-t" style={{ borderColor: "var(--border)" }}>
-                  <label className="text-xs" style={{ color: "var(--text-muted)" }}>Site Name</label>
+                  <label style={{ color: "var(--text-muted)" }}>Site Name</label>
                   <input type="text" value={siteName} onChange={(e) => setSiteName(e.target.value)}
-                    className="w-full mt-1 px-2 py-1 rounded border text-xs outline-none"
+                    className="w-full mt-1 px-2 py-1 rounded border text-sm outline-none"
                     style={{ backgroundColor: "var(--surface-alt)", borderColor: "var(--border)", color: "var(--text)" }} />
                 </div>
               </div>
 
               {/* Export */}
               <div className="rounded-xl border p-4" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <div className="text-xs font-semibold mb-3" style={{ color: "var(--text-muted)" }}>Export</div>
+                <div className="font-semibold text-sm mb-3" style={{ color: "var(--text-muted)" }}>Export</div>
 
                 {/* Primary CTA */}
                 <button onClick={handleExportFaviconPackage} disabled={exporting}
@@ -1035,14 +1035,14 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
 
                 {/* HTML snippet */}
                 <div className="mb-3">
-                  <button onClick={handleCopyHTML} className="w-full px-3 py-1.5 rounded-lg border text-xs font-medium"
+                  <button onClick={handleCopyHTML} className="w-full px-3 py-1.5 rounded-lg border font-medium text-sm"
                     style={{ borderColor: "var(--border)", color: "var(--text)", backgroundColor: "var(--surface-alt)" }}>
                     {copiedHTML ? "Copied!" : "Copy HTML Snippet"}
                   </button>
                 </div>
 
                 {/* Individual exports */}
-                <button onClick={() => setShowExportOptions(!showExportOptions)} className="text-xs mb-2"
+                <button onClick={() => setShowExportOptions(!showExportOptions)} className="mb-2"
                   style={{ color: ACCENT }}>
                   {showExportOptions ? "Hide" : "More"} export options
                 </button>
@@ -1051,16 +1051,16 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
                   <div className="space-y-1.5">
                     {[1, 2, 4, 8].map(s => (
                       <button key={s} onClick={() => handleExportPNG(s)}
-                        className="w-full px-3 py-1 rounded border text-xs text-left"
+                        className="w-full px-3 py-1 rounded border text-sm text-left"
                         style={{ borderColor: "var(--border)", color: "var(--text)", backgroundColor: "var(--surface)" }}>
                         PNG {s}x ({canvasW * s}x{canvasH * s})
                       </button>
                     ))}
-                    <button onClick={handleExportICO} className="w-full px-3 py-1 rounded border text-xs text-left"
+                    <button onClick={handleExportICO} className="w-full px-3 py-1 rounded border text-sm text-left"
                       style={{ borderColor: "var(--border)", color: "var(--text)", backgroundColor: "var(--surface)" }}>
                       ICO (multi-resolution)
                     </button>
-                    <button onClick={handleExportSVG} className="w-full px-3 py-1 rounded border text-xs text-left"
+                    <button onClick={handleExportSVG} className="w-full px-3 py-1 rounded border text-sm text-left"
                       style={{ borderColor: "var(--border)", color: "var(--text)", backgroundColor: "var(--surface)" }}>
                       SVG (scalable)
                     </button>
@@ -1088,7 +1088,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
           <div className="flex flex-wrap gap-1.5 mb-4 overflow-x-auto pb-2">
             {ICON_CATEGORIES.map(cat => (
               <button key={cat.id} onClick={() => setIconCategory(cat.id)}
-                className="px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-colors"
+                className="px-3 py-1 rounded-full font-medium text-sm whitespace-nowrap transition-colors"
                 style={{
                   backgroundColor: iconCategory === cat.id ? ACCENT : "var(--surface-alt)",
                   color: iconCategory === cat.id ? "#fff" : "var(--text-muted)",
@@ -1106,7 +1106,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
                 style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}
                 title={`${icon.name} — Click to load`}>
                 <IconPreview icon={icon} size={48} />
-                <span className="text-xs truncate w-full text-center" style={{ color: "var(--text-muted)" }}>{icon.name}</span>
+                <span className="text-sm truncate w-full text-center" style={{ color: "var(--text-muted)" }}>{icon.name}</span>
               </button>
             ))}
           </div>
@@ -1140,7 +1140,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
         {/* ========== KEYBOARD SHORTCUTS ========== */}
         <div className="mt-12 rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
           <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--text)" }}>Keyboard Shortcuts</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
             {[
               ["B", "Pencil/Brush"], ["E", "Eraser"], ["G", "Fill (Bucket)"], ["I", "Eyedropper"],
               ["L", "Line Tool"], ["R", "Rectangle"], ["C", "Circle"], ["X", "Swap Colors"],
@@ -1156,7 +1156,7 @@ export default function PixelArtEditor({ defaultCanvasSize = 32, title, subtitle
       </main>
 
       {/* Footer */}
-      <footer className="border-t mt-12 py-6 text-center text-xs" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+      <footer className="border-t mt-12 py-6 text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
         <p>All processing happens in your browser. Your images never leave your device.</p>
       </footer>
     </div>

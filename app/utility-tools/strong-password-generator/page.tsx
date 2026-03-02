@@ -33,16 +33,16 @@ export default function StrongPasswordGeneratorPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Utility Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Strong Password Generator &mdash; Passwords That Take Centuries to Crack</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Generate passwords with enough entropy to withstand modern GPU cracking farms. See real-time strength analysis with crack time estimates for four attack scenarios.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Password Strength by the Numbers</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Password strength is measured in <strong style={{ color: "var(--text)" }}>bits of entropy</strong>. Each bit doubles the number of possible passwords an attacker must try. Here&apos;s what different entropy levels mean in practice:</p>
-              <div className="space-y-2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Password Strength by the Numbers</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Password strength is measured in <strong style={{ color: "var(--text)" }}>bits of entropy</strong>. Each bit doubles the number of possible passwords an attacker must try. Here&apos;s what different entropy levels mean in practice:</p>
+              <div className="space-y-2" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 <p><strong style={{ color: "#DC2626" }}>Under 40 bits:</strong> Cracked in seconds to minutes. Common passwords, short PINs, simple patterns.</p>
                 <p><strong style={{ color: "#D97706" }}>40-59 bits:</strong> Cracked in hours to days. Short passwords with mixed character types.</p>
                 <p><strong style={{ color: "#65A30D" }}>60-79 bits:</strong> Cracked in years to decades. Moderate random passwords, 5-word passphrases.</p>
@@ -51,12 +51,12 @@ export default function StrongPasswordGeneratorPage() {
               </div>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Why 16+ Characters Is the New Baseline</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>In 2020, 8 characters was considered acceptable. By 2025, GPU cracking speeds have made 8-character passwords trivially breakable. NIST, OWASP, and security researchers now recommend <strong style={{ color: "var(--text)" }}>16 characters minimum</strong> for important accounts. Our generator defaults to 16 characters with all character types &mdash; providing approximately 105 bits of entropy. That would take longer than the age of the universe to crack with current technology.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Why 16+ Characters Is the New Baseline</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>In 2020, 8 characters was considered acceptable. By 2025, GPU cracking speeds have made 8-character passwords trivially breakable. NIST, OWASP, and security researchers now recommend <strong style={{ color: "var(--text)" }}>16 characters minimum</strong> for important accounts. Our generator defaults to 16 characters with all character types &mdash; providing approximately 105 bits of entropy. That would take longer than the age of the universe to crack with current technology.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#0596691a", borderColor: "#05966940" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>A strong password is already generated below &mdash; copy it or customize the settings.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>A strong password is already generated below &mdash; copy it or customize the settings.</p>
           </div>
         </div>
       </div>

@@ -68,7 +68,7 @@ function SEOContent() {
         }}
       >
         <h2
-          className="text-2xl font-bold mb-6"
+          className="text-[22px] sm:text-[28px] font-bold mb-6"
           style={{ color: "var(--text)" }}
         >
           How Image Compression Works
@@ -138,7 +138,7 @@ function SEOContent() {
       {/* FAQ */}
       <div className="mb-12">
         <h2
-          className="text-2xl font-bold mb-6"
+          className="text-[22px] sm:text-[28px] font-bold mb-6"
           style={{ color: "var(--text)" }}
         >
           Frequently Asked Questions

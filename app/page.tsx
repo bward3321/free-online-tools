@@ -66,7 +66,7 @@ export default function Home() {
       >
         Free Online Tools
       </h1>
-      <p className="text-lg mb-8 text-center" style={{ color: "var(--text-muted)" }}>
+      <p className="mb-8 text-center" style={{ color: "var(--text-muted)", fontSize: "18px" }}>
         Instant-use calculators, converters, and tools. No signup required.
       </p>
 
@@ -80,15 +80,16 @@ export default function Home() {
             <div className="flex items-center gap-3 mb-6 pb-3" style={{ borderBottom: "1px solid var(--border)" }}>
               <h2
                 id={`${cat.id}-heading`}
-                className="text-2xl font-semibold"
+                className="text-[22px] sm:text-[28px] font-semibold"
                 style={{ color: "var(--text)" }}
               >
                 {cat.emoji} {cat.name}
               </h2>
               <span
-                className="text-xs font-medium rounded-full"
+                className="font-medium rounded-full"
                 style={{
-                  padding: "2px 10px",
+                  padding: "3px 12px",
+                  fontSize: "14px",
                   backgroundColor: "var(--surface)",
                   color: "var(--text-muted)",
                   border: "1px solid var(--border)",
@@ -112,7 +113,7 @@ export default function Home() {
                   <h3 className="font-semibold text-lg mb-1" style={{ color: "var(--text)" }}>
                     {tool.title}
                   </h3>
-                  <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+                  <p style={{ color: "var(--text-muted)", fontSize: "16px" }}>
                     {tool.desc}
                   </p>
                 </Link>

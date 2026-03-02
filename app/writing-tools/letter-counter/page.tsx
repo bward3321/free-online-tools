@@ -32,20 +32,20 @@ export default function LetterCounterPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#4F46E5" }}>Home</a><span>/</span><span>Writing Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Letter Counter &mdash; Count Letters in Your Text Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Count letters, words, characters, sentences, and paragraphs in real-time. Includes reading time estimates and readability analysis.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Letters vs. Characters</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>A <strong style={{ color: "var(--text)" }}>letter</strong> is an alphabetic character: a through z (uppercase or lowercase). A <strong style={{ color: "var(--text)" }}>character</strong> is anything that takes up a position in text: letters, numbers, spaces, punctuation marks, and special symbols.</p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>For example, the sentence &ldquo;Hello, World! 123&rdquo; contains <strong style={{ color: "var(--text)" }}>10 letters</strong> (H-e-l-l-o-W-o-r-l-d), but <strong style={{ color: "var(--text)" }}>17 characters</strong> (including the comma, space, exclamation mark, space, and three digits).</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Letters vs. Characters</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>A <strong style={{ color: "var(--text)" }}>letter</strong> is an alphabetic character: a through z (uppercase or lowercase). A <strong style={{ color: "var(--text)" }}>character</strong> is anything that takes up a position in text: letters, numbers, spaces, punctuation marks, and special symbols.</p>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>For example, the sentence &ldquo;Hello, World! 123&rdquo; contains <strong style={{ color: "var(--text)" }}>10 letters</strong> (H-e-l-l-o-W-o-r-l-d), but <strong style={{ color: "var(--text)" }}>17 characters</strong> (including the comma, space, exclamation mark, space, and three digits).</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">When Letter Count Matters</h2>
-              <div className="space-y-2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">When Letter Count Matters</h2>
+              <div className="space-y-2" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 {[
                   "Academic writing — some style guides specify letter counts for abstracts",
                   "Scrabble and word games — scoring depends on specific letters used",
@@ -59,7 +59,7 @@ export default function LetterCounterPage() {
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#4F46E51a", borderColor: "#4F46E540" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste or type your text below to count letters instantly.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste or type your text below to count letters instantly.</p>
           </div>
         </div>
       </div>

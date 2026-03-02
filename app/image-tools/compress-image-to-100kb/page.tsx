@@ -58,7 +58,7 @@ function SEOContent() {
         className="rounded-2xl border p-6 md:p-8 mb-12"
         style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}
       >
-        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>
+        <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>
           Why You Need to Compress Images to 100KB
         </h2>
         <div className="prose max-w-none space-y-4 text-sm leading-relaxed" style={{ color: "var(--text)" }}>
@@ -93,7 +93,7 @@ function SEOContent() {
       </div>
 
       <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
         <div className="space-y-3">
           {[
             { q: "How do I compress a photo to exactly 100KB?", a: "Simply upload your image and our tool automatically compresses it to 100KB using a precision algorithm. The 100KB target is pre-selected on this page. The tool finds the exact quality level that produces a file as close to 100KB as possible." },

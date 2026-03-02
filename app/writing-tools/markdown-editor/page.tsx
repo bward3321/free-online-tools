@@ -38,19 +38,19 @@ export default function MarkdownEditorPage() {
         <div className="max-w-[800px] mx-auto px-4 py-8">
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-2xl font-bold mb-3">What Is Markdown?</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">What Is Markdown?</h2>
               <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>Markdown is a lightweight markup language created by John Gruber in 2004. It lets you write formatted text using simple, readable syntax that converts to HTML. Instead of clicking toolbar buttons or writing raw HTML, you type natural symbols: <strong style={{ color: "var(--text)" }}>**bold**</strong> for bold, <em>*italic*</em> for italic, <code style={{ color: "#059669" }}># Heading</code> for headings. Markdown is used everywhere in software development: GitHub READMEs, documentation sites, blog platforms, note-taking apps, and technical writing. Its simplicity means you focus on content, not formatting.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-2xl font-bold mb-3">How to Use This Editor</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">How to Use This Editor</h2>
               <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>Type Markdown in the left pane and see it rendered instantly in the right pane. Use the formatting toolbar for quick insertions &mdash; click Bold, Italic, Link, or any other button to insert the syntax at your cursor. For tables, click the Table button to open the visual builder where you can create tables by clicking cells instead of typing pipes. When you&apos;re done, export your work: Copy as Markdown, HTML, or Rich Text (which pastes perfectly into Gmail and Google Docs), or download as a file.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-2xl font-bold mb-3">Key Features</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Key Features</h2>
               <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>The <strong style={{ color: "var(--text)" }}>live preview</strong> updates as you type with scroll synchronization between editor and preview. The <strong style={{ color: "var(--text)" }}>formatting toolbar</strong> makes Markdown accessible to beginners who haven&apos;t memorized the syntax. The <strong style={{ color: "var(--text)" }}>visual table builder</strong> eliminates the pain of typing pipe-delimited tables manually. <strong style={{ color: "var(--text)" }}>Copy as Rich Text</strong> is the killer feature &mdash; write in Markdown and paste beautifully formatted text into any application. Ten <strong style={{ color: "var(--text)" }}>starter templates</strong> cover READMEs, blog posts, meeting notes, changelogs, and more.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-2xl font-bold mb-3">Markdown Syntax Quick Reference</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Markdown Syntax Quick Reference</h2>
               <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>Headings use hash symbols: <code style={{ color: "#059669" }}># H1</code>, <code style={{ color: "#059669" }}>## H2</code>, <code style={{ color: "#059669" }}>### H3</code>. Bold uses double asterisks <code style={{ color: "#059669" }}>**bold**</code>, italic uses single <code style={{ color: "#059669" }}>*italic*</code>. Links: <code style={{ color: "#059669" }}>[text](url)</code>. Images: <code style={{ color: "#059669" }}>![alt](url)</code>. Code blocks use triple backticks with an optional language. Lists start with <code style={{ color: "#059669" }}>-</code> or <code style={{ color: "#059669" }}>1.</code>. Blockquotes start with <code style={{ color: "#059669" }}>&gt;</code>. Task lists use <code style={{ color: "#059669" }}>- [x]</code> and <code style={{ color: "#059669" }}>- [ ]</code>.</p>
             </section>
           </article>
@@ -66,7 +66,7 @@ export default function MarkdownEditorPage() {
                 <a key={t.href} href={t.href} className="p-4 rounded-xl border hover:shadow-md transition-shadow" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                   <span className="text-xl">{t.emoji}</span>
                   <div className="font-semibold mt-1" style={{ fontSize: "15px" }}>{t.title}</div>
-                  <div className="text-xs" style={{ color: "var(--text-muted)" }}>{t.desc}</div>
+                  <div style={{ color: "var(--text-muted)", fontSize: "15px" }}>{t.desc}</div>
                 </a>
               ))}
             </div>

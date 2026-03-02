@@ -407,7 +407,7 @@ export default function CssGradientGenerator({
       <style dangerouslySetInnerHTML={{ __html: animKeyframes }} />
       <div className="max-w-[1400px] mx-auto px-4 py-6">
         {!articleMode && (
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: textMuted }}>
+          <nav className="flex items-center gap-1 text-sm mb-4" style={{ color: textMuted }}>
             <a href="/" className="hover:underline" style={{ color: accent }}>Home</a><span>/</span><span>Design Tools</span>
           </nav>
         )}
@@ -417,7 +417,7 @@ export default function CssGradientGenerator({
           {(["linear", "radial", "conic", "mesh"] as GradientType[]).map(t => (
             <button key={t} onClick={() => setType(t)} className={btnCls}
               style={{ backgroundColor: type === t ? accent + "20" : "transparent", color: type === t ? accent : textMuted, border: `1px solid ${type === t ? accent + "50" : border}` }}>
-              {t.charAt(0).toUpperCase() + t.slice(1)} {t === "mesh" && <span className="text-xs opacity-60 ml-1">Beta</span>}
+              {t.charAt(0).toUpperCase() + t.slice(1)} {t === "mesh" && <span className="text-sm opacity-60 ml-1">Beta</span>}
             </button>
           ))}
         </div>
@@ -429,13 +429,13 @@ export default function CssGradientGenerator({
             {/* Preview mode toggles */}
             <div className="flex gap-2 mb-3">
               {(["background", "text", "card", "button"] as PreviewMode[]).map(m => (
-                <button key={m} onClick={() => setPreviewMode(m)} className="px-2.5 py-1 rounded text-xs font-semibold"
+                <button key={m} onClick={() => setPreviewMode(m)} className="px-2.5 py-1 rounded font-semibold text-sm"
                   style={{ backgroundColor: previewMode === m ? accent + "20" : "transparent", color: previewMode === m ? accent : textMuted, border: `1px solid ${previewMode === m ? accent + "40" : border}` }}>
                   {m.charAt(0).toUpperCase() + m.slice(1)}
                 </button>
               ))}
               <div className="flex-1" />
-              <button onClick={toggleFullscreen} className="px-2 py-1 rounded text-xs" style={{ color: textMuted, border: `1px solid ${border}` }}>{"\u26F6"} Full</button>
+              <button onClick={toggleFullscreen} className="px-2 py-1 rounded text-sm" style={{ color: textMuted, border: `1px solid ${border}` }}>{"\u26F6"} Full</button>
             </div>
 
             {/* Preview box */}
@@ -508,9 +508,9 @@ export default function CssGradientGenerator({
                     <button onClick={() => setRadialShape("circle")} className="px-3 py-1 text-sm" style={{ backgroundColor: radialShape === "circle" ? accent + "20" : "transparent", color: radialShape === "circle" ? accent : textMuted }}>Circle</button>
                     <button onClick={() => setRadialShape("ellipse")} className="px-3 py-1 text-sm" style={{ backgroundColor: radialShape === "ellipse" ? accent + "20" : "transparent", color: radialShape === "ellipse" ? accent : textMuted }}>Ellipse</button>
                   </div>
-                  <label className="text-xs" style={{ color: textMuted }}>X: <input type="number" min={0} max={100} value={radialX} onChange={e => setRadialX(+e.target.value)} className="w-14 px-1 py-0.5 rounded border text-center" style={{ backgroundColor: bg, borderColor: border, color: text }} />%</label>
-                  <label className="text-xs" style={{ color: textMuted }}>Y: <input type="number" min={0} max={100} value={radialY} onChange={e => setRadialY(+e.target.value)} className="w-14 px-1 py-0.5 rounded border text-center" style={{ backgroundColor: bg, borderColor: border, color: text }} />%</label>
-                  <span className="text-xs italic" style={{ color: textMuted }}>Click preview to set position</span>
+                  <label style={{ color: textMuted }}>X: <input type="number" min={0} max={100} value={radialX} onChange={e => setRadialX(+e.target.value)} className="w-14 px-1 py-0.5 rounded border text-center" style={{ backgroundColor: bg, borderColor: border, color: text }} />%</label>
+                  <label style={{ color: textMuted }}>Y: <input type="number" min={0} max={100} value={radialY} onChange={e => setRadialY(+e.target.value)} className="w-14 px-1 py-0.5 rounded border text-center" style={{ backgroundColor: bg, borderColor: border, color: text }} />%</label>
+                  <span className="text-sm italic" style={{ color: textMuted }}>Click preview to set position</span>
                 </div>
               )}
 
@@ -522,7 +522,7 @@ export default function CssGradientGenerator({
                     {meshPoints.map((p, i) => (
                       <div key={i} className="flex items-center gap-2 p-2 rounded-lg" style={{ backgroundColor: bg }}>
                         <input type="color" value={p.color} onChange={e => { const n = [...meshPoints]; n[i] = { ...n[i], color: e.target.value }; setMeshPoints(n); }} className="w-8 h-8 rounded cursor-pointer" style={{ border: "none" }} />
-                        <span className="text-xs" style={{ color: textMuted }}>Point {i + 1}</span>
+                        <span style={{ color: textMuted }}>Point {i + 1}</span>
                       </div>
                     ))}
                   </div>
@@ -535,9 +535,9 @@ export default function CssGradientGenerator({
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-sm font-semibold" style={{ color: textMuted }}>Color Stops</span>
                     <div className="flex-1" />
-                    <button onClick={addStop} className="text-xs px-2 py-1 rounded" style={{ color: accent, border: `1px solid ${accent}40` }}>+ Add</button>
-                    <button onClick={reverseStops} className="text-xs px-2 py-1 rounded" style={{ color: textMuted, border: `1px solid ${border}` }}>{"\u21C4"} Reverse</button>
-                    <button onClick={randomize} className="text-xs px-2 py-1 rounded" style={{ color: textMuted, border: `1px solid ${border}` }}>{"\uD83C\uDFB2"} Random</button>
+                    <button onClick={addStop} className="px-2 py-1 text-sm rounded" style={{ color: accent, border: `1px solid ${accent}40` }}>+ Add</button>
+                    <button onClick={reverseStops} className="px-2 py-1 text-sm rounded" style={{ color: textMuted, border: `1px solid ${border}` }}>{"\u21C4"} Reverse</button>
+                    <button onClick={randomize} className="px-2 py-1 text-sm rounded" style={{ color: textMuted, border: `1px solid ${border}` }}>{"\uD83C\uDFB2"} Random</button>
                   </div>
                   {/* Visual bar */}
                   <div ref={stopsBarRef} className="h-8 rounded-lg relative cursor-pointer mb-3" style={{ background: `linear-gradient(90deg, ${[...stops].sort((a, b) => a.pos - b.pos).map(s => `${s.color} ${s.pos}%`).join(", ")})` }} onClick={handleStopsBarClick}>
@@ -551,8 +551,8 @@ export default function CssGradientGenerator({
                   <div className="flex flex-wrap items-center gap-3">
                     <input type="color" value={stops[selectedStop]?.color || "#000000"} onChange={e => { const n = [...stops]; n[selectedStop] = { ...n[selectedStop], color: e.target.value }; setStops(n); }} className="w-10 h-10 rounded-lg cursor-pointer" style={{ border: `2px solid ${border}` }} />
                     <input type="text" value={stops[selectedStop]?.color || ""} onChange={e => { const n = [...stops]; n[selectedStop] = { ...n[selectedStop], color: e.target.value }; setStops(n); }} className="w-24 px-2 py-1.5 rounded-lg border text-sm font-mono" style={{ backgroundColor: bg, borderColor: border, color: text }} />
-                    <label className="text-xs" style={{ color: textMuted }}>Position: <input type="number" min={0} max={100} value={stops[selectedStop]?.pos || 0} onChange={e => { const n = [...stops]; n[selectedStop] = { ...n[selectedStop], pos: +e.target.value }; setStops(n); }} className="w-14 px-1 py-1 rounded border text-center" style={{ backgroundColor: bg, borderColor: border, color: text }} />%</label>
-                    {stops.length > 2 && <button onClick={() => removeStop(selectedStop)} className="text-xs px-2 py-1 rounded" style={{ color: "#EF4444", border: "1px solid #EF444440" }}>{"\u2715"} Remove</button>}
+                    <label style={{ color: textMuted }}>Position: <input type="number" min={0} max={100} value={stops[selectedStop]?.pos || 0} onChange={e => { const n = [...stops]; n[selectedStop] = { ...n[selectedStop], pos: +e.target.value }; setStops(n); }} className="w-14 px-1 py-1 rounded border text-center" style={{ backgroundColor: bg, borderColor: border, color: text }} />%</label>
+                    {stops.length > 2 && <button onClick={() => removeStop(selectedStop)} className="px-2 py-1 text-sm rounded" style={{ color: "#EF4444", border: "1px solid #EF444440" }}>{"\u2715"} Remove</button>}
                   </div>
                 </div>
               )}
@@ -571,10 +571,10 @@ export default function CssGradientGenerator({
                 </label>
                 {animate && (
                   <>
-                    <select value={animType} onChange={e => setAnimType(e.target.value as AnimType)} className="text-xs px-2 py-1 rounded border" style={{ backgroundColor: bg, borderColor: border, color: text }}>
+                    <select value={animType} onChange={e => setAnimType(e.target.value as AnimType)} className="px-2 py-1 text-sm rounded border" style={{ backgroundColor: bg, borderColor: border, color: text }}>
                       <option value="shift">Shift</option><option value="hue">Hue Rotate</option><option value="pulse">Pulse</option>
                     </select>
-                    <label className="flex items-center gap-1 text-xs" style={{ color: textMuted }}>Speed: <input type="range" min={2} max={15} value={animSpeed} onChange={e => setAnimSpeed(+e.target.value)} className="w-20" /> {animSpeed}s</label>
+                    <label className="flex items-center gap-1 text-sm" style={{ color: textMuted }}>Speed: <input type="range" min={2} max={15} value={animSpeed} onChange={e => setAnimSpeed(+e.target.value)} className="w-20" /> {animSpeed}s</label>
                   </>
                 )}
               </div>
@@ -586,7 +586,7 @@ export default function CssGradientGenerator({
             {/* Code tabs */}
             <div className="flex gap-1 mb-2">
               {(["css", "tailwind", "scss", "vars"] as CodeTab[]).map(t => (
-                <button key={t} onClick={() => setCodeTab(t)} className="px-3 py-1.5 rounded-lg text-xs font-semibold"
+                <button key={t} onClick={() => setCodeTab(t)} className="px-3 py-1.5 rounded-lg font-semibold text-sm"
                   style={{ backgroundColor: codeTab === t ? accent + "20" : "transparent", color: codeTab === t ? accent : textMuted, border: `1px solid ${codeTab === t ? accent + "40" : border}` }}>
                   {t === "vars" ? "CSS Vars" : t.toUpperCase()}
                 </button>
@@ -613,7 +613,7 @@ export default function CssGradientGenerator({
                 <input type="text" value={gallerySearch} onChange={e => setGallerySearch(e.target.value)} placeholder="Search gradients..." className="w-full px-3 py-2 rounded-lg border outline-none mb-3 text-sm" style={{ backgroundColor: bg, borderColor: border, color: text }} />
                 <div className="flex gap-1 flex-wrap mb-3">
                   {CATEGORIES.map(c => (
-                    <button key={c} onClick={() => setGalleryCat(c)} className="px-2 py-0.5 rounded-full text-xs"
+                    <button key={c} onClick={() => setGalleryCat(c)} className="px-2 py-0.5 rounded-full text-sm"
                       style={{ backgroundColor: galleryCat === c ? accent + "20" : "transparent", color: galleryCat === c ? accent : textMuted, border: `1px solid ${galleryCat === c ? accent + "40" : border}` }}>
                       {c}
                     </button>
@@ -623,7 +623,7 @@ export default function CssGradientGenerator({
                   {filteredPresets.map((p, i) => (
                     <button key={i} onClick={() => loadPreset(p)} className="rounded-lg overflow-hidden hover:ring-2 hover:ring-emerald-500 transition-all group" title={p.name}>
                       <div className="h-16" style={{ background: `linear-gradient(${p.angle}deg, ${p.stops.map(s => `${s.color} ${s.pos}%`).join(", ")})` }} />
-                      <div className="text-xs py-1 px-1 truncate text-center" style={{ color: textMuted }}>{p.name}</div>
+                      <div className="text-sm py-1 px-1 truncate text-center" style={{ color: textMuted }}>{p.name}</div>
                     </button>
                   ))}
                 </div>

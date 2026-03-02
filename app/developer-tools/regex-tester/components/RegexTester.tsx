@@ -526,7 +526,7 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
       <div className="max-w-[1200px] mx-auto px-4 py-8 md:py-12">
         {/* breadcrumb */}
         {!articleMode && (
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: textMuted }}>
+          <nav className="flex items-center gap-1 text-sm mb-4" style={{ color: textMuted }}>
             <a href="/" className="hover:underline" style={{ color: accent }}>Home</a>
             <span>/</span>
             <span>Developer Tools</span>
@@ -592,7 +592,7 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
               ))}
             </div>
             {pattern && (
-              <span className="text-xs font-medium" style={{ color: patternError ? "#FF5555" : "#50FA7B" }}>
+              <span className="font-medium text-sm" style={{ color: patternError ? "#FF5555" : "#50FA7B" }}>
                 {patternError ? `\u274C ${patternError}` : "\u2705 Valid pattern"}
               </span>
             )}
@@ -625,7 +625,7 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
           </div>
 
           {/* Stats bar */}
-          <div className="flex flex-wrap gap-4 mt-2 text-xs" style={{ color: textMuted }}>
+          <div className="flex flex-wrap gap-4 mt-2 text-sm" style={{ color: textMuted }}>
             {timeout ? (
               <span style={{ color: "#FFB86C" }}>{"\u26A0\uFE0F"} Pattern timed out after 2s. May indicate catastrophic backtracking.</span>
             ) : (
@@ -647,13 +647,13 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
             <div className="p-3 text-sm font-semibold" style={{ borderBottom: `1px solid ${border}`, color: textMuted }}>
               Match Results
             </div>
-            <div className="max-h-[300px] overflow-y-auto p-3 space-y-2" style={{ fontSize: "14px", fontFamily: monoFont }}>
+            <div className="max-h-[300px] overflow-y-auto p-3 space-y-2" style={{ fontSize: "15px", fontFamily: monoFont }}>
               {matches.slice(0, 200).map((m, idx) => (
                 <div key={idx} className="p-2 rounded-lg" style={{ backgroundColor: surfaceAlt }}>
                   <div className="flex items-baseline gap-2 flex-wrap">
-                    <span className="font-bold text-xs" style={{ color: accent }}>Match {idx + 1}</span>
-                    <span style={{ color: textMuted, fontSize: "12px" }}>(index {m.index}&ndash;{m.index + m.length})</span>
-                    <span className="px-2 py-0.5 rounded" style={{ backgroundColor: GROUP_BG[0], color: GROUP_BORDER[0], fontSize: "13px" }}>
+                    <span className="font-bold text-sm" style={{ color: accent }}>Match {idx + 1}</span>
+                    <span style={{ color: textMuted, fontSize: "15px" }}>(index {m.index}&ndash;{m.index + m.length})</span>
+                    <span className="px-2 py-0.5 rounded" style={{ backgroundColor: GROUP_BG[0], color: GROUP_BORDER[0], fontSize: "15px" }}>
                       &quot;{m.match}&quot;
                     </span>
                   </div>
@@ -661,12 +661,12 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
                     <div className="mt-1 pl-4 space-y-0.5">
                       {m.groups.map((g, gi) => g !== undefined && (
                         <div key={gi} className="flex items-baseline gap-2">
-                          <span style={{ color: GROUP_BORDER[(gi + 1) % GROUP_BORDER.length], fontSize: "12px" }}>
+                          <span style={{ color: GROUP_BORDER[(gi + 1) % GROUP_BORDER.length], fontSize: "15px" }}>
                             {m.namedGroups && Object.entries(m.namedGroups).find(([, v]) => v === g)?.[0]
                               ? `Group "${Object.entries(m.namedGroups).find(([, v]) => v === g)![0]}"`
                               : `Group ${gi + 1}`}:
                           </span>
-                          <span className="px-1.5 py-0.5 rounded" style={{ backgroundColor: GROUP_BG[(gi + 1) % GROUP_BG.length], fontSize: "13px" }}>
+                          <span className="px-1.5 py-0.5 rounded" style={{ backgroundColor: GROUP_BG[(gi + 1) % GROUP_BG.length], fontSize: "15px" }}>
                             &quot;{g}&quot;
                           </span>
                         </div>
@@ -676,7 +676,7 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
                 </div>
               ))}
               {matches.length > 200 && (
-                <p className="text-center text-xs" style={{ color: textMuted }}>Showing first 200 of {matches.length} matches</p>
+                <p className="text-center text-sm" style={{ color: textMuted }}>Showing first 200 of {matches.length} matches</p>
               )}
             </div>
           </div>
@@ -708,13 +708,13 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
             {!pattern ? (
               <p style={{ color: textMuted }}>Enter a regex pattern above to see its explanation.</p>
             ) : (
-              <div className="space-y-1" style={{ fontFamily: monoFont, fontSize: "14px" }}>
+              <div className="space-y-1" style={{ fontFamily: monoFont, fontSize: "15px" }}>
                 {explanations.map((tok, idx) => (
                   <div key={idx} className="flex gap-4" style={{ paddingLeft: `${tok.indent * 20}px` }}>
                     <span className="shrink-0 font-bold" style={{ color: tokenColor(tok.type), minWidth: "clamp(80px, 20vw, 200px)" }}>
                       {tok.token}
                     </span>
-                    <span style={{ color: textMuted, fontSize: "14px" }}>{tok.desc}</span>
+                    <span style={{ color: textMuted, fontSize: "15px" }}>{tok.desc}</span>
                   </div>
                 ))}
               </div>
@@ -738,13 +738,13 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
               />
               <button
                 onClick={() => setShowReplaceRef(!showReplaceRef)}
-                className="text-xs mt-1 hover:underline"
+                className="text-sm mt-1 hover:underline"
                 style={{ color: accent }}
               >
                 {showReplaceRef ? "Hide reference" : "Show replacement reference"}
               </button>
               {showReplaceRef && (
-                <div className="mt-2 p-3 rounded-lg text-xs space-y-1" style={{ backgroundColor: surfaceAlt, fontFamily: monoFont, color: textMuted }}>
+                <div className="mt-2 p-3 rounded-lg text-sm space-y-1" style={{ backgroundColor: surfaceAlt, fontFamily: monoFont, color: textMuted }}>
                   <div><span style={{ color: accent }}>$1, $2...</span> &mdash; Captured group by number</div>
                   <div><span style={{ color: accent }}>{"$<name>"}</span> &mdash; Captured group by name</div>
                   <div><span style={{ color: accent }}>$&</span> &mdash; Entire match</div>
@@ -757,20 +757,20 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <div className="text-xs font-semibold mb-1" style={{ color: textMuted }}>&mdash; Original &mdash;</div>
-                <div className="p-3 rounded-lg whitespace-pre-wrap" style={{ backgroundColor: surfaceAlt, fontFamily: monoFont, fontSize: "14px", minHeight: "100px", wordBreak: "break-word" }}>
+                <div className="font-semibold text-sm mb-1" style={{ color: textMuted }}>&mdash; Original &mdash;</div>
+                <div className="p-3 rounded-lg whitespace-pre-wrap" style={{ backgroundColor: surfaceAlt, fontFamily: monoFont, fontSize: "15px", minHeight: "100px", wordBreak: "break-word" }}>
                   {testStr}
                 </div>
               </div>
               <div>
-                <div className="text-xs font-semibold mb-1" style={{ color: textMuted }}>&mdash; Result &mdash;</div>
-                <div className="p-3 rounded-lg whitespace-pre-wrap" style={{ backgroundColor: surfaceAlt, fontFamily: monoFont, fontSize: "14px", minHeight: "100px", wordBreak: "break-word" }}>
+                <div className="font-semibold text-sm mb-1" style={{ color: textMuted }}>&mdash; Result &mdash;</div>
+                <div className="p-3 rounded-lg whitespace-pre-wrap" style={{ backgroundColor: surfaceAlt, fontFamily: monoFont, fontSize: "15px", minHeight: "100px", wordBreak: "break-word" }}>
                   {replaceResult}
                 </div>
               </div>
             </div>
             <div className="flex items-center justify-between mt-3">
-              <span className="text-xs" style={{ color: textMuted }}>
+              <span style={{ color: textMuted }}>
                 {patternValid && matches.length > 0 ? `${matches.length} replacement${matches.length !== 1 ? "s" : ""} made` : "No replacements"}
               </span>
               <button
@@ -804,19 +804,19 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
                     {pats.map((p, idx) => (
                       <div key={idx} className="p-4 rounded-lg border" style={{ borderColor: border, backgroundColor: surfaceAlt }}>
                         <div className="font-semibold mb-1" style={{ fontSize: "15px" }}>{p.name}</div>
-                        <div className="text-xs mb-2 truncate" style={{ fontFamily: monoFont, color: accent }}>{p.pattern}</div>
-                        <div className="text-xs mb-3" style={{ color: textMuted }}>{p.desc}</div>
+                        <div className="text-sm mb-2 truncate" style={{ fontFamily: monoFont, color: accent }}>{p.pattern}</div>
+                        <div className="text-sm mb-3" style={{ color: textMuted }}>{p.desc}</div>
                         <div className="flex gap-2">
                           <button
                             onClick={() => loadPattern(p)}
-                            className="px-3 py-1 rounded-lg text-xs font-semibold transition-colors"
+                            className="px-3 py-1 rounded-lg font-semibold text-sm transition-colors"
                             style={{ backgroundColor: accent + "20", color: accent, border: `1px solid ${accent}40` }}
                           >
                             Load Pattern
                           </button>
                           <button
                             onClick={() => copy(p.pattern)}
-                            className="px-3 py-1 rounded-lg text-xs font-semibold transition-colors"
+                            className="px-3 py-1 rounded-lg font-semibold text-sm transition-colors"
                             style={{ backgroundColor: "transparent", color: textMuted, border: `1px solid ${border}` }}
                           >
                             Copy
@@ -869,7 +869,7 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
                 </div>
               ))}
             </div>
-            <p className="text-xs mt-4" style={{ color: textMuted }}>Click any row with an example to load it into the tester above.</p>
+            <p className="text-sm mt-4" style={{ color: textMuted }}>Click any row with an example to load it into the tester above.</p>
           </div>
         )}
 
@@ -934,7 +934,7 @@ export default function RegexTester({ title, subtitle, defaultTab = "explainer",
                   <a key={tool.href} href={tool.href} className="p-4 rounded-xl border hover:shadow-md transition-shadow" style={{ backgroundColor: surface, borderColor: border }}>
                     <span className="text-xl">{tool.emoji}</span>
                     <div className="font-semibold mt-1" style={{ fontSize: "15px" }}>{tool.title}</div>
-                    <div className="text-xs" style={{ color: textMuted }}>{tool.desc}</div>
+                    <div style={{ color: textMuted }}>{tool.desc}</div>
                   </a>
                 ))}
               </div>

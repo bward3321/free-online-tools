@@ -23,7 +23,7 @@ export default function HowMuchDoISpendPage() {
       {/* Article-first wrapper */}
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", "--color-accent": "#16A34A" } as React.CSSProperties}>
         <div className="max-w-[1100px] mx-auto px-4 pt-8 md:pt-12">
-          <nav className="text-xs mb-2" style={{ color: "var(--text-muted)" }}>
+          <nav className="mb-2" style={{ fontSize: "15px", color: "var(--text-muted)" }}>
             <a href="/" className="hover:opacity-70 transition-opacity" style={{ color: "#16A34A" }}>Home</a>
             <span className="mx-1.5">/</span><span>Finance Tools</span>
           </nav>
@@ -33,11 +33,11 @@ export default function HowMuchDoISpendPage() {
           </p>
           <article className="rounded-2xl border p-6 md:p-8 mb-8" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
             <div className="prose max-w-none space-y-4 text-sm leading-relaxed" style={{ color: "var(--text)" }}>
-              <h2 className="text-xl font-bold mb-4">The Psychology of Subscription Spending</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">The Psychology of Subscription Spending</h2>
               <p>Subscriptions exploit a powerful cognitive bias: <strong>pain-of-payment avoidance</strong>. A $15/month charge feels trivial because it is small, recurring, and automatic. You do not feel it leaving your account the way you feel handing over $180 in cash at the end of the year. This is by design &mdash; subscription pricing is engineered to minimize perceived cost.</p>
               <p>Research by West Monroe found that <strong>84% of people underestimate their monthly subscription spending</strong>. The average guess is $86/month. The average actual amount is $219&ndash;$280/month. That gap &mdash; $130&ndash;$194/month of invisible spending &mdash; represents one of the easiest savings opportunities in personal finance.</p>
 
-              <h2 className="text-xl font-bold mt-8 mb-4">Average Spending by Category</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mt-8 mb-4">Average Spending by Category</h2>
               <p>According to 2025&ndash;2026 consumer surveys, monthly subscription spending in the US breaks down roughly as follows:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li><strong>Streaming video:</strong> $46&ndash;$75/mo (2&ndash;4 services)</li>
@@ -49,7 +49,7 @@ export default function HowMuchDoISpendPage() {
                 <li><strong>AI tools:</strong> $10&ndash;$50/mo (a fast-growing category since 2023)</li>
               </ul>
 
-              <h2 className="text-xl font-bold mt-8 mb-4">Steps to Audit Your Subscriptions</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mt-8 mb-4">Steps to Audit Your Subscriptions</h2>
               <p>The most effective method takes about 15 minutes:</p>
               <ol className="list-decimal pl-5 space-y-1">
                 <li>Pull up 3 months of bank or credit card statements.</li>
@@ -71,7 +71,7 @@ export default function HowMuchDoISpendPage() {
           articleMode
         />
         <div className="max-w-[1100px] mx-auto px-4 pb-8">
-          <footer className="border-t pt-8 pb-4 text-center text-xs" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+          <footer className="border-t pt-8 pb-4 text-center" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
             <p>Free Online Tools &mdash; Free calculators and tools for everyone.</p>
             <p className="mt-1">No signup required. No ads. No tracking.</p>
           </footer>

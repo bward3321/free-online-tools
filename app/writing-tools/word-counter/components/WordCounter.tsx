@@ -281,7 +281,7 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
         {/* Header */}
         {!articleMode && (
           <>
-            <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+            <nav className="flex items-center gap-1 text-sm mb-4" style={{ color: "var(--text-muted)" }}>
               <a href="/" className="hover:underline" style={{ color: accent }}>Home</a><span>/</span><span>Writing Tools</span>
             </nav>
             <div className="flex items-start justify-between mb-3">
@@ -310,7 +310,7 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
             ] as [string, string | number][]).map(([label, val]) => (
               <div key={label}>
                 <div className="font-bold" style={{ fontSize: "26px", color: accent }}>{val}</div>
-                <div className="uppercase tracking-wider" style={{ fontSize: "13px", color: "var(--text-muted)" }}>{label}</div>
+                <div className="uppercase tracking-wider" style={{ fontSize: "15px", color: "var(--text-muted)" }}>{label}</div>
               </div>
             ))}
           </div>
@@ -329,7 +329,7 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
               ] as [string, string][]).map(([label, val]) => (
                 <div key={label}>
                   <div className="font-bold" style={{ fontSize: "22px" }}>{val}</div>
-                  <div className="uppercase tracking-wider" style={{ fontSize: "13px", color: "var(--text-muted)" }}>{label}</div>
+                  <div className="uppercase tracking-wider" style={{ fontSize: "15px", color: "var(--text-muted)" }}>{label}</div>
                 </div>
               ))}
             </div>
@@ -428,20 +428,20 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
                   <div key={pl.name} className="rounded-lg border p-3" style={{ borderColor: over ? "#DC262640" : "var(--border)", backgroundColor: over ? "#DC26260a" : "transparent" }}>
                     <div className="flex items-center justify-between mb-1">
                       <span style={{ fontSize: "15px" }}>{pl.icon} {pl.name}</span>
-                      <span style={{ fontSize: "14px" }}>{icon}</span>
+                      <span style={{ fontSize: "15px" }}>{icon}</span>
                     </div>
                     <div className="flex items-center gap-2 mb-1">
                       <div className="flex-1 h-2 rounded-full" style={{ backgroundColor: "var(--border)" }}>
                         <div className="h-2 rounded-full transition-all" style={{ width: `${Math.min(pct, 100)}%`, backgroundColor: barColor }} />
                       </div>
-                      <span className="text-xs font-semibold whitespace-nowrap" style={{ color: barColor }}>
+                      <span className="font-semibold text-sm whitespace-nowrap" style={{ color: barColor }}>
                         {count.toLocaleString()} / {pl.limit.toLocaleString()}
                       </span>
                     </div>
-                    <div style={{ fontSize: "13px", color: over ? "#DC2626" : "var(--text-muted)" }}>
+                    <div style={{ fontSize: "15px", color: over ? "#DC2626" : "var(--text-muted)" }}>
                       {over ? `${Math.abs(remaining).toLocaleString()} characters over` : `${remaining.toLocaleString()} characters remaining`}
                     </div>
-                    {pl.optimal && <div style={{ fontSize: "12px", color: "var(--text-muted)", marginTop: "2px" }}>{pl.optimal}</div>}
+                    {pl.optimal && <div style={{ fontSize: "15px", color: "var(--text-muted)", marginTop: "2px" }}>{pl.optimal}</div>}
                   </div>
                 );
               })}
@@ -463,7 +463,7 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
                   ["Include trigrams", includeTrigrams, setIncludeTrigrams],
                   ["Exclude common words", excludeCommon, setExcludeCommon],
                 ] as [string, boolean, (v: boolean) => void][]).map(([label, val, set]) => (
-                  <label key={label} className="flex items-center gap-2 cursor-pointer" style={{ fontSize: "14px" }}>
+                  <label key={label} className="flex items-center gap-2 cursor-pointer" style={{ fontSize: "15px" }}>
                     <input type="checkbox" checked={val} onChange={() => set(!val)} style={{ accentColor: accent }} />
                     {label}
                   </label>
@@ -510,7 +510,7 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
               ) : (
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="rounded-lg border p-4" style={{ borderColor: "var(--border)" }}>
-                    <div className="font-bold mb-1" style={{ fontSize: "14px", color: "var(--text-muted)" }}>FLESCH READING EASE</div>
+                    <div className="font-bold mb-1" style={{ fontSize: "15px", color: "var(--text-muted)" }}>FLESCH READING EASE</div>
                     <div className="font-bold" style={{ fontSize: "36px", color: fleschColor(readability.flesch) }}>{readability.flesch}</div>
                     <div className="font-semibold" style={{ fontSize: "16px", color: fleschColor(readability.flesch) }}>{fleschLabel(readability.flesch)}</div>
                     <div className="mt-2 h-3 rounded-full" style={{ backgroundColor: "var(--border)" }}>
@@ -518,7 +518,7 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
                     </div>
                   </div>
                   <div className="rounded-lg border p-4" style={{ borderColor: "var(--border)" }}>
-                    <div className="font-bold mb-1" style={{ fontSize: "14px", color: "var(--text-muted)" }}>GRADE LEVEL</div>
+                    <div className="font-bold mb-1" style={{ fontSize: "15px", color: "var(--text-muted)" }}>GRADE LEVEL</div>
                     <div className="font-bold" style={{ fontSize: "36px", color: accent }}>{readability.grade}</div>
                     <div style={{ fontSize: "15px", color: "var(--text-muted)" }}>
                       {readability.grade <= 6 ? "Elementary school level" :
@@ -611,7 +611,7 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
                   <h3 className="font-bold mb-2" style={{ fontSize: "16px" }}>{cat}</h3>
                   <div className="space-y-1">
                     {items.map(([label, val]) => (
-                      <div key={label} className="flex justify-between" style={{ fontSize: "14px" }}>
+                      <div key={label} className="flex justify-between" style={{ fontSize: "15px" }}>
                         <span style={{ color: "var(--text-muted)" }}>{label}</span>
                         <span className="font-semibold ml-2 text-right">{val}</span>
                       </div>
@@ -626,7 +626,7 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
         {/* ═══════════ FAQs ═══════════ */}
         {!articleMode && (
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Frequently Asked Questions</h2>
             <div className="space-y-3">
               {[
                 ["How does the word counter work?", "Simply type or paste your text into the editor. The tool counts words, characters, sentences, paragraphs, and more in real-time as you type. No buttons to click — results update instantly. All counting happens in your browser; your text is never sent to any server."],
@@ -641,7 +641,7 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
               ].map(([q, a]) => (
                 <details key={q} className="rounded-xl border" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                   <summary className="p-4 cursor-pointer font-semibold" style={{ fontSize: "16px" }}>{q}</summary>
-                  <p className="px-4 pb-4" style={{ fontSize: "16px", color: "var(--text-muted)" }}>{a}</p>
+                  <p className="px-4 pb-4" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>{a}</p>
                 </details>
               ))}
             </div>
@@ -650,7 +650,7 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
 
         {/* ═══════════ Related tools ═══════════ */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Related Tools</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Related Tools</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {[
               ["QR Code Generator", "/utility-tools/qr-code-generator", "Generate QR codes for URLs, WiFi, contacts, and more"],
@@ -661,14 +661,14 @@ export default function WordCounter({ title = "Word Counter", subtitle, articleM
             ].map(([name, href, desc]) => (
               <a key={name} href={href} className="block rounded-xl border p-4 hover:shadow-md transition-shadow" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <h3 className="font-semibold mb-1" style={{ fontSize: "16px" }}>{name}</h3>
-                <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>{desc}</p>
+                <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>{desc}</p>
               </a>
             ))}
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="text-center pt-6 pb-8 border-t" style={{ borderColor: "var(--border)", color: "var(--text-muted)", fontSize: "14px" }}>
+        <footer className="text-center pt-6 pb-8 border-t" style={{ borderColor: "var(--border)", color: "var(--text-muted)", fontSize: "15px" }}>
           <p>© {new Date().getFullYear()} <a href="/" style={{ color: accent }} className="hover:underline">EveryFreeTool.com</a> — Free tools, no signup, no nonsense.</p>
         </footer>
       </div>

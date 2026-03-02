@@ -85,25 +85,25 @@ export default function ReadmeEditorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Writing Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Writing Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Free README.md Editor &mdash; Write Better GitHub READMEs</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Write and preview your GitHub README with live rendering, pre-built templates, and GitHub-flavored Markdown support. Start with the template below and customize it for your project.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">What Makes a Great README</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Your README is the first thing visitors see when they find your project. A great README answers four questions immediately: <strong style={{ color: "var(--text)" }}>What</strong> does this project do? <strong style={{ color: "var(--text)" }}>Why</strong> should I care? <strong style={{ color: "var(--text)" }}>How</strong> do I install and use it? <strong style={{ color: "var(--text)" }}>How</strong> do I contribute? The template pre-loaded in the editor covers all four with proper structure and formatting.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">What Makes a Great README</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Your README is the first thing visitors see when they find your project. A great README answers four questions immediately: <strong style={{ color: "var(--text)" }}>What</strong> does this project do? <strong style={{ color: "var(--text)" }}>Why</strong> should I care? <strong style={{ color: "var(--text)" }}>How</strong> do I install and use it? <strong style={{ color: "var(--text)" }}>How</strong> do I contribute? The template pre-loaded in the editor covers all four with proper structure and formatting.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">GitHub README Best Practices</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Start with a concise, descriptive title and a one-line summary. Add badges for build status, version, and license &mdash; they signal project health at a glance. Include a table of contents for longer READMEs. Use code blocks with language tags for installation and usage examples. Add contributing guidelines to welcome collaborators. Keep the README updated as your project evolves.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">GitHub README Best Practices</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Start with a concise, descriptive title and a one-line summary. Add badges for build status, version, and license &mdash; they signal project health at a glance. Include a table of contents for longer READMEs. Use code blocks with language tags for installation and usage examples. Add contributing guidelines to welcome collaborators. Keep the README updated as your project evolves.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Badge Syntax</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>GitHub badges use the shields.io format: <code style={{ color: "#059669" }}>![Label](https://img.shields.io/badge/label-message-color)</code>. Popular badges: build passing (green), version number (blue), license type (green), download count, code coverage percentage. The template includes customizable badge examples you can modify for your project.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Badge Syntax</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>GitHub badges use the shields.io format: <code style={{ color: "#059669" }}>![Label](https://img.shields.io/badge/label-message-color)</code>. Popular badges: build passing (green), version number (blue), license type (green), download count, code coverage percentage. The template includes customizable badge examples you can modify for your project.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#0596691a", borderColor: "#05966940" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Edit the README template below for your project.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Edit the README template below for your project.</p>
           </div>
         </div>
       </div>

@@ -27,22 +27,22 @@ export default function JsonValidatorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">JSON Validator &mdash; Check If Your JSON Is Valid Instantly</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Paste any JSON to validate its syntax against the RFC 8259 standard. Get detailed error messages with line numbers and auto-fix for common mistakes.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Common JSON Errors</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>JSON is strict. Unlike JavaScript objects, JSON requires <strong style={{ color: "var(--text)" }}>double quotes</strong> around all keys and string values, <strong style={{ color: "var(--text)" }}>no trailing commas</strong> after the last item in arrays or objects, and <strong style={{ color: "var(--text)" }}>no comments</strong> of any kind. These rules trip up developers daily.</p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Our auto-fix feature can repair most of these errors automatically. Click &ldquo;Try to Fix&rdquo; and the tool will replace single quotes, remove trailing commas, quote unquoted keys, and strip comments.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Common JSON Errors</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>JSON is strict. Unlike JavaScript objects, JSON requires <strong style={{ color: "var(--text)" }}>double quotes</strong> around all keys and string values, <strong style={{ color: "var(--text)" }}>no trailing commas</strong> after the last item in arrays or objects, and <strong style={{ color: "var(--text)" }}>no comments</strong> of any kind. These rules trip up developers daily.</p>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Our auto-fix feature can repair most of these errors automatically. Click &ldquo;Try to Fix&rdquo; and the tool will replace single quotes, remove trailing commas, quote unquoted keys, and strip comments.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Why Validation Matters</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Malformed JSON breaks API calls, crashes parsers, and causes silent data loss. A missing comma or extra bracket can take hours to debug in a large file. This validator pinpoints the exact error location so you can fix it in seconds.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Why Validation Matters</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Malformed JSON breaks API calls, crashes parsers, and causes silent data loss. A missing comma or extra bracket can take hours to debug in a large file. This validator pinpoints the exact error location so you can fix it in seconds.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste your JSON below to validate it instantly.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste your JSON below to validate it instantly.</p>
           </div>
         </div>
       </div>

@@ -20,25 +20,25 @@ export default function MarkdownPreviewerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Writing Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Writing Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Free Markdown Previewer &mdash; See Your Markdown Rendered Instantly</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Paste your Markdown text or drop a .md file to see it rendered with GitHub-flavored styling. Perfect for checking READMEs, documentation, and blog posts before publishing.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Preview Before You Publish</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Writing Markdown without seeing the rendered output is like coding without running the program. This previewer gives you instant visual feedback as you type or paste. Tables render as actual tables, code blocks get syntax highlighting, task lists show checkboxes, and headings display with proper hierarchy. No more pushing to GitHub just to see how your README looks.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Preview Before You Publish</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Writing Markdown without seeing the rendered output is like coding without running the program. This previewer gives you instant visual feedback as you type or paste. Tables render as actual tables, code blocks get syntax highlighting, task lists show checkboxes, and headings display with proper hierarchy. No more pushing to GitHub just to see how your README looks.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">GitHub-Flavored Markdown</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The previewer supports all GitHub Flavored Markdown extensions: pipe tables with alignment, strikethrough with tildes, task lists with checkboxes, fenced code blocks with language-specific syntax highlighting, and automatic URL linking. The styling matches GitHub&apos;s rendering closely, so what you see here is what your audience will see on GitHub.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">GitHub-Flavored Markdown</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The previewer supports all GitHub Flavored Markdown extensions: pipe tables with alignment, strikethrough with tildes, task lists with checkboxes, fenced code blocks with language-specific syntax highlighting, and automatic URL linking. The styling matches GitHub&apos;s rendering closely, so what you see here is what your audience will see on GitHub.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Checking README Files</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Your README.md is the front page of your repository. Before every commit, paste it here to verify: Are the headings right? Do the code blocks highlight correctly? Are the links formatted properly? Does the table look good? A 30-second preview check saves you from embarrassing formatting issues in your public repo.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Checking README Files</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Your README.md is the front page of your repository. Before every commit, paste it here to verify: Are the headings right? Do the code blocks highlight correctly? Are the links formatted properly? Does the table look good? A 30-second preview check saves you from embarrassing formatting issues in your public repo.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#0596691a", borderColor: "#05966940" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste your Markdown below to preview it.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste your Markdown below to preview it.</p>
           </div>
         </div>
       </div>

@@ -27,25 +27,25 @@ export default function Base64ToImagePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Base64 to Image Converter &mdash; Decode Base64 to Image Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Paste a Base64-encoded string and see the image instantly. Auto-detects image format from data URI prefix, shows a live preview, and lets you download the decoded image file.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">When You Need Base64-to-Image Conversion</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Developers encounter Base64 images in <strong style={{ color: "var(--text)" }}>API responses</strong> that return embedded image data, <strong style={{ color: "var(--text)" }}>database records</strong> where images are stored as text blobs, <strong style={{ color: "var(--text)" }}>email sources</strong> with MIME-encoded inline images, and <strong style={{ color: "var(--text)" }}>HTML/CSS files</strong> containing data URI images that need to be extracted as files. This tool lets you paste the encoded string and instantly see and download the original image.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">When You Need Base64-to-Image Conversion</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Developers encounter Base64 images in <strong style={{ color: "var(--text)" }}>API responses</strong> that return embedded image data, <strong style={{ color: "var(--text)" }}>database records</strong> where images are stored as text blobs, <strong style={{ color: "var(--text)" }}>email sources</strong> with MIME-encoded inline images, and <strong style={{ color: "var(--text)" }}>HTML/CSS files</strong> containing data URI images that need to be extracted as files. This tool lets you paste the encoded string and instantly see and download the original image.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Format Detection</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>If your Base64 string includes a data URI prefix like <code style={{ color: "#8BE9FD" }}>data:image/png;base64,</code>, the tool automatically detects the image format. If you paste just the raw Base64 without a prefix, use the MIME type dropdown to specify the format. The tool defaults to PNG, but you can select JPEG, GIF, SVG, WebP, or other formats as needed.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Format Detection</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>If your Base64 string includes a data URI prefix like <code style={{ color: "#8BE9FD" }}>data:image/png;base64,</code>, the tool automatically detects the image format. If you paste just the raw Base64 without a prefix, use the MIME type dropdown to specify the format. The tool defaults to PNG, but you can select JPEG, GIF, SVG, WebP, or other formats as needed.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Completely Private</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>All decoding happens in your browser. The Base64 string is never sent to any server. This is important when working with <strong style={{ color: "var(--text)" }}>proprietary images</strong>, <strong style={{ color: "var(--text)" }}>user-uploaded content</strong>, or any image data that shouldn&apos;t leave your machine. Close the tab and the data is gone.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Completely Private</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>All decoding happens in your browser. The Base64 string is never sent to any server. This is important when working with <strong style={{ color: "var(--text)" }}>proprietary images</strong>, <strong style={{ color: "var(--text)" }}>user-uploaded content</strong>, or any image data that shouldn&apos;t leave your machine. Close the tab and the data is gone.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste your Base64 string below to see the image.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste your Base64 string below to see the image.</p>
           </div>
         </div>
       </div>

@@ -312,7 +312,7 @@ export default function LoremIpsumGenerator({ title, subtitle, articleMode, defa
       <div className="max-w-[900px] mx-auto px-4 py-6">
         {!articleMode && (
           <>
-            <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: textMuted }}>
+            <nav className="flex items-center gap-1 text-sm mb-4" style={{ color: textMuted }}>
               <a href="/" className="hover:underline" style={{ color: accent }}>Home</a><span>/</span><span>Writing Tools</span>
             </nav>
             <h1 className="text-3xl md:text-4xl font-bold mb-2">{title}</h1>
@@ -359,7 +359,7 @@ export default function LoremIpsumGenerator({ title, subtitle, articleMode, defa
         </div>
 
         {unit === "characters" && (
-          <p className="text-xs mb-3" style={{ color: textMuted }}>Output will be truncated to the exact character count.</p>
+          <p className="text-sm mb-3" style={{ color: textMuted }}>Output will be truncated to the exact character count.</p>
         )}
 
         {/* Options toggles */}
@@ -385,10 +385,10 @@ export default function LoremIpsumGenerator({ title, subtitle, articleMode, defa
 
         {/* Social presets */}
         <div className="flex flex-wrap gap-2 mb-4">
-          <span className="text-xs font-semibold self-center" style={{ color: textMuted }}>Presets:</span>
+          <span className="font-semibold text-sm self-center" style={{ color: textMuted }}>Presets:</span>
           {SOCIAL_PRESETS.map(p => (
             <button key={p.name} onClick={() => applySocialPreset(p)}
-              className="px-2.5 py-1 rounded-full text-xs font-medium"
+              className="px-2.5 py-1 rounded-full font-medium text-sm"
               style={{ backgroundColor: surface, color: textMuted, border: `1px solid ${border}` }}>
               {p.name}
             </button>
@@ -397,7 +397,7 @@ export default function LoremIpsumGenerator({ title, subtitle, articleMode, defa
 
         {/* Social label */}
         {socialLabel && (
-          <p className="text-xs font-semibold mb-2" style={{ color: accent }}>{socialLabel}</p>
+          <p className="font-semibold text-sm mb-2" style={{ color: accent }}>{socialLabel}</p>
         )}
 
         {/* Output area */}
@@ -411,7 +411,7 @@ export default function LoremIpsumGenerator({ title, subtitle, articleMode, defa
             animation: "fadeIn 0.3s ease",
           }}>
           <style dangerouslySetInnerHTML={{ __html: "@keyframes fadeIn { from { opacity: 0.4; } to { opacity: 1; } }" }} />
-          <div className="absolute top-3 right-4 text-xs" style={{ color: textMuted }}>
+          <div className="absolute top-3 right-4 text-sm" style={{ color: textMuted }}>
             {wordCount.toLocaleString()} words &middot; {charCount.toLocaleString()} characters
           </div>
           <div className="pt-4" style={{ color: text, fontFamily: includeHtml ? "'JetBrains Mono', monospace" : "inherit", fontSize: includeHtml ? "14px" : "16px", whiteSpace: "pre-wrap", wordBreak: "break-word" }}>
@@ -432,7 +432,7 @@ export default function LoremIpsumGenerator({ title, subtitle, articleMode, defa
         {/* ═══ SEO: FAQs ═══ */}
         {!articleMode && (
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Frequently Asked Questions</h2>
             <div className="space-y-3">
               {[
                 ["Is this Lorem Ipsum generator free?", "Completely free, no signup, no limits. Everything runs in your browser — nothing is sent to any server. Generate as much text as you need."],
@@ -453,7 +453,7 @@ export default function LoremIpsumGenerator({ title, subtitle, articleMode, defa
 
         {/* ═══ Related Tools ═══ */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">More Free Writing & Text Tools</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">More Free Writing & Text Tools</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {[
               ["Word Counter", "/writing-tools/word-counter", "Count words, characters, sentences & reading time"],
@@ -463,14 +463,14 @@ export default function LoremIpsumGenerator({ title, subtitle, articleMode, defa
             ].map(([name, href, desc]) => (
               <a key={name} href={href} className="block rounded-xl border p-4 hover:shadow-md transition-shadow" style={{ backgroundColor: surface, borderColor: border }}>
                 <h3 className="font-semibold mb-1" style={{ fontSize: "16px" }}>{name}</h3>
-                <p style={{ fontSize: "14px", color: textMuted }}>{desc}</p>
+                <p style={{ fontSize: "15px", color: textMuted }}>{desc}</p>
               </a>
             ))}
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="text-center pt-6 pb-8 border-t" style={{ borderColor: border, color: textMuted, fontSize: "14px" }}>
+        <footer className="text-center pt-6 pb-8 border-t" style={{ borderColor: border, color: textMuted, fontSize: "15px" }}>
           <p>&copy; {new Date().getFullYear()} <a href="/" style={{ color: accent }} className="hover:underline">EveryFreeTool.com</a> &mdash; Free tools, no signup, no nonsense.</p>
         </footer>
       </div>

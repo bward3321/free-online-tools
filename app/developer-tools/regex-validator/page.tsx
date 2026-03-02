@@ -20,25 +20,25 @@ export default function RegexValidatorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Regex Validator &mdash; Validate Your Regular Expression Syntax</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Type or paste any regular expression to validate its syntax instantly. The tool checks every character as you type and shows clear error messages with fix suggestions.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Regex Syntax Rules</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Regular expressions follow precise syntax rules. Special characters (<code style={{ color: "#8BE9FD" }}>. * + ? ^ $ {'{'} {'}'} [ ] | ( ) \</code>) have meaning and must be escaped with a backslash when you want them as literals. Parentheses must be balanced. Character classes must be closed. Quantifiers need a preceding element to repeat. This tool checks all these rules in real-time.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Regex Syntax Rules</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Regular expressions follow precise syntax rules. Special characters (<code style={{ color: "#8BE9FD" }}>. * + ? ^ $ {'{'} {'}'} [ ] | ( ) \</code>) have meaning and must be escaped with a backslash when you want them as literals. Parentheses must be balanced. Character classes must be closed. Quantifiers need a preceding element to repeat. This tool checks all these rules in real-time.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">JavaScript vs Other Regex Engines</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>This validator uses JavaScript&apos;s RegExp engine, which supports: named groups <code style={{ color: "#8BE9FD" }}>(?&lt;name&gt;...)</code>, lookbehind <code style={{ color: "#8BE9FD" }}>(?&lt;=...)</code>, the <code style={{ color: "#8BE9FD" }}>s</code> (dotAll) flag, and Unicode property escapes. Features <strong style={{ color: "var(--text)" }}>not</strong> supported: atomic groups, possessive quantifiers, conditional patterns, and recursive patterns (available in PCRE/PHP).</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">JavaScript vs Other Regex Engines</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>This validator uses JavaScript&apos;s RegExp engine, which supports: named groups <code style={{ color: "#8BE9FD" }}>(?&lt;name&gt;...)</code>, lookbehind <code style={{ color: "#8BE9FD" }}>(?&lt;=...)</code>, the <code style={{ color: "#8BE9FD" }}>s</code> (dotAll) flag, and Unicode property escapes. Features <strong style={{ color: "var(--text)" }}>not</strong> supported: atomic groups, possessive quantifiers, conditional patterns, and recursive patterns (available in PCRE/PHP).</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Tips for Writing Valid Patterns</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Build patterns incrementally &mdash; start with a simple match and add complexity one piece at a time. Use non-capturing groups <code style={{ color: "#8BE9FD" }}>(?:...)</code> when you don&apos;t need the capture. Be specific with character classes instead of relying on <code style={{ color: "#8BE9FD" }}>.*</code>. Test against both matching and non-matching inputs to verify your pattern doesn&apos;t over-match.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Tips for Writing Valid Patterns</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Build patterns incrementally &mdash; start with a simple match and add complexity one piece at a time. Use non-capturing groups <code style={{ color: "#8BE9FD" }}>(?:...)</code> when you don&apos;t need the capture. Be specific with character classes instead of relying on <code style={{ color: "#8BE9FD" }}>.*</code>. Test against both matching and non-matching inputs to verify your pattern doesn&apos;t over-match.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Enter your regex below to validate it.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Enter your regex below to validate it.</p>
           </div>
         </div>
       </div>

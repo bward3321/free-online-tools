@@ -62,7 +62,7 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
     <div style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
       <div className="max-w-[800px] mx-auto px-4 py-8">
         {/* Breadcrumb */}
-        <nav className="text-sm mb-4" style={{ color: "var(--text-muted)" }}>
+        <nav className="mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}>
           <a href="/" style={{ color: ACCENT }} className="hover:underline">Home</a>
           <span className="mx-2">&gt;</span>
           <a href="/conversion-tools/unit-converter" style={{ color: ACCENT }} className="hover:underline">Conversion Tools</a>
@@ -85,7 +85,7 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
               className="flex-1 rounded-lg px-4 py-3 outline-none"
               style={{ backgroundColor: "var(--surface-alt)", border: "1px solid var(--border)", fontSize: "20px", color: "var(--text)" }}
             />
-            <span className="text-sm font-medium whitespace-nowrap" style={{ color: "var(--text-muted)", minWidth: "80px" }}>
+            <span className="font-medium whitespace-nowrap" style={{ color: "var(--text-muted)", minWidth: "80px", fontSize: "15px" }}>
               {currentFrom.name} ({currentFrom.abbr})
             </span>
           </div>
@@ -93,11 +93,11 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
           <div className="flex justify-center my-3">
             <button
               onClick={handleSwap}
-              className="w-10 h-10 rounded-full flex items-center justify-center text-white text-lg font-bold"
-              style={{ backgroundColor: ACCENT }}
+              className="rounded-full flex items-center justify-center text-white"
+              style={{ backgroundColor: ACCENT, width: "44px", height: "44px" }}
               aria-label="Swap units"
             >
-              \u21C5
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4" /></svg>
             </button>
           </div>
 
@@ -111,19 +111,19 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
               className="flex-1 rounded-lg px-4 py-3 outline-none"
               style={{ backgroundColor: "var(--surface-alt)", border: "1px solid var(--border)", fontSize: "20px", color: "var(--text)" }}
             />
-            <span className="text-sm font-medium whitespace-nowrap" style={{ color: "var(--text-muted)", minWidth: "80px" }}>
+            <span className="font-medium whitespace-nowrap" style={{ color: "var(--text-muted)", minWidth: "80px", fontSize: "15px" }}>
               {currentTo.name} ({currentTo.abbr})
             </span>
           </div>
 
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <p style={{ color: "var(--text-muted)", fontSize: "14px", fontFamily: "monospace" }}>{formula}</p>
+            <p style={{ color: "var(--text-muted)", fontSize: "15px", fontFamily: "monospace" }}>{formula}</p>
             <div className="flex items-center gap-2">
               <select
                 value={precision}
                 onChange={(e) => setPrecision(Number(e.target.value))}
-                className="rounded-lg px-2 py-1 text-sm outline-none cursor-pointer"
-                style={{ backgroundColor: "var(--surface-alt)", border: "1px solid var(--border)", color: "var(--text-muted)", fontSize: "13px" }}
+                className="rounded-lg px-2 py-1 outline-none cursor-pointer"
+                style={{ backgroundColor: "var(--surface-alt)", border: "1px solid var(--border)", color: "var(--text-muted)", fontSize: "15px" }}
               >
                 {PRECISION_OPTIONS.map((p) => (
                   <option key={p.value} value={p.value}>{p.label}</option>
@@ -131,8 +131,8 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
               </select>
               <button
                 onClick={handleCopy}
-                className="rounded-lg px-3 py-1 text-sm"
-                style={{ backgroundColor: copied ? ACCENT : "var(--surface-alt)", color: copied ? "#fff" : "var(--text-muted)", border: "1px solid var(--border)", fontSize: "13px" }}
+                className="rounded-lg px-3 py-1"
+                style={{ backgroundColor: copied ? ACCENT : "var(--surface-alt)", color: copied ? "#fff" : "var(--text-muted)", border: "1px solid var(--border)", fontSize: "16px" }}
               >
                 {copied ? "Copied!" : "Copy Result"}
               </button>
@@ -143,10 +143,10 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
         {/* Quick Answer Box */}
         <section className="mb-8 rounded-xl p-5" style={{ backgroundColor: "#ecfdf5", borderLeft: `4px solid ${ACCENT}` }}>
           <div className="dark-override" style={{ color: "#065f46" }}>
-            <h2 className="text-lg font-semibold mb-3">Common {fromUnit.name} to {toUnit.name} Conversions</h2>
+            <h2 className="font-semibold mb-3" style={{ fontSize: "20px" }}>Common {fromUnit.name} to {toUnit.name} Conversions</h2>
             <ul className="space-y-1">
               {spoke.quickAnswers.map((a) => (
-                <li key={a} className="text-sm">{a}</li>
+                <li key={a} style={{ fontSize: "16px" }}>{a}</li>
               ))}
             </ul>
           </div>
@@ -155,9 +155,9 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
 
         {/* Reference Table */}
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-4">{fromUnit.name} to {toUnit.name} Reference Table</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">{fromUnit.name} to {toUnit.name} Reference Table</h2>
           <div className="overflow-x-auto rounded-xl" style={{ border: "1px solid var(--border)" }}>
-            <table className="w-full text-sm">
+            <table className="w-full" style={{ fontSize: "16px" }}>
               <thead>
                 <tr style={{ backgroundColor: ACCENT, color: "#fff" }}>
                   <th className="px-4 py-3 text-left font-semibold">{fromUnit.name} ({fromUnit.abbr})</th>
@@ -178,8 +178,8 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
 
         {/* Formula Explanation */}
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-4">How to Convert {fromUnit.name} to {toUnit.name}</h2>
-          <div className="rounded-xl border p-5 space-y-3" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", fontSize: "16px", color: "var(--text-muted)" }}>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">How to Convert {fromUnit.name} to {toUnit.name}</h2>
+          <div className="rounded-xl border p-5 space-y-3" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
             <p>{spoke.formulaExplanation}</p>
             <p className="font-semibold" style={{ fontFamily: "monospace", color: "var(--text)" }}>{formula}</p>
             {spoke.workedExamples.map((ex) => (
@@ -191,8 +191,8 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
 
         {/* Real-world comparisons */}
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-4">Real-World Comparisons</h2>
-          <div className="rounded-xl border p-5 space-y-2" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", fontSize: "16px", color: "var(--text-muted)" }}>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Real-World Comparisons</h2>
+          <div className="rounded-xl border p-5 space-y-2" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
             {spoke.comparisons.map((c) => (
               <p key={c.text}>\u2022 {c.text}</p>
             ))}
@@ -201,19 +201,19 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
 
         {/* SEO Content */}
         <section className="mb-8">
-          <div className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", fontSize: "16px", color: "var(--text-muted)" }}>
+          <div className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
             <div dangerouslySetInnerHTML={{ __html: spoke.seoContent }} />
           </div>
         </section>
 
         {/* FAQ */}
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-3">
             {spoke.faq.map((f) => (
               <details key={f.q} className="rounded-xl border" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <summary className="p-4 cursor-pointer font-semibold">{f.q}</summary>
-                <p className="px-4 pb-4" style={{ fontSize: "16px", color: "var(--text-muted)" }}>{f.a}</p>
+                <p className="px-4 pb-4" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>{f.a}</p>
               </details>
             ))}
           </div>
@@ -221,7 +221,7 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
 
         {/* Related Conversions */}
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-4">Related Conversions</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Related Conversions</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {spoke.relatedSlugs.map((slug) => {
               const label = slug
@@ -233,8 +233,8 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
                 <a
                   key={slug}
                   href={`/conversion-tools/${slug}`}
-                  className="block rounded-xl border p-3 text-sm font-medium hover:shadow-md"
-                  style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", color: "var(--text)" }}
+                  className="block rounded-xl border p-3 font-medium hover:shadow-md"
+                  style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", color: "var(--text)", fontSize: "16px" }}
                 >
                   {label} <span style={{ color: ACCENT }}>&rarr;</span>
                 </a>
@@ -245,7 +245,7 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
 
         {/* More Free Tools */}
         <section className="mb-8">
-          <h2 className="text-xl font-bold mb-4">More Free Tools</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">More Free Tools</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {[
               ["Concrete Calculator", "/construction/concrete-calculator", "Calculate concrete needed for your project"],
@@ -255,7 +255,7 @@ export default function SpokeConverter({ spoke }: { spoke: SpokeData }) {
             ].map(([name, href, desc]) => (
               <a key={name} href={href} className="block rounded-xl border p-4 hover:shadow-md" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <h3 className="font-semibold mb-1">{name}</h3>
-                <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>{desc}</p>
+                <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>{desc}</p>
               </a>
             ))}
           </div>

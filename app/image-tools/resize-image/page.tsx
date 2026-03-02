@@ -60,7 +60,7 @@ function SEOContent() {
         className="rounded-2xl border p-6 md:p-8 mb-12"
         style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}
       >
-        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>
+        <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>
           How to Resize Images for Any Platform
         </h2>
         <div className="prose max-w-none space-y-4 text-sm leading-relaxed" style={{ color: "var(--text)" }}>
@@ -102,7 +102,7 @@ function SEOContent() {
       </div>
 
       <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
         <div className="space-y-3">
           {[
             { q: "What size should I use for Instagram posts?", a: "Instagram posts display best at 1080\u00d71080 pixels (square format). For landscape posts, use 1080\u00d7566 pixels, and for portrait posts, use 1080\u00d71350 pixels. Our Social Media presets include all standard Instagram sizes." },

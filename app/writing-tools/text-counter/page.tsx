@@ -32,20 +32,20 @@ export default function TextCounterPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#4F46E5" }}>Home</a><span>/</span><span>Writing Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Text Counter &mdash; Analyze Any Text Instantly</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Go beyond simple counting. Analyze your text for readability, keyword density, social media fit, and more &mdash; all in real-time as you type.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">More Than Just Counting</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Simple word counters tell you how many words you have. This tool tells you how your text <em>performs</em>. <strong style={{ color: "var(--text)" }}>Readability scores</strong> reveal whether your audience can easily understand your writing. <strong style={{ color: "var(--text)" }}>Keyword density</strong> shows whether your SEO keywords appear at the right frequency. <strong style={{ color: "var(--text)" }}>Social media checks</strong> tell you if your text fits within platform limits.</p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Think of it as a writing dashboard: paste your text once, get insights across every dimension that matters.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">More Than Just Counting</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Simple word counters tell you how many words you have. This tool tells you how your text <em>performs</em>. <strong style={{ color: "var(--text)" }}>Readability scores</strong> reveal whether your audience can easily understand your writing. <strong style={{ color: "var(--text)" }}>Keyword density</strong> shows whether your SEO keywords appear at the right frequency. <strong style={{ color: "var(--text)" }}>Social media checks</strong> tell you if your text fits within platform limits.</p>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Think of it as a writing dashboard: paste your text once, get insights across every dimension that matters.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Using Text Analysis to Improve Writing</h2>
-              <div className="space-y-2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Using Text Analysis to Improve Writing</h2>
+              <div className="space-y-2" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 {[
                   "Aim for Flesch Reading Ease of 60-70 for general audience content",
                   "Keep average sentence length under 20 words for clarity",
@@ -59,7 +59,7 @@ export default function TextCounterPage() {
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#4F46E51a", borderColor: "#4F46E540" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste your text below for comprehensive analysis.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste your text below for comprehensive analysis.</p>
           </div>
         </div>
       </div>

@@ -342,7 +342,7 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
         {/* Header */}
         {!articleMode && (
           <>
-            <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+            <nav className="flex items-center gap-1 text-sm mb-4" style={{ color: "var(--text-muted)" }}>
               <a href="/" className="hover:underline" style={{ color: accent }}>Home</a><span>/</span><span>Utility Tools</span>
             </nav>
             <div className="flex items-start justify-between mb-3">
@@ -360,7 +360,7 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
         )}
 
         {/* Trust badges */}
-        <div className="flex flex-wrap gap-3 mb-8" style={{ fontSize: "14px", color: "var(--text-muted)" }}>
+        <div className="flex flex-wrap gap-3 mb-8" style={{ fontSize: "15px", color: "var(--text-muted)" }}>
           {["🔒 100% Client-Side", "🚫 No Data Stored", "🛡️ CSPRNG Secured", "📡 Zero Server Calls"].map((b) => (
             <span key={b} className="px-3 py-1.5 rounded-full border" style={{ borderColor: "var(--border)", backgroundColor: "var(--surface)" }}>{b}</span>
           ))}
@@ -424,7 +424,7 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
                 </div>
                 <span className="font-bold" style={{ fontSize: "18px", color: STR_COLORS[score] }}>{STR_LABELS[score]}</span>
               </div>
-              <div className="flex flex-wrap gap-4" style={{ fontSize: "14px", color: "var(--text-muted)" }}>
+              <div className="flex flex-wrap gap-4" style={{ fontSize: "15px", color: "var(--text-muted)" }}>
                 <span>Entropy: {entropy.toFixed(1)} bits</span>
                 {mode === "pin" && <span>{pinCombinations.toLocaleString()} possible combinations</span>}
               </div>
@@ -493,13 +493,13 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
                             <input type="checkbox" checked={val} onChange={() => set(!val)} style={{ accentColor: accent, width: 18, height: 18 }} />
                             {label}
                           </label>
-                          <p className="ml-7" style={{ fontSize: "14px", color: "var(--text-muted)" }}>{help}</p>
+                          <p className="ml-7" style={{ fontSize: "15px", color: "var(--text-muted)" }}>{help}</p>
                         </div>
                       ))}
                       <div>
                         <label className="font-semibold block mb-1" style={{ fontSize: "15px" }}>Custom Symbols</label>
                         <input type="text" value={customSymbols} onChange={(e) => setCustomSymbols(e.target.value || DEFAULT_SYMBOLS)} className="w-full rounded-lg border p-2" style={{ fontSize: "16px", fontFamily: "monospace", backgroundColor: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} />
-                        <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>Some sites only allow certain special characters</p>
+                        <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>Some sites only allow certain special characters</p>
                       </div>
                     </div>
                   )}
@@ -511,7 +511,7 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
             {mode === "passphrase" && (
               <div className="space-y-5 mb-6">
                 <div className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                  <label className="font-bold mb-3 block" style={{ fontSize: "16px" }}>Word Count: <span style={{ color: accent }}>{wordCount}</span> <span style={{ fontSize: "14px", fontWeight: 400, color: "var(--text-muted)" }}>({calcPassphraseEntropy(wordCount).toFixed(1)} bits of entropy)</span></label>
+                  <label className="font-bold mb-3 block" style={{ fontSize: "16px" }}>Word Count: <span style={{ color: accent }}>{wordCount}</span> <span style={{ fontSize: "15px", fontWeight: 400, color: "var(--text-muted)" }}>({calcPassphraseEntropy(wordCount).toFixed(1)} bits of entropy)</span></label>
                   <div className="flex items-center gap-4">
                     <input type="range" min={3} max={10} value={wordCount} onChange={(e) => setWordCount(+e.target.value)} className="flex-1" style={{ accentColor: accent }} />
                     <input type="number" min={3} max={10} value={wordCount} onChange={(e) => setWordCount(Math.max(3, Math.min(10, +e.target.value || 3)))} className="w-20 rounded-lg border p-2 text-center" style={{ fontSize: "18px", backgroundColor: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} />
@@ -602,7 +602,7 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
                             <div key={i} className="flex items-center gap-3 p-2 rounded-lg" style={{ backgroundColor: "var(--bg)" }}>
                               <span className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: STR_COLORS[bpScore] }} />
                               <span className="flex-1 text-sm break-all" style={{ fontFamily: "monospace" }}>{bp}</span>
-                              <button onClick={() => copyBulkItem(i)} className="text-xs px-2 py-1 rounded border flex-shrink-0" style={{ borderColor: "var(--border)", color: bulkCopied === i ? accent : "var(--text-muted)" }}>
+                              <button onClick={() => copyBulkItem(i)} className="px-2 py-1 text-sm rounded border flex-shrink-0" style={{ borderColor: "var(--border)", color: bulkCopied === i ? accent : "var(--text-muted)" }}>
                                 {bulkCopied === i ? "✅" : "📋"}
                               </button>
                             </div>
@@ -771,7 +771,7 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
 
         {/* ═══════════ Security tips ═══════════ */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Security Tips</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Security Tips</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {[
               ["Use a unique password for every account", "If one account gets breached, every account sharing that password is compromised. A password manager makes this practical."],
@@ -790,8 +790,8 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
 
         {/* ═══════════ How it works ═══════════ */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">How Password Generation Works</h2>
-          <div className="space-y-4 rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", fontSize: "16px", color: "var(--text-muted)" }}>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">How Password Generation Works</h2>
+          <div className="space-y-4 rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
             <p>This tool uses your browser&apos;s built-in Cryptographic Random Number Generator (CSPRNG) &mdash; specifically <code>crypto.getRandomValues()</code> &mdash; to generate passwords. This is the same source of randomness used by operating systems, encryption software, and professional security tools.</p>
             <p><strong style={{ color: "var(--text)" }}>For random passwords:</strong> The tool builds a character pool from your selected options, then picks characters using the CSPRNG. A Fisher-Yates shuffle ensures required characters are distributed randomly throughout.</p>
             <p><strong style={{ color: "var(--text)" }}>For passphrases:</strong> Words are selected from the EFF&apos;s curated wordlist of 7,776 common English words. Each word adds approximately 12.9 bits of entropy.</p>
@@ -802,7 +802,7 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
         {/* ═══════════ FAQs ═══════════ */}
         {!articleMode && (
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Frequently Asked Questions</h2>
             <div className="space-y-3">
               {[
                 ["Is this password generator safe to use?", "Yes. This tool generates passwords entirely in your browser using the Web Crypto API (crypto.getRandomValues()), the same CSPRNG used by password managers and security software. No passwords are transmitted to any server, stored in any database, or logged in any way."],
@@ -817,7 +817,7 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
               ].map(([q, a]) => (
                 <details key={q} className="rounded-xl border" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                   <summary className="p-4 cursor-pointer font-semibold" style={{ fontSize: "16px" }}>{q}</summary>
-                  <p className="px-4 pb-4" style={{ fontSize: "16px", color: "var(--text-muted)" }}>{a}</p>
+                  <p className="px-4 pb-4" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>{a}</p>
                 </details>
               ))}
             </div>
@@ -826,7 +826,7 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
 
         {/* ═══════════ Related tools ═══════════ */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Related Tools</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Related Tools</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {[
               ["QR Code Generator", "/utility-tools/qr-code-generator", "Generate QR codes for URLs, WiFi, contacts, and more"],
@@ -837,14 +837,14 @@ export default function PasswordGenerator({ title = "Password Generator", subtit
             ].map(([name, href, desc]) => (
               <a key={name} href={href} className="block rounded-xl border p-4 hover:shadow-md transition-shadow" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <h3 className="font-semibold mb-1" style={{ fontSize: "16px" }}>{name}</h3>
-                <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>{desc}</p>
+                <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>{desc}</p>
               </a>
             ))}
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="text-center pt-6 pb-8 border-t" style={{ borderColor: "var(--border)", color: "var(--text-muted)", fontSize: "14px" }}>
+        <footer className="text-center pt-6 pb-8 border-t" style={{ borderColor: "var(--border)", color: "var(--text-muted)", fontSize: "15px" }}>
           <p>© {new Date().getFullYear()} <a href="/" style={{ color: accent }} className="hover:underline">EveryFreeTool.com</a> — Free tools, no signup, no nonsense.</p>
         </footer>
       </div>

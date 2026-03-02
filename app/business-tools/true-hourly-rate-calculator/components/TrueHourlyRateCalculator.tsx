@@ -240,7 +240,7 @@ function PillButton({ active, label, desc, onClick }: { active: boolean; label: 
         backgroundColor: active ? "#DC2626" : "var(--bg)",
         color: active ? "#fff" : "var(--text)",
         border: active ? "none" : "1px solid var(--border)",
-        fontSize: "14px",
+        fontSize: "15px",
         minWidth: "60px",
       }}
     >
@@ -439,7 +439,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
       {/* ─── Header ─── */}
       <header className="max-w-[1100px] mx-auto px-4 pt-6 pb-2">
         <div className="flex items-center justify-between mb-4">
-          <nav className="flex items-center gap-1" style={{ color: "var(--text-muted)", fontSize: "14px" }}>
+          <nav className="flex items-center gap-1" style={{ color: "var(--text-muted)", fontSize: "15px" }}>
             <Link href="/" className="hover:underline" style={{ color: "#DC2626" }}>Home</Link>
             <span>/</span>
             <span>Business Tools</span>
@@ -477,7 +477,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                     style={{
                       backgroundColor: inputMode === "salary" ? "#DC2626" : "transparent",
                       color: inputMode === "salary" ? "#fff" : "var(--text-muted)",
-                      fontSize: "14px",
+                      fontSize: "15px",
                     }}
                   >Annual Salary</button>
                   <button
@@ -486,7 +486,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                     style={{
                       backgroundColor: inputMode === "hourly" ? "#DC2626" : "transparent",
                       color: inputMode === "hourly" ? "#fff" : "var(--text-muted)",
-                      fontSize: "14px",
+                      fontSize: "15px",
                     }}
                   >Hourly Rate</button>
                 </div>
@@ -507,7 +507,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                       aria-label="Annual salary"
                     />
                   </div>
-                  <p className="mt-1.5" style={{ fontSize: "14px", color: "var(--text-muted)" }}>Before taxes, base salary</p>
+                  <p className="mt-1.5" style={{ fontSize: "15px", color: "var(--text-muted)" }}>Before taxes, base salary</p>
                 </div>
               ) : (
                 <div>
@@ -525,7 +525,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                     />
                     <span className="absolute right-4 top-1/2 -translate-y-1/2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>/hr</span>
                   </div>
-                  <p className="mt-1.5" style={{ fontSize: "14px", color: "var(--text-muted)" }}>Converts to {formatCurrency(salary, 0)}/year at 40 hrs/week</p>
+                  <p className="mt-1.5" style={{ fontSize: "15px", color: "var(--text-muted)" }}>Converts to {formatCurrency(salary, 0)}/year at 40 hrs/week</p>
                 </div>
               )}
             </div>
@@ -547,7 +547,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                   <PillButton key={p.value} active={commuteMins === p.value} label={p.label} desc={p.desc} onClick={() => setCommuteMins(p.value)} />
                 ))}
               </div>
-              <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>
+              <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>
                 That&apos;s <strong style={{ color: "var(--text)" }}>{commuteHrsWeek.toFixed(1)} hours/week</strong> and <strong style={{ color: "var(--text)" }}>{Math.round(commuteHrsWeek * 52)} hours/year</strong> commuting
               </p>
             </div>
@@ -569,7 +569,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                   <PillButton key={p.value} active={unpaidOT === p.value} label={p.label} desc={p.desc} onClick={() => setUnpaidOT(p.value)} />
                 ))}
               </div>
-              <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>48% of US workers report working more than 40 hours per week</p>
+              <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>48% of US workers report working more than 40 hours per week</p>
             </div>
 
             {/* Work Prep */}
@@ -648,7 +648,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                     if (catExpenses.length === 0) return null;
                     return (
                       <div key={cat}>
-                        <h4 className="font-semibold mb-2 uppercase tracking-wide" style={{ fontSize: "12px", color: "var(--text-muted)" }}>{cat}</h4>
+                        <h4 className="font-semibold mb-2 uppercase tracking-wide" style={{ fontSize: "15px", color: "var(--text-muted)" }}>{cat}</h4>
                         <div className="space-y-2">
                           {catExpenses.map(exp => (
                             <div key={exp.id} className="flex items-center gap-3">
@@ -666,7 +666,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                               </button>
                               <span className="flex-1" style={{ fontSize: "15px", color: exp.enabled ? "var(--text)" : "var(--text-muted)" }}>{exp.label}</span>
                               <div className="relative" style={{ width: "100px" }}>
-                                <span className="absolute left-2 top-1/2 -translate-y-1/2" style={{ fontSize: "14px", color: "var(--text-muted)" }}>$</span>
+                                <span className="absolute left-2 top-1/2 -translate-y-1/2" style={{ fontSize: "15px", color: "var(--text-muted)" }}>$</span>
                                 <input
                                   type="text"
                                   inputMode="numeric"
@@ -683,7 +683,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                                   }}
                                   aria-label={`${exp.label} monthly cost`}
                                 />
-                                <span className="absolute right-2 top-1/2 -translate-y-1/2" style={{ fontSize: "12px", color: "var(--text-muted)" }}>/mo</span>
+                                <span className="absolute right-2 top-1/2 -translate-y-1/2" style={{ fontSize: "15px", color: "var(--text-muted)" }}>/mo</span>
                               </div>
                             </div>
                           ))}
@@ -704,7 +704,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                         aria-label="Custom expense name"
                       />
                       <div className="relative" style={{ width: "100px" }}>
-                        <span className="absolute left-2 top-1/2 -translate-y-1/2" style={{ fontSize: "14px", color: "var(--text-muted)" }}>$</span>
+                        <span className="absolute left-2 top-1/2 -translate-y-1/2" style={{ fontSize: "15px", color: "var(--text-muted)" }}>$</span>
                         <input
                           type="text"
                           inputMode="numeric"
@@ -714,13 +714,13 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                           style={{ fontSize: "15px", backgroundColor: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}
                           aria-label="Custom expense amount"
                         />
-                        <span className="absolute right-2 top-1/2 -translate-y-1/2" style={{ fontSize: "12px", color: "var(--text-muted)" }}>/mo</span>
+                        <span className="absolute right-2 top-1/2 -translate-y-1/2" style={{ fontSize: "15px", color: "var(--text-muted)" }}>/mo</span>
                       </div>
                       <button onClick={() => removeCustomExpense(i)} className="p-1 rounded hover:opacity-70" style={{ color: "var(--text-muted)" }}>&times;</button>
                     </div>
                   ))}
 
-                  <button onClick={addCustomExpense} className="font-medium py-2 px-4 rounded-lg border" style={{ fontSize: "14px", borderColor: "var(--border)", color: "#DC2626" }}>
+                  <button onClick={addCustomExpense} className="font-medium py-2 px-4 rounded-lg border" style={{ fontSize: "15px", borderColor: "var(--border)", color: "#DC2626" }}>
                     + Add Custom Expense
                   </button>
 
@@ -742,24 +742,24 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
             <div className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
               <div className="grid grid-cols-2 gap-4 text-center mb-4">
                 <div>
-                  <p className="uppercase tracking-wide font-semibold mb-1" style={{ fontSize: "13px", color: "var(--text-muted)" }}>Your &ldquo;Paper&rdquo; Rate</p>
+                  <p className="uppercase tracking-wide font-semibold mb-1" style={{ fontSize: "15px", color: "var(--text-muted)" }}>Your &ldquo;Paper&rdquo; Rate</p>
                   <AnimatedNumber
                     value={paperRate}
                     className="tabular-nums font-bold"
                     style={{ fontSize: "clamp(36px, 5vw, 48px)", color: "#16A34A", textDecoration: "line-through", textDecorationColor: "#16A34A40" }}
                   />
-                  <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>/hr</p>
-                  <p style={{ fontSize: "13px", color: "var(--text-muted)" }}>Based on salary &divide; 40 hrs/week</p>
+                  <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>/hr</p>
+                  <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>Based on salary &divide; 40 hrs/week</p>
                 </div>
                 <div>
-                  <p className="uppercase tracking-wide font-semibold mb-1" style={{ fontSize: "13px", color: "var(--text-muted)" }}>Your TRUE Rate</p>
+                  <p className="uppercase tracking-wide font-semibold mb-1" style={{ fontSize: "15px", color: "var(--text-muted)" }}>Your TRUE Rate</p>
                   <AnimatedNumber
                     value={trueRate}
                     className="tabular-nums font-bold"
                     style={{ fontSize: "clamp(44px, 6vw, 64px)", color: "#DC2626" }}
                   />
-                  <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>/hr</p>
-                  <p style={{ fontSize: "13px", color: "var(--text-muted)" }}>What you ACTUALLY earn per hour of your life spent on work</p>
+                  <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>/hr</p>
+                  <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>What you ACTUALLY earn per hour of your life spent on work</p>
                 </div>
               </div>
 
@@ -795,12 +795,12 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                         {/* Green marker (paper rate) */}
                         <div className="absolute top-4" style={{ left: `${paperPos}%`, transform: "translateX(-50%)" }}>
                           <div className="w-4 h-4 rounded-full border-2 border-white" style={{ backgroundColor: "#16A34A" }} />
-                          <p className="absolute top-5 font-bold whitespace-nowrap" style={{ fontSize: "12px", color: "#16A34A", left: "50%", transform: "translateX(-50%)" }}>{formatCurrency(paperRate, 2)}</p>
+                          <p className="absolute top-5 font-bold whitespace-nowrap" style={{ fontSize: "15px", color: "#16A34A", left: "50%", transform: "translateX(-50%)" }}>{formatCurrency(paperRate, 2)}</p>
                         </div>
                         {/* Red marker (true rate) */}
                         <div className="absolute top-4" style={{ left: `${truePos}%`, transform: "translateX(-50%)" }}>
                           <div className="w-5 h-5 rounded-full border-2 border-white" style={{ backgroundColor: "#DC2626" }} />
-                          <p className="absolute top-6 font-bold whitespace-nowrap" style={{ fontSize: "13px", color: "#DC2626", left: "50%", transform: "translateX(-50%)" }}>{formatCurrency(trueRate, 2)}</p>
+                          <p className="absolute top-6 font-bold whitespace-nowrap" style={{ fontSize: "15px", color: "#DC2626", left: "50%", transform: "translateX(-50%)" }}>{formatCurrency(trueRate, 2)}</p>
                         </div>
                       </>
                     );
@@ -838,7 +838,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Time Budget */}
               <div>
-                <h3 className="font-semibold mb-3 uppercase tracking-wide" style={{ fontSize: "14px", color: "var(--text-muted)" }}>Your Time Budget (per week)</h3>
+                <h3 className="font-semibold mb-3 uppercase tracking-wide" style={{ fontSize: "15px", color: "var(--text-muted)" }}>Your Time Budget (per week)</h3>
                 <div className="space-y-2 font-mono tabular-nums" style={{ fontSize: "16px" }}>
                   <div className="flex justify-between"><span>Paid work hours:</span><span>40.0 hrs</span></div>
                   <div className="flex justify-between" style={{ color: "#DC2626" }}><span>+ Unpaid overtime:</span><span>+ {unpaidOT.toFixed(1)} hrs</span></div>
@@ -858,7 +858,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
 
               {/* Money Budget */}
               <div>
-                <h3 className="font-semibold mb-3 uppercase tracking-wide" style={{ fontSize: "14px", color: "var(--text-muted)" }}>Your Money (annual)</h3>
+                <h3 className="font-semibold mb-3 uppercase tracking-wide" style={{ fontSize: "15px", color: "var(--text-muted)" }}>Your Money (annual)</h3>
                 <div className="space-y-2 font-mono tabular-nums" style={{ fontSize: "16px" }}>
                   <div className="flex justify-between"><span>Gross salary:</span><span>{formatCurrency(salary)}</span></div>
                   {annualExpenses > 0 && (
@@ -979,19 +979,19 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="text-center p-3 rounded-xl" style={{ backgroundColor: "var(--surface)" }}>
                       <p className="font-bold tabular-nums" style={{ fontSize: "28px", color: "#16A34A" }}>{formatCurrency(sc.trueRate, 2)}</p>
-                      <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>New true rate</p>
+                      <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>New true rate</p>
                     </div>
                     <div className="text-center p-3 rounded-xl" style={{ backgroundColor: "var(--surface)" }}>
                       <p className="font-bold tabular-nums" style={{ fontSize: "28px", color: "#16A34A" }}>+{pctIncrease.toFixed(0)}%</p>
-                      <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>Rate increase</p>
+                      <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>Rate increase</p>
                     </div>
                     <div className="text-center p-3 rounded-xl" style={{ backgroundColor: "var(--surface)" }}>
                       <p className="font-bold tabular-nums" style={{ fontSize: "28px", color: "#16A34A" }}>{hrsSaved.toFixed(1)}</p>
-                      <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>Hrs/week saved</p>
+                      <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>Hrs/week saved</p>
                     </div>
                     <div className="text-center p-3 rounded-xl" style={{ backgroundColor: "var(--surface)" }}>
                       <p className="font-bold tabular-nums" style={{ fontSize: "28px", color: "#16A34A" }}>{formatCurrency(annualSaved)}</p>
-                      <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>Annual savings</p>
+                      <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>Annual savings</p>
                     </div>
                   </div>
 
@@ -1083,7 +1083,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                 <div key={i} className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                   <p className="font-bold tabular-nums" style={{ fontSize: "36px", color: "#DC2626" }}>{card.stat}</p>
                   <p className="mt-1" style={{ fontSize: "16px", color: "var(--text)" }}>{card.desc}</p>
-                  {card.source && <p className="mt-1" style={{ fontSize: "13px", color: "var(--text-muted)" }}>{card.source}</p>}
+                  {card.source && <p className="mt-1" style={{ fontSize: "15px", color: "var(--text-muted)" }}>{card.source}</p>}
                 </div>
               ))}
             </div>
@@ -1173,7 +1173,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
                     {faq.q}
                     <span className="ml-2 flex-shrink-0 text-lg" style={{ color: "var(--text-muted)" }}>+</span>
                   </summary>
-                  <div className="px-5 pb-4" style={{ fontSize: "16px", lineHeight: 1.7, color: "var(--text-muted)" }}>
+                  <div className="px-5 pb-4" style={{ fontSize: "17px", lineHeight: 1.7, color: "var(--text-muted)" }}>
                     {faq.a}
                   </div>
                 </details>
@@ -1200,7 +1200,7 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
           </section>
 
           {/* Footer */}
-          <footer className="text-center py-8" style={{ color: "var(--text-muted)", fontSize: "14px" }}>
+          <footer className="text-center py-8" style={{ color: "var(--text-muted)", fontSize: "15px" }}>
             <p>100% free. No signup. All calculations happen in your browser.</p>
             <p className="mt-1">
               <Link href="/" className="hover:underline" style={{ color: "#DC2626" }}>EveryFreeTool.com</Link>
@@ -1212,11 +1212,11 @@ export default function TrueHourlyRateCalculator({ title, subtitle, articleMode 
       {/* ─── Mobile Sticky Bar ─── */}
       <div className="fixed bottom-0 left-0 right-0 lg:hidden border-t py-3 px-4 flex items-center justify-between z-40" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
         <div>
-          <p style={{ fontSize: "12px", color: "var(--text-muted)" }}>Your True Rate</p>
+          <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>Your True Rate</p>
           <p className="font-bold tabular-nums" style={{ fontSize: "24px", color: "#DC2626" }}>{formatCurrency(trueRate, 2)}/hr</p>
         </div>
         <div className="text-right">
-          <p style={{ fontSize: "12px", color: "var(--text-muted)" }}>Paper Rate</p>
+          <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>Paper Rate</p>
           <p className="font-bold tabular-nums line-through" style={{ fontSize: "18px", color: "#16A34A", textDecorationColor: "#16A34A40" }}>{formatCurrency(paperRate, 2)}/hr</p>
         </div>
       </div>

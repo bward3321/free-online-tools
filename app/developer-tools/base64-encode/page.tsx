@@ -27,17 +27,17 @@ export default function Base64EncodePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Base64 Encode &mdash; Convert Text to Base64 Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Instantly encode any text to Base64. Handles all Unicode characters including emoji, CJK text, and accented characters. Supports URL-safe output and MIME line breaks.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Quick Base64 Encoding</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Need to quickly encode a string for an API call, auth header, or config file? Type or paste below and copy the output. The conversion happens in real time as you type &mdash; no buttons to click, no forms to submit. This is the fastest way to get a Base64-encoded string.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Quick Base64 Encoding</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Need to quickly encode a string for an API call, auth header, or config file? Type or paste below and copy the output. The conversion happens in real time as you type &mdash; no buttons to click, no forms to submit. This is the fastest way to get a Base64-encoded string.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Code Examples</h2>
-              <div className="space-y-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Code Examples</h2>
+              <div className="space-y-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 <div><strong style={{ color: "var(--text)" }}>JavaScript:</strong> <code style={{ color: "#8BE9FD" }}>btoa(unescape(encodeURIComponent(str)))</code></div>
                 <div><strong style={{ color: "var(--text)" }}>Python:</strong> <code style={{ color: "#8BE9FD" }}>base64.b64encode(text.encode(&apos;utf-8&apos;)).decode()</code></div>
                 <div><strong style={{ color: "var(--text)" }}>PHP:</strong> <code style={{ color: "#8BE9FD" }}>base64_encode($text)</code></div>
@@ -46,8 +46,8 @@ export default function Base64EncodePage() {
               </div>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Common Encoding Scenarios</h2>
-              <div className="space-y-2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Common Encoding Scenarios</h2>
+              <div className="space-y-2" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 {[
                   "HTTP Basic Auth: encode username:password for Authorization header",
                   "Data URIs: embed small files inline in HTML, CSS, or JSON",
@@ -61,7 +61,7 @@ export default function Base64EncodePage() {
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Type or paste text below to encode it to Base64.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Type or paste text below to encode it to Base64.</p>
           </div>
         </div>
       </div>

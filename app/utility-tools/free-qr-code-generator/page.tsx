@@ -33,15 +33,15 @@ export default function FreeQrCodeGeneratorPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#2563EB" }}>Home</a><span>/</span><span>Utility Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Free QR Code Generator &mdash; No Signup, No Watermark, No Limits</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Every feature that competitors charge $7-12/month for &mdash; logo embedding, color customization, batch generation, SVG export &mdash; completely free, forever.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">What You Get Free (That Others Charge For)</h2>
-              <div className="space-y-2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">What You Get Free (That Others Charge For)</h2>
+              <div className="space-y-2" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 {[
                   { f: "Logo embedding", c: "$7-12/mo at QR TIGER, QRCode Monkey Pro" },
                   { f: "Custom colors & branding", c: "Paid tier at most generators" },
@@ -57,12 +57,12 @@ export default function FreeQrCodeGeneratorPage() {
               </div>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">100% Private &amp; Client-Side</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Unlike most QR generators that process your data on their servers (and may log URLs, WiFi passwords, and contact info), this tool runs <strong style={{ color: "var(--text)" }}>entirely in your browser</strong>. No data is ever transmitted. Your WiFi passwords, contact details, and business URLs stay on your device. Close the tab and everything is gone.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">100% Private &amp; Client-Side</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Unlike most QR generators that process your data on their servers (and may log URLs, WiFi passwords, and contact info), this tool runs <strong style={{ color: "var(--text)" }}>entirely in your browser</strong>. No data is ever transmitted. Your WiFi passwords, contact details, and business URLs stay on your device. Close the tab and everything is gone.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#2563EB1a", borderColor: "#2563EB40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Start generating QR codes below &mdash; all features, completely free.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Start generating QR codes below &mdash; all features, completely free.</p>
           </div>
         </div>
       </div>

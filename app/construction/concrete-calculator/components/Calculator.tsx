@@ -386,7 +386,7 @@ function ResultsPanel({
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: "var(--text-muted)" }}>
             <circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" />
           </svg>
-          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10" style={{ backgroundColor: "var(--text)", color: "var(--bg)" }}>
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10" style={{ backgroundColor: "var(--text)", color: "var(--bg)" }}>
             Most contractors recommend 10% extra
           </div>
         </div>
@@ -419,13 +419,13 @@ function ResultsPanel({
               <div className="text-2xl font-bold tabular-nums" style={{ color: "var(--text)" }}>
                 {formatInt(count)}
               </div>
-              <div className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>
+              <div style={{ color: "var(--text-muted)" }}>
                 {size} lb bags
               </div>
             </div>
           ))}
         </div>
-        <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>
+        <p style={{ color: "var(--text-muted)" }}>
           Based on standard yield: 40lb = 0.011 yd&sup3;, 60lb = 0.017 yd&sup3;, 80lb = 0.022 yd&sup3;
         </p>
       </div>
@@ -473,7 +473,7 @@ function ResultsPanel({
             <div className="text-2xl font-bold tabular-nums" style={{ color: "var(--text)" }}>
               ${formatNumber(bagCost)}
             </div>
-            <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+            <p style={{ color: "var(--text-muted)" }}>
               Prices based on average US retail. Edit to match your local prices.
             </p>
           </div>
@@ -514,7 +514,7 @@ function ResultsPanel({
             <div className="text-2xl font-bold tabular-nums" style={{ color: "var(--text)" }}>
               ${formatNumber(readymixCost)}
             </div>
-            <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+            <p style={{ color: "var(--text-muted)" }}>
               Ready-mix is recommended for orders over 1 cubic yard.
             </p>
           </div>
@@ -553,7 +553,7 @@ function ResultsPanel({
           )}
         </button>
       </div>
-      <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+      <p style={{ color: "var(--text-muted)" }}>
         Based on standard concrete density of 150 lbs/ft&sup3;
       </p>
     </div>
@@ -635,7 +635,7 @@ function MiniSection({
               <button
                 key={s.id}
                 onClick={() => onUpdate(getDefaultFields(s.id), s.id)}
-                className="px-3 py-1.5 text-xs rounded-lg transition-all font-medium"
+                className="px-3 py-1.5 text-sm rounded-lg transition-all font-medium"
                 style={{
                   backgroundColor:
                     section.shape === s.id
@@ -1019,7 +1019,7 @@ export default function Calculator() {
             }}
           >
             <h2
-              className="text-2xl font-bold mb-6"
+              className="text-[22px] sm:text-[28px] font-bold mb-6"
               style={{ color: "var(--text)" }}
             >
               How to Calculate Concrete for Your Project
@@ -1074,7 +1074,7 @@ export default function Calculator() {
         {/* FAQ */}
         <div className="mb-12">
           <h2
-            className="text-2xl font-bold mb-6"
+            className="text-[22px] sm:text-[28px] font-bold mb-6"
             style={{ color: "var(--text)" }}
           >
             Frequently Asked Questions
@@ -1212,7 +1212,7 @@ export default function Calculator() {
                   <div className="font-medium text-sm" style={{ color: "var(--text)" }}>
                     {tool.name}
                   </div>
-                  <div className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
+                  <div style={{ color: "var(--text-muted)" }}>
                     {tool.desc}
                   </div>
                 </div>
@@ -1223,7 +1223,7 @@ export default function Calculator() {
 
         {/* Footer */}
         <footer
-          className="border-t pt-8 pb-4 text-center text-xs"
+          className="border-t pt-8 pb-4 text-center text-sm"
           style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
         >
           <p>Free Online Tools &mdash; Free calculators and tools for everyone.</p>

@@ -20,25 +20,25 @@ export default function RegexPatternsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Common Regex Patterns &mdash; Ready-to-Use Regular Expressions</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>A searchable library of 30+ pre-built regex patterns for the most common tasks. Email validation, phone numbers, URLs, dates, passwords, and more. Click any pattern to load it into the tester with sample data.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Stop Reinventing the Wheel</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Most regex tasks have been solved thousands of times. Need to validate an email? Match a phone number? Extract dates from text? Instead of writing a pattern from scratch and debugging edge cases, start with a proven pattern from this library. Load it, test it against your data, customize if needed, and copy it into your code.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Stop Reinventing the Wheel</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Most regex tasks have been solved thousands of times. Need to validate an email? Match a phone number? Extract dates from text? Instead of writing a pattern from scratch and debugging edge cases, start with a proven pattern from this library. Load it, test it against your data, customize if needed, and copy it into your code.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Patterns for Every Use Case</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The library covers <strong style={{ color: "var(--text)" }}>7 categories</strong>: contact validation (email, phone), web (URLs, domains, IPs), numbers (integers, decimals, currency), dates and times (ISO, US format, 24-hour), input validation (passwords, usernames, credit cards), text processing (HTML tags, whitespace, duplicates), and developer patterns (imports, TODOs, semver, JSON keys).</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Patterns for Every Use Case</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The library covers <strong style={{ color: "var(--text)" }}>7 categories</strong>: contact validation (email, phone), web (URLs, domains, IPs), numbers (integers, decimals, currency), dates and times (ISO, US format, 24-hour), input validation (passwords, usernames, credit cards), text processing (HTML tags, whitespace, duplicates), and developer patterns (imports, TODOs, semver, JSON keys).</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Each Pattern Includes Sample Data</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>When you click &quot;Load Pattern,&quot; the tool loads both the regex and a test string with <strong style={{ color: "var(--text)" }}>matching and non-matching examples</strong>. This immediately shows you what the pattern catches and what it misses. Modify the test string to add your own data and verify the pattern works for your specific case.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Each Pattern Includes Sample Data</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>When you click &quot;Load Pattern,&quot; the tool loads both the regex and a test string with <strong style={{ color: "var(--text)" }}>matching and non-matching examples</strong>. This immediately shows you what the pattern catches and what it misses. Modify the test string to add your own data and verify the pattern works for your specific case.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Browse and search patterns below.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Browse and search patterns below.</p>
           </div>
         </div>
       </div>

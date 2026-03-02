@@ -1070,7 +1070,7 @@ export default function MarkdownEditor({
     justifyContent: "center",
     minWidth: "32px",
     minHeight: "32px",
-    fontSize: "14px",
+    fontSize: "15px",
     fontWeight: 600,
     transition: "all 0.15s",
   });
@@ -1107,7 +1107,7 @@ export default function MarkdownEditor({
         <div className="flex items-center justify-between py-3 px-4" style={{ borderBottom: `1px solid ${border}` }}>
           <div className="flex items-center gap-3">
             {!articleMode && (
-              <nav className="flex items-center gap-1 text-xs" style={{ color: textMuted }}>
+              <nav className="flex items-center gap-1 text-sm" style={{ color: textMuted }}>
                 <a href="/" className="hover:underline" style={{ color: accent }}>Home</a>
                 <span>/</span>
                 <span>Writing Tools</span>
@@ -1119,7 +1119,7 @@ export default function MarkdownEditor({
             {!isMobile && (
               <div className="flex rounded-lg overflow-hidden" style={{ border: `1px solid ${border}` }}>
                 {(["editor", "split", "preview"] as ViewMode[]).map(vm => (
-                  <button key={vm} onClick={() => setViewMode(vm)} title={vm} style={{ ...btnStyle(viewMode === vm), borderRadius: 0, border: "none", padding: "4px 10px", fontSize: "12px" }}>
+                  <button key={vm} onClick={() => setViewMode(vm)} title={vm} style={{ ...btnStyle(viewMode === vm), borderRadius: 0, border: "none", padding: "4px 10px", fontSize: "15px" }}>
                     {vm === "editor" ? "\u270F\uFE0F" : vm === "split" ? "\u2B1C" : "\uD83D\uDC41\uFE0F"}
                   </button>
                 ))}
@@ -1240,8 +1240,8 @@ export default function MarkdownEditor({
             <input type="text" value={findText} onChange={e => setFindText(e.target.value)} placeholder="Find..." className="px-3 py-1.5 rounded-lg border text-sm outline-none" style={{ backgroundColor: surface, borderColor: border, color: textColor, minWidth: "150px" }} />
             <input type="text" value={replaceText} onChange={e => setReplaceText(e.target.value)} placeholder="Replace..." className="px-3 py-1.5 rounded-lg border text-sm outline-none" style={{ backgroundColor: surface, borderColor: border, color: textColor, minWidth: "150px" }} />
             <button onClick={() => setFindCaseSensitive(!findCaseSensitive)} style={btnStyle(findCaseSensitive)} title="Case sensitive">Aa</button>
-            <button onClick={doReplace} className="px-3 py-1 rounded-lg text-xs font-semibold" style={{ backgroundColor: accent + "20", color: accent, border: `1px solid ${accent}40` }}>Replace All</button>
-            <span className="text-xs" style={{ color: textMuted }}>{findMatches.length} match{findMatches.length !== 1 ? "es" : ""}</span>
+            <button onClick={doReplace} className="px-3 py-1 rounded-lg font-semibold text-sm" style={{ backgroundColor: accent + "20", color: accent, border: `1px solid ${accent}40` }}>Replace All</button>
+            <span style={{ color: textMuted }}>{findMatches.length} match{findMatches.length !== 1 ? "es" : ""}</span>
             <button onClick={() => setShowFindReplace(false)} style={btnStyle()}>{"\u2715"}</button>
           </div>
         )}
@@ -1259,7 +1259,7 @@ export default function MarkdownEditor({
           /* HTML-to-Markdown mode */
           <div id="md-split-container" className="flex" style={{ height: "calc(100vh - 160px)" }}>
             <div style={{ width: isMobile ? "100%" : `${splitPos}%`, display: isMobile && mobileTab !== "edit" ? "none" : "flex", flexDirection: "column" }}>
-              <div className="text-xs font-semibold px-3 py-1" style={{ color: textMuted, borderBottom: `1px solid ${border}` }}>HTML Input</div>
+              <div className="font-semibold text-sm px-3 py-1" style={{ color: textMuted, borderBottom: `1px solid ${border}` }}>HTML Input</div>
               <textarea
                 value={htmlInput}
                 onChange={e => setHtmlInput(e.target.value)}
@@ -1271,9 +1271,9 @@ export default function MarkdownEditor({
             </div>
             {!isMobile && <div className="w-[4px] cursor-col-resize hover:opacity-80" style={{ backgroundColor: border }} onMouseDown={handleDragStart} />}
             <div style={{ width: isMobile ? "100%" : `${100 - splitPos}%`, display: isMobile && mobileTab !== "preview" ? "none" : "flex", flexDirection: "column" }}>
-              <div className="text-xs font-semibold px-3 py-1 flex items-center justify-between" style={{ color: textMuted, borderBottom: `1px solid ${border}` }}>
+              <div className="font-semibold text-sm px-3 py-1 flex items-center justify-between" style={{ color: textMuted, borderBottom: `1px solid ${border}` }}>
                 <span>Markdown Output</span>
-                <button onClick={() => { navigator.clipboard.writeText(convertedMd); showToast("Markdown copied!"); }} className="text-xs px-2 py-0.5 rounded" style={{ color: accent }}>Copy</button>
+                <button onClick={() => { navigator.clipboard.writeText(convertedMd); showToast("Markdown copied!"); }} className="text-sm px-2 py-0.5 rounded" style={{ color: accent }}>Copy</button>
               </div>
               <pre className="flex-1 overflow-auto p-4" style={{ backgroundColor: surface, fontFamily: "'JetBrains Mono', monospace", fontSize: `${fontSize}px`, lineHeight: "1.6", color: textColor, whiteSpace: "pre-wrap", wordBreak: "break-word", margin: 0 }}>
                 {convertedMd || "Converted Markdown will appear here..."}
@@ -1318,7 +1318,7 @@ export default function MarkdownEditor({
                   />
                 </div>
                 {/* Stats bar */}
-                <div className="flex flex-wrap items-center gap-3 px-3 py-1.5 text-xs" style={{ color: textMuted, borderTop: `1px solid ${border}`, backgroundColor: isDark ? "#111827" : "#F9FAFB" }}>
+                <div className="flex flex-wrap items-center gap-3 px-3 py-1.5 text-sm" style={{ color: textMuted, borderTop: `1px solid ${border}`, backgroundColor: isDark ? "#111827" : "#F9FAFB" }}>
                   <span>{stats.words} words</span>
                   <span>{stats.chars} chars</span>
                   <span>{stats.lines} lines</span>
@@ -1346,11 +1346,11 @@ export default function MarkdownEditor({
               <>
                 <div className="w-[4px] flex-shrink-0" style={{ backgroundColor: border }} />
                 <div style={{ width: "30%", display: "flex", flexDirection: "column" }}>
-                  <div className="text-xs font-semibold px-3 py-1 flex items-center justify-between" style={{ color: textMuted, borderBottom: `1px solid ${border}` }}>
+                  <div className="font-semibold text-sm px-3 py-1 flex items-center justify-between" style={{ color: textMuted, borderBottom: `1px solid ${border}` }}>
                     <span>HTML Output</span>
-                    <button onClick={copyHtml} className="text-xs px-2 py-0.5 rounded" style={{ color: accent }}>Copy</button>
+                    <button onClick={copyHtml} className="text-sm px-2 py-0.5 rounded" style={{ color: accent }}>Copy</button>
                   </div>
-                  <pre className="flex-1 overflow-auto p-4" style={{ backgroundColor: surface, fontFamily: "'JetBrains Mono', monospace", fontSize: "13px", lineHeight: "1.5", color: textMuted, whiteSpace: "pre-wrap", wordBreak: "break-word", margin: 0 }}>
+                  <pre className="flex-1 overflow-auto p-4" style={{ backgroundColor: surface, fontFamily: "'JetBrains Mono', monospace", fontSize: "15px", lineHeight: "1.5", color: textMuted, whiteSpace: "pre-wrap", wordBreak: "break-word", margin: 0 }}>
                     {renderedHtml}
                   </pre>
                 </div>
@@ -1387,10 +1387,10 @@ export default function MarkdownEditor({
                       <th key={ci} className="text-center" style={{ border: `1px solid ${border}`, padding: "4px 8px" }}>
                         <div className="flex items-center gap-1 justify-center">
                           <button onClick={() => setTableAligns(p => { const n = [...p]; n[ci] = n[ci] === "left" ? "center" : n[ci] === "center" ? "right" : "left"; return n; })}
-                            className="text-xs px-1 rounded" style={{ color: accent }}>
+                            className="text-sm px-1 rounded" style={{ color: accent }}>
                             {tableAligns[ci] === "left" ? "\u2190" : tableAligns[ci] === "center" ? "\u2194" : "\u2192"}
                           </button>
-                          {tableCols > 1 && <button onClick={() => deleteTableCol(ci)} className="text-xs text-red-500 hover:text-red-700">{"\u2715"}</button>}
+                          {tableCols > 1 && <button onClick={() => deleteTableCol(ci)} className="text-sm text-red-500 hover:text-red-700">{"\u2715"}</button>}
                         </div>
                       </th>
                     ))}
@@ -1400,7 +1400,7 @@ export default function MarkdownEditor({
                   {tableCells.map((row, ri) => (
                     <tr key={ri}>
                       <td className="text-center">
-                        {tableRows > 1 && <button onClick={() => deleteTableRow(ri)} className="text-xs text-red-500 hover:text-red-700">{"\u2715"}</button>}
+                        {tableRows > 1 && <button onClick={() => deleteTableRow(ri)} className="text-sm text-red-500 hover:text-red-700">{"\u2715"}</button>}
                       </td>
                       {row.map((cell, ci) => (
                         <td key={ci} style={{ border: `1px solid ${border}`, padding: 0 }}>
@@ -1419,7 +1419,7 @@ export default function MarkdownEditor({
               <button onClick={addTableCol} className="px-3 py-1 rounded-lg text-sm" style={{ color: accent, border: `1px solid ${accent}40` }}>+ Column</button>
             </div>
             <div className="mb-4">
-              <div className="text-xs font-semibold mb-1" style={{ color: textMuted }}>Generated Markdown:</div>
+              <div className="font-semibold text-sm mb-1" style={{ color: textMuted }}>Generated Markdown:</div>
               <pre className="p-3 rounded-lg text-sm overflow-x-auto" style={{ backgroundColor: isDark ? "#111827" : "#F3F4F6", fontFamily: "monospace", color: textColor, whiteSpace: "pre-wrap" }}>{tableMarkdown}</pre>
             </div>
             <div className="flex gap-2">
@@ -1448,7 +1448,7 @@ export default function MarkdownEditor({
               ].map(([action, shortcut]) => (
                 <div key={action} className="flex justify-between py-1" style={{ borderBottom: `1px solid ${border}20` }}>
                   <span>{action}</span>
-                  <kbd className="px-2 py-0.5 rounded text-xs font-mono" style={{ backgroundColor: isDark ? "#374151" : "#F3F4F6", color: textMuted }}>{shortcut}</kbd>
+                  <kbd className="px-2 py-0.5 rounded text-sm font-mono" style={{ backgroundColor: isDark ? "#374151" : "#F3F4F6", color: textMuted }}>{shortcut}</kbd>
                 </div>
               ))}
             </div>

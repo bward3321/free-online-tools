@@ -33,19 +33,19 @@ export default function WifiQrCodeGeneratorPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#2563EB" }}>Home</a><span>/</span><span>Utility Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">WiFi QR Code Generator &mdash; Share Your WiFi Password Instantly</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Create a QR code that lets anyone scan and connect to your WiFi &mdash; no more spelling out passwords. Perfect for restaurants, Airbnbs, offices, and home.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">How WiFi QR Codes Work</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>WiFi QR codes use a standardized format (<code>WIFI:T:WPA;S:NetworkName;P:Password;;</code>) recognized by smartphone cameras. When scanned, the phone automatically prompts the user to join the network without any manual typing. This format was developed as part of the ZXing barcode library specification and is now supported natively on all modern smartphones.</p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The QR code encodes your network name (SSID), password, encryption type (WPA/WPA2, WPA3, or WEP), and whether the network is hidden. Special characters in your network name or password are automatically escaped so the code works correctly.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">How WiFi QR Codes Work</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>WiFi QR codes use a standardized format (<code>WIFI:T:WPA;S:NetworkName;P:Password;;</code>) recognized by smartphone cameras. When scanned, the phone automatically prompts the user to join the network without any manual typing. This format was developed as part of the ZXing barcode library specification and is now supported natively on all modern smartphones.</p>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The QR code encodes your network name (SSID), password, encryption type (WPA/WPA2, WPA3, or WEP), and whether the network is hidden. Special characters in your network name or password are automatically escaped so the code works correctly.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Where to Display Your WiFi QR Code</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Where to Display Your WiFi QR Code</h2>
               <div className="grid grid-cols-2 gap-3" style={{ fontSize: "15px", color: "var(--text-muted)" }}>
                 {["Restaurant table tents", "Airbnb welcome book", "Office lobby sign", "Hotel room card", "Coffee shop counter", "Guest bedroom frame", "Coworking desk", "Event registration"].map((place, i) => (
                   <div key={i} className="flex items-center gap-2 py-1"><span style={{ color: "#16A34A" }}>&#x2713;</span><span>{place}</span></div>
@@ -54,7 +54,7 @@ export default function WifiQrCodeGeneratorPage() {
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#2563EB1a", borderColor: "#2563EB40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Create your WiFi QR code below &mdash; just enter your network name and password.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Create your WiFi QR code below &mdash; just enter your network name and password.</p>
           </div>
         </div>
       </div>

@@ -85,7 +85,7 @@ export default function HowMuchDoMeetingsCostPage() {
               className="prose max-w-none space-y-4 text-sm leading-relaxed"
               style={{ color: "var(--text)" }}
             >
-              <h2 className="text-xl font-bold mb-4">
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">
                 The Numbers Are Staggering
               </h2>
               <p>
@@ -173,7 +173,7 @@ export default function HowMuchDoMeetingsCostPage() {
               className="prose max-w-none space-y-4 text-sm leading-relaxed"
               style={{ color: "var(--text)" }}
             >
-              <h2 className="text-xl font-bold mb-4">
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">
                 5 Ways to Cut Meeting Costs Without Killing Collaboration
               </h2>
 
@@ -239,7 +239,7 @@ export default function HowMuchDoMeetingsCostPage() {
           </div>
 
           <footer
-            className="border-t pt-8 pb-4 text-center text-xs"
+            className="border-t pt-8 pb-4 text-center"
             style={{
               borderColor: "var(--border)",
               color: "var(--text-muted)",

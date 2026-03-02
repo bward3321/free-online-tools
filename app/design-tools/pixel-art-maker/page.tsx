@@ -24,7 +24,7 @@ function SEOContent() {
   return (
     <div className="max-w-[1200px] mx-auto px-4 pb-12">
       <div className="rounded-2xl border p-6 md:p-8 mb-12" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>Make Beautiful Pixel Art</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>Make Beautiful Pixel Art</h2>
         <div className="space-y-4 text-sm" style={{ color: "var(--text-muted)" }}>
           <p>Pixel art isn&apos;t just nostalgia — it&apos;s a vibrant, active art form with a massive community of creators. From indie game developers to digital artists to icon designers, pixel art&apos;s deliberate, grid-based approach produces artwork with a unique charm that no other medium can match.</p>
 
@@ -47,7 +47,7 @@ function SEOContent() {
 
       {/* FAQs */}
       <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
         <div className="space-y-3">
           {faqs.map((faq) => (
             <details key={faq.q} className="group rounded-xl border" style={{ borderColor: "var(--border)", backgroundColor: "var(--surface)" }}>
@@ -63,7 +63,7 @@ function SEOContent() {
 
       {/* Pro Tips */}
       <div className="mb-12">
-        <h2 className="text-xl font-semibold mb-4" style={{ color: "var(--text)" }}>Pro Tips</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-semibold mb-4" style={{ color: "var(--text)" }}>Pro Tips</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
             { title: "Dithering for Depth", desc: "Use dithering to create the illusion of gradients and shadows with a limited color palette." },
@@ -73,7 +73,7 @@ function SEOContent() {
           ].map((tip) => (
             <div key={tip.title} className="rounded-xl border p-4" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
               <div className="font-medium text-sm mb-1" style={{ color: "var(--text)" }}>{tip.title}</div>
-              <div className="text-xs" style={{ color: "var(--text-muted)" }}>{tip.desc}</div>
+              <div style={{ color: "var(--text-muted)", fontSize: "15px" }}>{tip.desc}</div>
             </div>
           ))}
         </div>
@@ -81,7 +81,7 @@ function SEOContent() {
 
       {/* Related Tools */}
       <div className="mb-12">
-        <h2 className="text-xl font-semibold mb-4" style={{ color: "var(--text)" }}>Related Tools</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-semibold mb-4" style={{ color: "var(--text)" }}>Related Tools</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {[
             { name: "Pixel Art Editor", desc: "Full-featured pixel art editor", href: "/design-tools/pixel-art-editor" },
@@ -92,7 +92,7 @@ function SEOContent() {
               style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
               <div>
                 <div className="font-medium text-sm" style={{ color: "var(--text)" }}>{tool.name}</div>
-                <div className="text-xs" style={{ color: "var(--text-muted)" }}>{tool.desc}</div>
+                <div style={{ color: "var(--text-muted)", fontSize: "15px" }}>{tool.desc}</div>
               </div>
             </a>
           ))}

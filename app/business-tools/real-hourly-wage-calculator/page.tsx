@@ -34,7 +34,7 @@ export default function RealHourlyWageCalculatorPage() {
       {/* Article-first layout with philosophical framing */}
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#DC2626" }}>Home</a>
             <span>/</span>
             <span>Business Tools</span>
@@ -48,28 +48,28 @@ export default function RealHourlyWageCalculatorPage() {
 
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>The &ldquo;Your Money or Your Life&rdquo; Concept</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3" style={{ color: "var(--text)" }}>The &ldquo;Your Money or Your Life&rdquo; Concept</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 In the groundbreaking book <em>Your Money or Your Life</em>, Vicki Robin and Joe Dominguez introduced a radical idea: every dollar you spend represents a certain amount of <strong style={{ color: "var(--text)" }}>life energy</strong> &mdash; hours of your finite life that you exchanged for money. But most people dramatically overestimate what each hour of work is worth because they use the wrong formula.
               </p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 The standard calculation divides salary by 2,080 paid hours. A $75,000 salary seems like $36.06/hr. But your job doesn&apos;t just take 40 hours per week &mdash; it takes 50-60+ when you count commuting (55 min/day average), unpaid overtime (48% of workers), getting ready, and lunch. And your job costs you money too: gas, parking, work clothes, lunches out. When you calculate the <strong style={{ color: "var(--text)" }}>real hourly wage</strong>, the number drops 30-40%.
               </p>
             </section>
 
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>Why This Changes Everything</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3" style={{ color: "var(--text)" }}>Why This Changes Everything</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 Once you know your real hourly wage, every purchase becomes a trade-off calculation. That $150 dinner out? At a real wage of $24/hr, that&apos;s 6.25 hours of your life. Those new shoes for $200? Over 8 hours of your actual labor. This reframe doesn&apos;t mean you shouldn&apos;t buy things &mdash; it means you can make <strong style={{ color: "var(--text)" }}>informed choices</strong> about what&apos;s truly worth your life energy.
               </p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 It also transforms career decisions. A job offer with a higher salary but longer commute may actually pay you <em>less</em> per hour of life. Negotiating two remote days per week might be worth more than a $5,000 raise. The real hourly wage reveals the hidden math of work.
               </p>
             </section>
           </article>
 
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#DC26261a", borderColor: "#DC262640" }}>
-            <p className="font-semibold" style={{ fontSize: "16px", color: "var(--text)" }}>
+            <p className="font-semibold" style={{ fontSize: "17px", color: "var(--text)" }}>
               Use the calculator below to discover your <em>real hourly wage</em> &mdash; what each hour of your life devoted to work is actually worth.
             </p>
           </div>

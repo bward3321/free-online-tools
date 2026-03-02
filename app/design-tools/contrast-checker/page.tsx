@@ -20,25 +20,25 @@ export default function ContrastCheckerPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Design Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Design Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">WCAG Contrast Checker &mdash; Test Color Accessibility Instantly</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Pick a foreground and background color to instantly check WCAG 2.1 contrast compliance. Live text preview at multiple sizes, AA and AAA results, and smart fix suggestions.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">What Is WCAG?</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The Web Content Accessibility Guidelines (WCAG) are international standards for making web content accessible to people with disabilities. WCAG 2.1 defines minimum contrast ratios between text and background colors. <strong style={{ color: "var(--text)" }}>Level AA</strong> (the minimum standard) requires 4.5:1 for normal text. <strong style={{ color: "var(--text)" }}>Level AAA</strong> (enhanced) requires 7:1. These standards are legally required under the ADA, Section 508, and the European EN 301 549.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">What Is WCAG?</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The Web Content Accessibility Guidelines (WCAG) are international standards for making web content accessible to people with disabilities. WCAG 2.1 defines minimum contrast ratios between text and background colors. <strong style={{ color: "var(--text)" }}>Level AA</strong> (the minimum standard) requires 4.5:1 for normal text. <strong style={{ color: "var(--text)" }}>Level AAA</strong> (enhanced) requires 7:1. These standards are legally required under the ADA, Section 508, and the European EN 301 549.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">How the Contrast Ratio Works</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The contrast ratio is calculated from the <strong style={{ color: "var(--text)" }}>relative luminance</strong> of two colors. Luminance measures perceived brightness, accounting for the eye&apos;s different sensitivity to red, green, and blue light. The formula produces a ratio from 1:1 (no contrast, identical colors) to 21:1 (maximum contrast, black on white). This tool calculates the exact ratio in real-time as you adjust colors.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">How the Contrast Ratio Works</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The contrast ratio is calculated from the <strong style={{ color: "var(--text)" }}>relative luminance</strong> of two colors. Luminance measures perceived brightness, accounting for the eye&apos;s different sensitivity to red, green, and blue light. The formula produces a ratio from 1:1 (no contrast, identical colors) to 21:1 (maximum contrast, black on white). This tool calculates the exact ratio in real-time as you adjust colors.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Common Mistakes to Avoid</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}><strong style={{ color: "var(--text)" }}>Light gray text on white</strong> &mdash; #999 on #FFF is only 2.85:1 (fails AA). <strong style={{ color: "var(--text)" }}>Colored text on colored backgrounds</strong> &mdash; blue on purple, green on teal, etc. often fail even when they &ldquo;look fine.&rdquo; <strong style={{ color: "var(--text)" }}>Placeholder text</strong> &mdash; light gray placeholders in form inputs frequently fail contrast requirements. Always test with this tool before shipping.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Common Mistakes to Avoid</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}><strong style={{ color: "var(--text)" }}>Light gray text on white</strong> &mdash; #999 on #FFF is only 2.85:1 (fails AA). <strong style={{ color: "var(--text)" }}>Colored text on colored backgrounds</strong> &mdash; blue on purple, green on teal, etc. often fail even when they &ldquo;look fine.&rdquo; <strong style={{ color: "var(--text)" }}>Placeholder text</strong> &mdash; light gray placeholders in form inputs frequently fail contrast requirements. Always test with this tool before shipping.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#0596691a", borderColor: "#05966940" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Enter foreground and background colors below to check contrast.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Enter foreground and background colors below to check contrast.</p>
           </div>
         </div>
       </div>

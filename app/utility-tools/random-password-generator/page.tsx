@@ -33,20 +33,20 @@ export default function RandomPasswordGeneratorPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Utility Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Random Password Generator &mdash; Truly Random, Instantly Generated</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Generate passwords with real cryptographic randomness — not the predictable pseudo-randomness of Math.random(). Every character is selected using your browser&apos;s CSPRNG.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">&ldquo;Random&rdquo; vs. Truly Random</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Not all randomness is equal. JavaScript&apos;s <code>Math.random()</code> uses a deterministic algorithm &mdash; given the same seed, it produces the same sequence every time. An attacker who knows the algorithm and seed can predict every &ldquo;random&rdquo; value it produces.</p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}><code>crypto.getRandomValues()</code> is fundamentally different. It draws from your operating system&apos;s entropy pool &mdash; a mix of hardware events like mouse movements, keyboard timing, disk I/O, and thermal noise. The result is cryptographically unpredictable, even to an attacker with full knowledge of the algorithm.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">&ldquo;Random&rdquo; vs. Truly Random</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Not all randomness is equal. JavaScript&apos;s <code>Math.random()</code> uses a deterministic algorithm &mdash; given the same seed, it produces the same sequence every time. An attacker who knows the algorithm and seed can predict every &ldquo;random&rdquo; value it produces.</p>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}><code>crypto.getRandomValues()</code> is fundamentally different. It draws from your operating system&apos;s entropy pool &mdash; a mix of hardware events like mouse movements, keyboard timing, disk I/O, and thermal noise. The result is cryptographically unpredictable, even to an attacker with full knowledge of the algorithm.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Best Practices for Random Passwords</h2>
-              <div className="space-y-2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Best Practices for Random Passwords</h2>
+              <div className="space-y-2" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 {[
                   "Use 16+ characters — every additional character makes cracking exponentially harder",
                   "Include all character types (uppercase, lowercase, numbers, symbols) for maximum entropy per character",
@@ -60,7 +60,7 @@ export default function RandomPasswordGeneratorPage() {
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#0596691a", borderColor: "#05966940" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>A random password is already generated below &mdash; copy it or customize the settings.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>A random password is already generated below &mdash; copy it or customize the settings.</p>
           </div>
         </div>
       </div>

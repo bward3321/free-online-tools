@@ -27,21 +27,21 @@ export default function JsonToCsvPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">JSON to CSV Converter &mdash; Convert JSON Arrays to CSV Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Paste a JSON array of objects and get CSV output instantly. Configurable delimiters, automatic header generation, and nested object flattening with dot notation.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">When You Need JSON to CSV</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>APIs return data as JSON, but spreadsheets, databases, and analytics tools often expect CSV. This converter bridges the gap &mdash; paste your API response, download a CSV, and open it in Excel, Google Sheets, or any data tool.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">When You Need JSON to CSV</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>APIs return data as JSON, but spreadsheets, databases, and analytics tools often expect CSV. This converter bridges the gap &mdash; paste your API response, download a CSV, and open it in Excel, Google Sheets, or any data tool.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Handling Nested Objects</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>CSV is a flat format &mdash; it has rows and columns, not nested structures. When your JSON has nested objects like <code>{`{"user":{"name":"Alice","address":{"city":"NYC"}}}`}</code>, the converter flattens them using dot notation: <code>user.name</code>, <code>user.address.city</code>.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Handling Nested Objects</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>CSV is a flat format &mdash; it has rows and columns, not nested structures. When your JSON has nested objects like <code>{`{"user":{"name":"Alice","address":{"city":"NYC"}}}`}</code>, the converter flattens them using dot notation: <code>user.name</code>, <code>user.address.city</code>.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste your JSON array below &mdash; the CSV converter is already active.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste your JSON array below &mdash; the CSV converter is already active.</p>
           </div>
         </div>
       </div>

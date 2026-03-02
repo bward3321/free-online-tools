@@ -115,11 +115,13 @@ export default function HubConverter() {
                 key={cat.id}
                 data-active={isActive}
                 onClick={() => switchCategory(cat)}
-                className="flex-shrink-0 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap"
+                className="flex-shrink-0 rounded-full px-4 py-2 font-medium whitespace-nowrap"
+
                 style={{
                   backgroundColor: isActive ? ACCENT : "var(--surface)",
                   color: isActive ? "#fff" : "var(--text)",
                   border: isActive ? "none" : "1px solid var(--border)",
+                  fontSize: "15px",
                 }}
               >
                 {cat.emoji} {cat.label}
@@ -173,11 +175,11 @@ export default function HubConverter() {
           <div className="flex justify-center my-3">
             <button
               onClick={handleSwap}
-              className="w-10 h-10 rounded-full flex items-center justify-center text-white text-lg font-bold"
-              style={{ backgroundColor: ACCENT }}
+              className="rounded-full flex items-center justify-center text-white"
+              style={{ backgroundColor: ACCENT, width: "44px", height: "44px" }}
               aria-label="Swap units"
             >
-              \u21C5
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4" /></svg>
             </button>
           </div>
 
@@ -219,19 +221,19 @@ export default function HubConverter() {
 
           {/* Formula + controls row */}
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <p style={{ color: "var(--text-muted)", fontSize: "14px", fontFamily: "monospace" }}>
+            <p style={{ color: "var(--text-muted)", fontSize: "15px", fontFamily: "monospace" }}>
               {formula}
             </p>
             <div className="flex items-center gap-2">
               <select
                 value={precision}
                 onChange={(e) => setPrecision(Number(e.target.value))}
-                className="rounded-lg px-2 py-1 text-sm outline-none cursor-pointer"
+                className="rounded-lg px-2 py-1 outline-none cursor-pointer"
                 style={{
                   backgroundColor: "var(--surface-alt)",
                   border: "1px solid var(--border)",
                   color: "var(--text-muted)",
-                  fontSize: "13px",
+                  fontSize: "15px",
                 }}
               >
                 {PRECISION_OPTIONS.map((p) => (
@@ -240,12 +242,12 @@ export default function HubConverter() {
               </select>
               <button
                 onClick={handleCopy}
-                className="rounded-lg px-3 py-1 text-sm"
+                className="rounded-lg px-3 py-1"
                 style={{
                   backgroundColor: copied ? ACCENT : "var(--surface-alt)",
                   color: copied ? "#fff" : "var(--text-muted)",
                   border: "1px solid var(--border)",
-                  fontSize: "13px",
+                  fontSize: "16px",
                 }}
               >
                 {copied ? "Copied!" : "Copy"}
@@ -256,11 +258,11 @@ export default function HubConverter() {
 
         {/* Quick Reference Table */}
         <section className="mb-12">
-          <h2 className="text-xl font-bold mb-4">
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">
             Quick Reference: {activeCat.units[fromKey]?.name} to {activeCat.units[toKey]?.name}
           </h2>
           <div className="overflow-x-auto rounded-xl" style={{ border: "1px solid var(--border)" }}>
-            <table className="w-full text-sm">
+            <table className="w-full" style={{ fontSize: "16px" }}>
               <thead>
                 <tr style={{ backgroundColor: ACCENT, color: "#fff" }}>
                   <th className="px-4 py-3 text-left font-semibold">{activeCat.units[fromKey]?.name} ({activeCat.units[fromKey]?.abbr})</th>
@@ -281,13 +283,13 @@ export default function HubConverter() {
 
         {/* Popular Conversions */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">Popular Conversions</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-6">Popular Conversions</h2>
           {ALL_CATEGORIES.map((cat) => {
             const spokes = spokesByCategory[cat.id];
             if (!spokes || spokes.length === 0) return null;
             return (
               <div key={cat.id} className="mb-6">
-                <h3 className="text-lg font-semibold mb-3">{cat.emoji} {cat.label}</h3>
+                <h3 className="font-semibold mb-3" style={{ fontSize: "20px" }}>{cat.emoji} {cat.label}</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                   {spokes.map((s) => {
                     const catDef = ALL_CATEGORIES.find((c) => c.id === s.categoryId);
@@ -297,11 +299,12 @@ export default function HubConverter() {
                       <a
                         key={s.slug}
                         href={`/conversion-tools/${s.slug}`}
-                        className="block rounded-lg px-3 py-2 text-sm hover:shadow-md"
+                        className="block rounded-lg px-3 py-2 hover:shadow-md"
                         style={{
                           backgroundColor: "var(--surface)",
                           border: "1px solid var(--border)",
                           color: "var(--text)",
+                          fontSize: "16px",
                         }}
                       >
                         <span className="font-medium">{fromAbbr}</span>
@@ -318,8 +321,8 @@ export default function HubConverter() {
 
         {/* SEO Content */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">About This Unit Converter</h2>
-          <div className="space-y-4 rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", fontSize: "16px", color: "var(--text-muted)" }}>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">About This Unit Converter</h2>
+          <div className="space-y-4 rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
             <p>This free universal unit converter handles over 200 units of measurement across 11 categories: length, weight & mass, temperature, volume, speed, area, digital storage, time, energy, pressure, and fuel economy. Every conversion happens instantly as you type — no &ldquo;calculate&rdquo; button needed.</p>
             <p>All calculations run entirely in your browser. Nothing is sent to a server, so your data stays private. The converter handles edge cases like temperature (which uses formulas, not simple multiplication) and fuel economy (where L/100km has an inverse relationship with MPG).</p>
             <p>Need a specific conversion? Check out our 50+ dedicated converter pages, each with reference tables, formulas, real-world examples, and detailed explanations. They&apos;re linked in the Popular Conversions grid above.</p>
@@ -328,7 +331,7 @@ export default function HubConverter() {
 
         {/* FAQ */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-3">
             {[
               { q: "How accurate is this converter?", a: "All conversions use the internationally agreed-upon exact definitions where available (e.g., 1 inch = exactly 2.54 cm, 1 pound = exactly 0.45359237 kg). Results are accurate to the full precision of JavaScript floating-point arithmetic." },
@@ -339,7 +342,7 @@ export default function HubConverter() {
             ].map((faq) => (
               <details key={faq.q} className="rounded-xl border" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <summary className="p-4 cursor-pointer font-semibold">{faq.q}</summary>
-                <p className="px-4 pb-4" style={{ fontSize: "16px", color: "var(--text-muted)" }}>{faq.a}</p>
+                <p className="px-4 pb-4" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>{faq.a}</p>
               </details>
             ))}
           </div>
@@ -347,7 +350,7 @@ export default function HubConverter() {
 
         {/* Related Tools */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">More Free Tools</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">More Free Tools</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {[
               ["Concrete Calculator", "/construction/concrete-calculator", "Calculate concrete needed for your project"],
@@ -357,7 +360,7 @@ export default function HubConverter() {
             ].map(([name, href, desc]) => (
               <a key={name} href={href} className="block rounded-xl border p-4 hover:shadow-md" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <h3 className="font-semibold mb-1">{name}</h3>
-                <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>{desc}</p>
+                <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>{desc}</p>
               </a>
             ))}
           </div>

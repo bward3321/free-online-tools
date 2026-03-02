@@ -54,7 +54,7 @@ function DarkModeToggle() {
 /* ─── Privacy Badge ─── */
 function PrivacyBadge() {
   return (
-    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium" style={{ backgroundColor: "var(--surface-alt)", color: "var(--text-muted)" }}>
+    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full font-medium text-sm" style={{ backgroundColor: "var(--surface-alt)", color: "var(--text-muted)" }}>
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
       100% client-side
     </div>
@@ -145,7 +145,7 @@ function TeamBuilder({
 
             {/* Hourly rate */}
             <div className="flex items-center gap-1">
-              <span className="text-xs" style={{ color: "var(--text-muted)" }}>$</span>
+              <span style={{ color: "var(--text-muted)" }}>$</span>
               <input
                 type="number"
                 inputMode="decimal"
@@ -155,7 +155,7 @@ function TeamBuilder({
                 className="w-16 px-2 py-1.5 rounded-lg border text-sm outline-none text-center"
                 style={{ backgroundColor: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }}
               />
-              <span className="text-xs" style={{ color: "var(--text-muted)" }}>/hr</span>
+              <span style={{ color: "var(--text-muted)" }}>/hr</span>
             </div>
 
             {/* Count stepper */}
@@ -396,7 +396,7 @@ function ResultsPanel({
               className="rounded-xl border p-4 text-center"
               style={{ backgroundColor: "var(--surface)", borderColor: item.highlight ? "var(--color-accent)" : "var(--border)" }}
             >
-              <div className="text-xs font-medium mb-1" style={{ color: "var(--text-muted)" }}>
+              <div className="font-medium text-sm mb-1" style={{ color: "var(--text-muted)" }}>
                 {item.label}
               </div>
               <div
@@ -502,7 +502,7 @@ function ComparisonMode({
                 <button
                   key={d}
                   onClick={() => setOptDuration(d)}
-                  className="px-3 py-1 rounded-lg text-xs font-medium border transition-colors"
+                  className="px-3 py-1 rounded-lg font-medium text-sm border transition-colors"
                   style={{
                     borderColor: optDuration === d ? "var(--color-accent)" : "var(--border)",
                     backgroundColor: optDuration === d ? "var(--color-accent)" : "var(--surface)",
@@ -552,7 +552,7 @@ function ComparisonMode({
               }}
             />
           </div>
-          <div className="flex justify-between text-xs mt-1" style={{ color: "#6b6b76" }}>
+          <div className="flex justify-between text-sm mt-1" style={{ color: "#6b6b76" }}>
             <span>Optimized: {formatCurrency(optAnnual, 0)}</span>
             <span>Current: {formatCurrency(origAnnual, 0)}</span>
           </div>
@@ -903,7 +903,7 @@ function LiveTimer({ initialAttendees }: { initialAttendees: Attendee[] }) {
               <button
                 key={r.label}
                 onClick={() => setQuickRate(r.rate)}
-                className="px-3 py-1 rounded-lg text-xs border transition-colors hover:opacity-80"
+                className="px-3 py-1 rounded-lg text-sm border transition-colors hover:opacity-80"
                 style={{
                   borderColor: quickRate === r.rate ? "var(--color-accent)" : "var(--border)",
                   backgroundColor: quickRate === r.rate ? "var(--color-accent)" : "var(--surface)",
@@ -1190,7 +1190,7 @@ export default function MeetingCostCalculator({
               className="rounded-2xl border p-6 md:p-8"
               style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}
             >
-              <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>
                 The Hidden Cost of Meetings
               </h2>
               <div className="prose max-w-none space-y-4 text-sm leading-relaxed" style={{ color: "var(--text)" }}>
@@ -1232,7 +1232,7 @@ export default function MeetingCostCalculator({
 
         {/* ─── FAQ ─── */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>
             Frequently Asked Questions
           </h2>
           <div className="space-y-3">
@@ -1310,7 +1310,7 @@ export default function MeetingCostCalculator({
                 </svg>
                 <div>
                   <div className="font-medium text-sm" style={{ color: "var(--text)" }}>{tool.name}</div>
-                  <div className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>{tool.desc}</div>
+                  <div style={{ color: "var(--text-muted)" }}>{tool.desc}</div>
                 </div>
               </a>
             ))}
@@ -1318,7 +1318,7 @@ export default function MeetingCostCalculator({
         </div>
 
         {/* Footer */}
-        <footer className="border-t pt-8 pb-4 text-center text-xs" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+        <footer className="border-t pt-8 pb-4 text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
           <p>Free Online Tools &mdash; Free calculators and tools for everyone.</p>
           <p className="mt-1">No signup required. No ads. No tracking.</p>
         </footer>

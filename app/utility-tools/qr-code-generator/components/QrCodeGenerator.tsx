@@ -446,7 +446,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
       {/* ─── Header ─── */}
       <header className="max-w-[1200px] mx-auto px-4 pt-6 pb-2">
         <div className="flex items-center justify-between mb-4">
-          <nav className="flex items-center gap-1" style={{ color: "var(--text-muted)", fontSize: "14px" }}>
+          <nav className="flex items-center gap-1" style={{ color: "var(--text-muted)", fontSize: "15px" }}>
             <Link href="/" className="hover:underline" style={{ color: "#2563EB" }}>Home</Link>
             <span>/</span>
             <span>Utility Tools</span>
@@ -512,7 +512,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                     {urlValid === true && <span className="absolute right-3 top-1/2 -translate-y-1/2" style={{ color: "#16A34A", fontSize: "20px" }}>&#x2713;</span>}
                     {urlValid === false && <span className="absolute right-3 top-1/2 -translate-y-1/2" style={{ color: "#DC2626", fontSize: "20px" }}>&#x2717;</span>}
                   </div>
-                  <p className="mt-1.5 flex justify-between" style={{ fontSize: "14px", color: "var(--text-muted)" }}>
+                  <p className="mt-1.5 flex justify-between" style={{ fontSize: "15px", color: "var(--text-muted)" }}>
                     <span>Enter any URL to generate a QR code</span>
                     <span className="tabular-nums">{dataLength} / 4,296</span>
                   </p>
@@ -547,7 +547,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                     </button>
                     <span style={{ fontSize: "16px" }}>Hidden Network</span>
                   </div>
-                  <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>Scan this QR code to instantly connect to WiFi. Works on iPhone (iOS 11+) and Android (10+).</p>
+                  <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>Scan this QR code to instantly connect to WiFi. Works on iPhone (iOS 11+) and Android (10+).</p>
                 </div>
               )}
 
@@ -604,7 +604,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                 <div>
                   <label className="block font-bold mb-2" style={{ fontSize: "16px" }}>Phone Number</label>
                   <input type="tel" value={phoneInput} onChange={e => setPhoneInput(e.target.value)} placeholder="+1 (555) 123-4567" className="w-full rounded-xl border px-4 py-3" style={{ fontSize: "18px", backgroundColor: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} aria-label="Phone number" />
-                  <p className="mt-1.5" style={{ fontSize: "14px", color: "var(--text-muted)" }}>Scanning will initiate a phone call to this number.</p>
+                  <p className="mt-1.5" style={{ fontSize: "15px", color: "var(--text-muted)" }}>Scanning will initiate a phone call to this number.</p>
                 </div>
               )}
 
@@ -621,7 +621,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                 <div>
                   <label className="block font-bold mb-2" style={{ fontSize: "16px" }}>Plain Text</label>
                   <textarea value={textInput} onChange={e => setTextInput(e.target.value)} placeholder="Enter any text, serial number, code, or note..." rows={5} className="w-full rounded-xl border px-4 py-3 resize-y" style={{ fontSize: "18px", backgroundColor: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} aria-label="Plain text content" />
-                  <p className="mt-1.5 text-right tabular-nums" style={{ fontSize: "14px", color: "var(--text-muted)" }}>{textInput.length} / 4,296 characters</p>
+                  <p className="mt-1.5 text-right tabular-nums" style={{ fontSize: "15px", color: "var(--text-muted)" }}>{textInput.length} / 4,296 characters</p>
                 </div>
               )}
 
@@ -630,7 +630,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                 <div>
                   <label className="block font-bold mb-2" style={{ fontSize: "16px" }}>Paste URLs (one per line, max 50)</label>
                   <textarea value={batchInput} onChange={e => setBatchInput(e.target.value)} placeholder={"https://example.com/page1\nhttps://example.com/page2\nhttps://example.com/page3"} rows={8} className="w-full rounded-xl border px-4 py-3 resize-y font-mono" style={{ fontSize: "16px", backgroundColor: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} aria-label="Batch URLs" />
-                  <p className="mt-1.5 flex justify-between" style={{ fontSize: "14px", color: "var(--text-muted)" }}>
+                  <p className="mt-1.5 flex justify-between" style={{ fontSize: "15px", color: "var(--text-muted)" }}>
                     <span>{batchUrls.length} URL{batchUrls.length !== 1 ? "s" : ""} detected</span>
                     <span>Max 50</span>
                   </p>
@@ -659,7 +659,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                       <h3 className="font-semibold mb-3" style={{ fontSize: "16px" }}>Colors</h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block mb-2" style={{ fontSize: "14px", color: "var(--text-muted)" }}>Foreground (dark modules)</label>
+                          <label className="block mb-2" style={{ fontSize: "15px", color: "var(--text-muted)" }}>Foreground (dark modules)</label>
                           <div className="flex items-center gap-2 mb-2">
                             <input type="color" value={fgColor} onChange={e => setFgColor(e.target.value)} className="w-10 h-10 rounded-lg border cursor-pointer" style={{ borderColor: "var(--border)" }} aria-label="Foreground color" />
                             <input type="text" value={fgColor} onChange={e => { if (/^#[0-9A-Fa-f]{6}$/.test(e.target.value)) setFgColor(e.target.value); }} className="flex-1 rounded-lg border px-3 py-2 font-mono tabular-nums" style={{ fontSize: "15px", backgroundColor: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} aria-label="Foreground hex color" />
@@ -671,7 +671,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                           </div>
                         </div>
                         <div>
-                          <label className="block mb-2" style={{ fontSize: "14px", color: "var(--text-muted)" }}>Background</label>
+                          <label className="block mb-2" style={{ fontSize: "15px", color: "var(--text-muted)" }}>Background</label>
                           <div className="flex items-center gap-2 mb-2">
                             <input type="color" value={bgColor} onChange={e => { setBgColor(e.target.value); setTransparentBg(false); }} className="w-10 h-10 rounded-lg border cursor-pointer" style={{ borderColor: "var(--border)" }} aria-label="Background color" />
                             <input type="text" value={transparentBg ? "transparent" : bgColor} onChange={e => { if (/^#[0-9A-Fa-f]{6}$/.test(e.target.value)) { setBgColor(e.target.value); setTransparentBg(false); } }} className="flex-1 rounded-lg border px-3 py-2 font-mono tabular-nums" style={{ fontSize: "15px", backgroundColor: "var(--bg)", borderColor: "var(--border)", color: "var(--text)" }} aria-label="Background hex color" />
@@ -682,14 +682,14 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                                 <button key={p.color} onClick={() => { setBgColor(p.color); setTransparentBg(false); }} className="w-7 h-7 rounded-md border-2" style={{ backgroundColor: p.color, borderColor: bgColor === p.color && !transparentBg ? "#2563EB" : "var(--border)" }} aria-label={p.label} title={p.label} />
                               ))}
                             </div>
-                            <button onClick={() => setTransparentBg(!transparentBg)} className="px-2 py-1 rounded-md text-xs font-medium border" style={{ borderColor: transparentBg ? "#2563EB" : "var(--border)", color: transparentBg ? "#2563EB" : "var(--text-muted)", backgroundColor: transparentBg ? "#2563EB10" : "transparent" }}>Transparent</button>
+                            <button onClick={() => setTransparentBg(!transparentBg)} className="px-2 py-1 rounded-md font-medium text-sm border" style={{ borderColor: transparentBg ? "#2563EB" : "var(--border)", color: transparentBg ? "#2563EB" : "var(--text-muted)", backgroundColor: transparentBg ? "#2563EB10" : "transparent" }}>Transparent</button>
                           </div>
                         </div>
                       </div>
                       {lowContrast && (
                         <div className="mt-3 flex items-start gap-2 rounded-lg p-3" style={{ backgroundColor: "#D977060d", border: "1px solid #D9770625" }}>
                           <span style={{ fontSize: "16px" }}>&#x26A0;&#xFE0F;</span>
-                          <p style={{ fontSize: "14px", color: "#D97706" }}>Low contrast may cause scanning issues on some devices. We recommend a minimum 3:1 contrast ratio.</p>
+                          <p style={{ fontSize: "15px", color: "#D97706" }}>Low contrast may cause scanning issues on some devices. We recommend a minimum 3:1 contrast ratio.</p>
                         </div>
                       )}
                     </div>
@@ -697,7 +697,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                     {/* Logo */}
                     <div>
                       <button onClick={() => setShowLogo(!showLogo)} className="font-semibold flex items-center gap-2" style={{ fontSize: "16px", color: "var(--text)" }}>
-                        <span>{showLogo ? "\u25BE" : "\u25B8"}</span> Add Logo <span className="font-normal px-2 py-0.5 rounded text-xs" style={{ backgroundColor: "#16A34A20", color: "#16A34A" }}>Free</span>
+                        <span>{showLogo ? "\u25BE" : "\u25B8"}</span> Add Logo <span className="font-normal px-2 py-0.5 rounded text-sm" style={{ backgroundColor: "#16A34A20", color: "#16A34A" }}>Free</span>
                       </button>
                       {showLogo && (
                         <div className="mt-3 space-y-3">
@@ -707,19 +707,19 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                             </button>
                             {logoFile && (
                               <>
-                                <span style={{ fontSize: "14px", color: "var(--text-muted)" }}>{logoFile.name}</span>
-                                <button onClick={removeLogo} style={{ color: "#DC2626", fontSize: "14px" }}>Remove</button>
+                                <span style={{ fontSize: "15px", color: "var(--text-muted)" }}>{logoFile.name}</span>
+                                <button onClick={removeLogo} style={{ color: "#DC2626", fontSize: "15px" }}>Remove</button>
                               </>
                             )}
                             <input ref={fileInputRef} type="file" accept="image/png,image/jpeg,image/svg+xml" onChange={handleLogoUpload} className="hidden" aria-label="Upload logo image" />
                           </div>
                           {logoImage && (
                             <div>
-                              <label className="block mb-1" style={{ fontSize: "14px", color: "var(--text-muted)" }}>Logo Size ({Math.round(logoScale * 100)}%)</label>
+                              <label className="block mb-1" style={{ fontSize: "15px", color: "var(--text-muted)" }}>Logo Size ({Math.round(logoScale * 100)}%)</label>
                               <input type="range" min={0.15} max={0.3} step={0.01} value={logoScale} onChange={e => setLogoScale(Number(e.target.value))} className="w-full accent-[#2563EB]" aria-label="Logo size" />
                             </div>
                           )}
-                          <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>PNG, JPG, or SVG. Max 2MB. Error correction automatically increases to Level H when a logo is added.</p>
+                          <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>PNG, JPG, or SVG. Max 2MB. Error correction automatically increases to Level H when a logo is added.</p>
                         </div>
                       )}
                     </div>
@@ -733,10 +733,10 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                       </div>
                       <div className="flex flex-wrap gap-2">
                         {SIZE_PRESETS.map(p => (
-                          <button key={p.value} onClick={() => setQrSize(p.value)} className="px-3 py-1.5 rounded-lg font-medium" style={{ backgroundColor: qrSize === p.value ? "#2563EB" : "var(--bg)", color: qrSize === p.value ? "#fff" : "var(--text)", border: qrSize === p.value ? "none" : "1px solid var(--border)", fontSize: "13px" }}>{p.label}</button>
+                          <button key={p.value} onClick={() => setQrSize(p.value)} className="px-3 py-1.5 rounded-lg font-medium" style={{ backgroundColor: qrSize === p.value ? "#2563EB" : "var(--bg)", color: qrSize === p.value ? "#fff" : "var(--text)", border: qrSize === p.value ? "none" : "1px solid var(--border)", fontSize: "15px" }}>{p.label}</button>
                         ))}
                       </div>
-                      <p className="mt-2" style={{ fontSize: "14px", color: "var(--text-muted)" }}>For print, use 1024px or larger. For web/social, 512px is usually sufficient.</p>
+                      <p className="mt-2" style={{ fontSize: "15px", color: "var(--text-muted)" }}>For print, use 1024px or larger. For web/social, 512px is usually sufficient.</p>
                     </div>
 
                     {/* Error Correction (advanced) */}
@@ -759,11 +759,11 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                               }}
                             >
                               <span className="font-medium">{level.label}</span>
-                              <span style={{ fontSize: "13px", color: "var(--text-muted)" }}>{level.desc}</span>
+                              <span style={{ fontSize: "15px", color: "var(--text-muted)" }}>{level.desc}</span>
                             </button>
                           ))}
-                          {logoImage && <p style={{ fontSize: "14px", color: "#2563EB" }}>Locked to Level H when logo is added.</p>}
-                          <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>Higher error correction makes the QR more reliable but slightly larger.</p>
+                          {logoImage && <p style={{ fontSize: "15px", color: "#2563EB" }}>Locked to Level H when logo is added.</p>}
+                          <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>Higher error correction makes the QR more reliable but slightly larger.</p>
                         </div>
                       )}
                     </div>
@@ -801,10 +801,10 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                     </button>
                   </div>
                   <div className="grid grid-cols-2 gap-2">
-                    <button onClick={copyToClipboard} disabled={!qrData} className="py-2.5 rounded-xl font-medium border transition-colors disabled:opacity-40" style={{ borderColor: "var(--border)", color: "var(--text)", fontSize: "14px" }}>
+                    <button onClick={copyToClipboard} disabled={!qrData} className="py-2.5 rounded-xl font-medium border transition-colors disabled:opacity-40" style={{ borderColor: "var(--border)", color: "var(--text)", fontSize: "15px" }}>
                       {copied === "image" ? "Copied!" : "Copy to Clipboard"}
                     </button>
-                    <button onClick={copyLink} disabled={!qrData} className="py-2.5 rounded-xl font-medium border transition-colors disabled:opacity-40" style={{ borderColor: "var(--border)", color: "var(--text)", fontSize: "14px" }}>
+                    <button onClick={copyLink} disabled={!qrData} className="py-2.5 rounded-xl font-medium border transition-colors disabled:opacity-40" style={{ borderColor: "var(--border)", color: "var(--text)", fontSize: "15px" }}>
                       {copied === "link" ? "Copied!" : "Copy Link to QR"}
                     </button>
                   </div>
@@ -923,7 +923,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
                     {faq.q}
                     <span className="ml-2 flex-shrink-0 text-lg" style={{ color: "var(--text-muted)" }}>+</span>
                   </summary>
-                  <div className="px-5 pb-4" style={{ fontSize: "16px", lineHeight: 1.7, color: "var(--text-muted)" }}>
+                  <div className="px-5 pb-4" style={{ fontSize: "17px", lineHeight: 1.7, color: "var(--text-muted)" }}>
                     {faq.a}
                   </div>
                 </details>
@@ -950,7 +950,7 @@ export default function QrCodeGenerator({ title, subtitle, defaultTab = "url", e
           </section>
 
           {/* Footer */}
-          <footer className="text-center py-8" style={{ color: "var(--text-muted)", fontSize: "14px" }}>
+          <footer className="text-center py-8" style={{ color: "var(--text-muted)", fontSize: "15px" }}>
             <p>100% free. No signup. No watermarks. All QR codes generated in your browser.</p>
             <p className="mt-1"><Link href="/" className="hover:underline" style={{ color: "#2563EB" }}>EveryFreeTool.com</Link></p>
           </footer>

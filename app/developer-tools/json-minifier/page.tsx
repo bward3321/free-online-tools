@@ -27,21 +27,21 @@ export default function JsonMinifierPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">JSON Minifier &mdash; Compress JSON by Removing Whitespace</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Remove all whitespace from JSON to create the smallest possible output. See the exact size reduction with before/after comparison.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Why Minify JSON?</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Every space, tab, and newline in formatted JSON adds bytes that machines don&apos;t need. In API responses, those bytes multiply across thousands of requests per second. Minifying reduces payload size by 50-70%, saving bandwidth and improving response times.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Why Minify JSON?</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Every space, tab, and newline in formatted JSON adds bytes that machines don&apos;t need. In API responses, those bytes multiply across thousands of requests per second. Minifying reduces payload size by 50-70%, saving bandwidth and improving response times.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Minified vs. Formatted</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Use <strong style={{ color: "var(--text)" }}>minified JSON</strong> for production API payloads, embedded configs, and storage. Use <strong style={{ color: "var(--text)" }}>formatted JSON</strong> for debugging, code review, documentation, and any file humans need to read. This tool does both.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Minified vs. Formatted</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Use <strong style={{ color: "var(--text)" }}>minified JSON</strong> for production API payloads, embedded configs, and storage. Use <strong style={{ color: "var(--text)" }}>formatted JSON</strong> for debugging, code review, documentation, and any file humans need to read. This tool does both.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#8BE9FD1a", borderColor: "#8BE9FD40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Paste your JSON below &mdash; the minify view is already active.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Paste your JSON below &mdash; the minify view is already active.</p>
           </div>
         </div>
       </div>

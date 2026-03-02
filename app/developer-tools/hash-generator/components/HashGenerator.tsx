@@ -438,7 +438,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
     borderRadius: "8px",
     color: C.text,
     fontFamily: "monospace",
-    fontSize: "14px",
+    fontSize: "15px",
     padding: "12px",
     resize: "vertical" as const,
     outline: "none",
@@ -447,7 +447,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
   const smallBtn = (active?: boolean) => ({
     padding: "4px 12px",
     borderRadius: "6px",
-    fontSize: "13px",
+    fontSize: "15px",
     fontWeight: 600 as const,
     cursor: "pointer" as const,
     border: `1px solid ${active ? C.accent : C.border}`,
@@ -470,19 +470,19 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
       <div key={algo.id} style={{ ...cardStyle, borderColor: isHighlighted ? algo.color : C.border, borderWidth: isHighlighted ? "2px" : "1px" }}>
         <div className="flex items-center justify-between flex-wrap gap-2 mb-2">
           <div className="flex items-center gap-2 flex-wrap">
-            <span style={{ color: algo.color, fontWeight: 700, fontSize: "14px", letterSpacing: "0.05em", textTransform: "uppercase" as const }}>{algo.name}</span>
+            <span style={{ color: algo.color, fontWeight: 700, fontSize: "15px", letterSpacing: "0.05em", textTransform: "uppercase" as const }}>{algo.name}</span>
             {algo.badge && (
               <span style={{ fontSize: "11px", padding: "2px 8px", borderRadius: "4px", fontWeight: 600, background: algo.badgeColor + "22", color: algo.badgeColor }}>
                 {algo.badge === "Recommended" ? "\u2705 " : "\u26A0\uFE0F "}{algo.badge}
               </span>
             )}
-            <span style={{ fontSize: "12px", color: C.muted }}>{algo.bits}-bit</span>
+            <span style={{ fontSize: "15px", color: C.muted }}>{algo.bits}-bit</span>
           </div>
           <button onClick={() => val && copy(val, algo.id)} style={{ ...smallBtn(), opacity: val ? 1 : 0.4 }} disabled={!val}>
             {copied === algo.id ? "\u2705 Copied" : "\uD83D\uDCCB Copy"}
           </button>
         </div>
-        <div style={{ fontFamily: "monospace", fontSize: "14px", color: val ? C.text : C.muted, wordBreak: "break-all", minHeight: "20px", lineHeight: 1.5 }}>
+        <div style={{ fontFamily: "monospace", fontSize: "15px", color: val ? C.text : C.muted, wordBreak: "break-all", minHeight: "20px", lineHeight: 1.5 }}>
           {val || "—"}
         </div>
       </div>
@@ -494,7 +494,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
       <div className="max-w-[1100px] mx-auto px-4" style={{ paddingTop: articleMode ? "0" : "32px", paddingBottom: "48px" }}>
         {!articleMode && (
           <>
-            <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: C.muted }}>
+            <nav className="flex items-center gap-1 text-sm mb-4" style={{ color: C.muted }}>
               <a href="/" className="hover:underline" style={{ color: C.accent }}>Home</a>
               <span>/</span><span>Developer Tools</span>
             </nav>
@@ -511,7 +511,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
         {/* Output format */}
         {(tab === "text" || tab === "file") && (
           <div className="flex items-center gap-2 mb-4">
-            <span style={{ fontSize: "13px", color: C.muted }}>Output:</span>
+            <span style={{ fontSize: "15px", color: C.muted }}>Output:</span>
             {fmtOpts.map(f => <button key={f.id} onClick={() => setOutputFmt(f.id)} style={smallBtn(outputFmt === f.id)}>{f.label}</button>)}
           </div>
         )}
@@ -527,7 +527,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
               style={inputStyle}
             />
             <div className="flex items-center justify-between flex-wrap gap-2 mt-2 mb-4">
-              <span style={{ fontSize: "13px", color: C.muted }}>
+              <span style={{ fontSize: "15px", color: C.muted }}>
                 {text.length.toLocaleString()} characters &middot; {text.split(/\n/).length} lines
               </span>
               <div className="flex gap-2">
@@ -553,7 +553,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
               {file ? (
                 <div>
                   <div style={{ fontSize: "16px", fontWeight: 600 }}>{file.name}</div>
-                  <div style={{ fontSize: "13px", color: C.muted, marginTop: "4px" }}>
+                  <div style={{ fontSize: "15px", color: C.muted, marginTop: "4px" }}>
                     {fmtSize(file.size)} &middot; {file.type || "unknown type"}
                   </div>
                 </div>
@@ -561,14 +561,14 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                 <div>
                   <div style={{ fontSize: "32px", marginBottom: "8px" }}>{"\uD83D\uDCC1"}</div>
                   <div style={{ fontSize: "16px", fontWeight: 600 }}>Drop a file here or click to upload</div>
-                  <div style={{ fontSize: "13px", color: C.muted, marginTop: "4px" }}>Any file type, up to 2 GB</div>
+                  <div style={{ fontSize: "15px", color: C.muted, marginTop: "4px" }}>Any file type, up to 2 GB</div>
                 </div>
               )}
             </div>
 
             {fileHashing && (
               <div style={{ marginTop: "12px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "13px", color: C.muted, marginBottom: "4px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "15px", color: C.muted, marginBottom: "4px" }}>
                   <span>Hashing...</span>
                   <span>{Math.round(fileProgress * 100)}%</span>
                 </div>
@@ -579,7 +579,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
             )}
 
             {file && !fileHashing && fileTime > 0 && (
-              <div style={{ fontSize: "13px", color: C.muted, marginTop: "8px" }}>
+              <div style={{ fontSize: "15px", color: C.muted, marginTop: "8px" }}>
                 Hashed in {fileTime.toFixed(1)}s
               </div>
             )}
@@ -593,7 +593,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
 
                 {/* Quick Verify */}
                 <div style={{ ...cardStyle, marginTop: "16px" }}>
-                  <div style={{ fontSize: "14px", fontWeight: 600, marginBottom: "8px" }}>Quick Verify</div>
+                  <div style={{ fontSize: "15px", fontWeight: 600, marginBottom: "8px" }}>Quick Verify</div>
                   <input
                     type="text"
                     value={fileVerify}
@@ -605,11 +605,11 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                     const result = checkFileVerify(fileVerify);
                     if (!result) return null;
                     return result.match ? (
-                      <div style={{ marginTop: "8px", padding: "12px", borderRadius: "8px", background: C.green + "22", color: C.green, fontWeight: 600, fontSize: "14px" }}>
+                      <div style={{ marginTop: "8px", padding: "12px", borderRadius: "8px", background: C.green + "22", color: C.green, fontWeight: 600, fontSize: "15px" }}>
                         {"\u2705"} Match! This matches the {result.algo} hash. File integrity verified.
                       </div>
                     ) : (
-                      <div style={{ marginTop: "8px", padding: "12px", borderRadius: "8px", background: C.red + "22", color: C.red, fontWeight: 600, fontSize: "14px" }}>
+                      <div style={{ marginTop: "8px", padding: "12px", borderRadius: "8px", background: C.red + "22", color: C.red, fontWeight: 600, fontSize: "15px" }}>
                         {"\u274C"} No match. The pasted hash does not match any computed hash.
                       </div>
                     );
@@ -625,7 +625,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
           <div>
             <div style={cardStyle}>
               <div className="flex items-center justify-between flex-wrap gap-2 mb-2">
-                <label style={{ fontSize: "14px", fontWeight: 600 }}>Secret Key</label>
+                <label style={{ fontSize: "15px", fontWeight: 600 }}>Secret Key</label>
                 <div className="flex items-center gap-2">
                   <button onClick={() => setHmacShowKey(!hmacShowKey)} style={smallBtn()}>
                     {hmacShowKey ? "Hide" : "Show"}
@@ -647,7 +647,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
             </div>
 
             <div style={cardStyle}>
-              <label style={{ fontSize: "14px", fontWeight: 600, display: "block", marginBottom: "8px" }}>Message / Payload</label>
+              <label style={{ fontSize: "15px", fontWeight: 600, display: "block", marginBottom: "8px" }}>Message / Payload</label>
               <textarea
                 value={hmacMsg}
                 onChange={e => setHmacMsg(e.target.value)}
@@ -658,7 +658,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
             </div>
 
             <div style={cardStyle}>
-              <label style={{ fontSize: "14px", fontWeight: 600, display: "block", marginBottom: "8px" }}>Algorithm</label>
+              <label style={{ fontSize: "15px", fontWeight: 600, display: "block", marginBottom: "8px" }}>Algorithm</label>
               <div className="flex flex-wrap gap-2">
                 {ALGOS.map(a => (
                   <button key={a.id} onClick={() => setHmacAlgo(a.id)} style={{
@@ -677,7 +677,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
             {hmacResult && (
               <div style={cardStyle}>
                 <div className="flex items-center justify-between mb-2">
-                  <span style={{ fontSize: "14px", fontWeight: 700, color: ALGOS.find(a => a.id === hmacAlgo)?.color }}>
+                  <span style={{ fontSize: "15px", fontWeight: 700, color: ALGOS.find(a => a.id === hmacAlgo)?.color }}>
                     HMAC-{ALGOS.find(a => a.id === hmacAlgo)?.name}
                   </span>
                   <button onClick={() => copy(hmacResult.hex, "hmac-hex")} style={smallBtn()}>
@@ -685,29 +685,29 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                   </button>
                 </div>
                 <div style={{ marginBottom: "12px" }}>
-                  <div style={{ fontSize: "12px", color: C.muted, marginBottom: "4px" }}>Hex:</div>
-                  <div style={{ fontFamily: "monospace", fontSize: "14px", wordBreak: "break-all", lineHeight: 1.5 }}>{hmacResult.hex}</div>
+                  <div style={{ fontSize: "15px", color: C.muted, marginBottom: "4px" }}>Hex:</div>
+                  <div style={{ fontFamily: "monospace", fontSize: "15px", wordBreak: "break-all", lineHeight: 1.5 }}>{hmacResult.hex}</div>
                 </div>
                 <div>
                   <div className="flex items-center justify-between">
-                    <span style={{ fontSize: "12px", color: C.muted }}>Base64:</span>
+                    <span style={{ fontSize: "15px", color: C.muted }}>Base64:</span>
                     <button onClick={() => copy(hmacResult.base64, "hmac-b64")} style={smallBtn()}>
                       {copied === "hmac-b64" ? "\u2705 Copied" : "\uD83D\uDCCB Copy"}
                     </button>
                   </div>
-                  <div style={{ fontFamily: "monospace", fontSize: "14px", wordBreak: "break-all", lineHeight: 1.5, marginTop: "4px" }}>{hmacResult.base64}</div>
+                  <div style={{ fontFamily: "monospace", fontSize: "15px", wordBreak: "break-all", lineHeight: 1.5, marginTop: "4px" }}>{hmacResult.base64}</div>
                 </div>
               </div>
             )}
 
             {/* Webhook helpers */}
             <div style={cardStyle}>
-              <button onClick={() => setWebhookOpen(!webhookOpen)} className="w-full flex items-center justify-between" style={{ background: "none", border: "none", color: C.text, cursor: "pointer", fontSize: "14px", fontWeight: 600, padding: 0 }}>
+              <button onClick={() => setWebhookOpen(!webhookOpen)} className="w-full flex items-center justify-between" style={{ background: "none", border: "none", color: C.text, cursor: "pointer", fontSize: "15px", fontWeight: 600, padding: 0 }}>
                 <span>Webhook Verification Helpers</span>
                 <span style={{ transform: webhookOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>{"\u25BC"}</span>
               </button>
               {webhookOpen && (
-                <div className="space-y-4 mt-4" style={{ fontSize: "14px", color: C.muted }}>
+                <div className="space-y-4 mt-4" style={{ fontSize: "15px", color: C.muted }}>
                   <div style={{ padding: "12px", borderRadius: "8px", background: C.surfaceAlt }}>
                     <div style={{ fontWeight: 600, color: C.text, marginBottom: "6px" }}>Stripe Webhook</div>
                     <div>Algorithm: <strong style={{ color: C.accent }}>HMAC-SHA256</strong></div>
@@ -747,7 +747,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
               <div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label style={{ fontSize: "14px", fontWeight: 600, display: "block", marginBottom: "6px" }}>Hash 1</label>
+                    <label style={{ fontSize: "15px", fontWeight: 600, display: "block", marginBottom: "6px" }}>Hash 1</label>
                     <textarea
                       value={hash1}
                       onChange={e => setHash1(e.target.value)}
@@ -757,7 +757,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                     />
                   </div>
                   <div>
-                    <label style={{ fontSize: "14px", fontWeight: 600, display: "block", marginBottom: "6px" }}>Hash 2</label>
+                    <label style={{ fontSize: "15px", fontWeight: 600, display: "block", marginBottom: "6px" }}>Hash 2</label>
                     <textarea
                       value={hash2}
                       onChange={e => setHash2(e.target.value)}
@@ -773,16 +773,16 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                     <div style={{ fontSize: "16px", fontWeight: 700, color: compareResult.match ? C.green : C.red, marginBottom: "4px" }}>
                       {compareResult.match ? "\u2705 MATCH \u2014 These hashes are identical." : "\u274C MISMATCH \u2014 These hashes are different."}
                     </div>
-                    <div style={{ fontSize: "13px", color: C.muted }}>
+                    <div style={{ fontSize: "15px", color: C.muted }}>
                       Algorithm detected: {compareResult.algo} ({compareResult.len1} hex characters)
                     </div>
                     {!compareResult.match && compareResult.firstDiff >= 0 && (
-                      <div style={{ fontSize: "13px", color: C.muted, marginTop: "4px" }}>
+                      <div style={{ fontSize: "15px", color: C.muted, marginTop: "4px" }}>
                         First difference at position {compareResult.firstDiff + 1}
                       </div>
                     )}
                     {!compareResult.match && compareResult.len1 !== compareResult.len2 && (
-                      <div style={{ fontSize: "13px", color: C.red, marginTop: "4px" }}>
+                      <div style={{ fontSize: "15px", color: C.red, marginTop: "4px" }}>
                         Length mismatch: Hash 1 is {compareResult.len1} chars, Hash 2 is {compareResult.len2} chars
                       </div>
                     )}
@@ -803,7 +803,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                   {verifyFile ? (
                     <div>
                       <div style={{ fontSize: "16px", fontWeight: 600 }}>{verifyFile.name}</div>
-                      <div style={{ fontSize: "13px", color: C.muted, marginTop: "4px" }}>{fmtSize(verifyFile.size)}</div>
+                      <div style={{ fontSize: "15px", color: C.muted, marginTop: "4px" }}>{fmtSize(verifyFile.size)}</div>
                     </div>
                   ) : (
                     <div>
@@ -814,7 +814,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                 </div>
 
                 <div style={{ ...cardStyle, marginTop: "12px" }}>
-                  <label style={{ fontSize: "14px", fontWeight: 600, display: "block", marginBottom: "6px" }}>Expected Hash</label>
+                  <label style={{ fontSize: "15px", fontWeight: 600, display: "block", marginBottom: "6px" }}>Expected Hash</label>
                   <input
                     type="text"
                     value={verifyExpected}
@@ -823,7 +823,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                     style={{ ...inputStyle, resize: "none" as const }}
                   />
                   {verifyExpected.trim() && (
-                    <div style={{ fontSize: "12px", color: C.muted, marginTop: "4px" }}>
+                    <div style={{ fontSize: "15px", color: C.muted, marginTop: "4px" }}>
                       Detected: {detectAlgo(verifyExpected.trim())} ({verifyExpected.trim().replace(/\s/g, "").length} chars)
                     </div>
                   )}
@@ -862,11 +862,11 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                     <div style={{ fontSize: "16px", fontWeight: 700, color: verifyResult.match ? C.green : C.red }}>
                       {verifyResult.match ? "\u2705 Match! File integrity verified." : "\u274C Mismatch! File may be corrupted or tampered with."}
                     </div>
-                    <div style={{ fontSize: "13px", color: C.muted, marginTop: "4px" }}>
+                    <div style={{ fontSize: "15px", color: C.muted, marginTop: "4px" }}>
                       Algorithm: {verifyResult.algo}
                     </div>
                     {!verifyResult.match && (
-                      <div style={{ fontSize: "13px", fontFamily: "monospace", color: C.muted, marginTop: "4px", wordBreak: "break-all" }}>
+                      <div style={{ fontSize: "15px", fontFamily: "monospace", color: C.muted, marginTop: "4px", wordBreak: "break-all" }}>
                         Computed: {verifyResult.computed}
                       </div>
                     )}
@@ -884,9 +884,9 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
             <span style={{ transform: refOpen ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>{"\u25BC"}</span>
           </button>
           {refOpen && (
-            <div className="mt-4" style={{ fontSize: "14px" }}>
+            <div className="mt-4" style={{ fontSize: "15px" }}>
               <div style={{ overflowX: "auto" }}>
-                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "13px" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "15px" }}>
                   <thead>
                     <tr style={{ borderBottom: `1px solid ${C.border}` }}>
                       {["Algorithm", "Output", "Hex Len", "Security", "Use Case"].map(h => (
@@ -913,7 +913,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                   </tbody>
                 </table>
               </div>
-              <div className="mt-4 space-y-2" style={{ fontSize: "13px", color: C.muted }}>
+              <div className="mt-4 space-y-2" style={{ fontSize: "15px", color: C.muted }}>
                 <p><strong style={{ color: C.text }}>Security Notes:</strong></p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Hashing is ONE-WAY &mdash; you cannot reverse a hash to get the original data</li>
@@ -923,7 +923,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                   <li>HMAC adds authentication on top of hashing &mdash; use it for API verification</li>
                 </ul>
                 <p className="mt-3"><strong style={{ color: C.text }}>Hash Length Identifier:</strong></p>
-                <div className="font-mono text-xs space-y-1" style={{ color: C.muted }}>
+                <div className="font-mono text-sm space-y-1" style={{ color: C.muted }}>
                   <div>32 hex chars &rarr; likely MD5</div>
                   <div>40 hex chars &rarr; likely SHA-1</div>
                   <div>64 hex chars &rarr; likely SHA-256</div>
@@ -937,7 +937,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
 
         {/* ─── FAQs ─── */}
         <div className="mt-10">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: C.text }}>Frequently Asked Questions</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4" style={{ color: C.text }}>Frequently Asked Questions</h2>
           <div className="space-y-2">
             {FAQS.map((faq, i) => (
               <details key={i} className="group" style={{ borderRadius: "10px", border: `1px solid ${C.border}`, background: C.surface }}>
@@ -947,7 +947,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
                     <span className="ml-2 transition-transform group-open:rotate-180" style={{ color: C.muted }}>{"\u25BC"}</span>
                   </span>
                 </summary>
-                <div className="px-5 pb-4" style={{ fontSize: "16px", lineHeight: 1.7, color: C.muted }}>{faq.a}</div>
+                <div className="px-5 pb-4" style={{ fontSize: "17px", lineHeight: 1.7, color: C.muted }}>{faq.a}</div>
               </details>
             ))}
           </div>
@@ -955,7 +955,7 @@ export default function HashGenerator({ title, subtitle, defaultTab = "text", hi
 
         {/* ─── Related Tools ─── */}
         <div className="mt-10">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: C.text }}>Related Tools</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4" style={{ color: C.text }}>Related Tools</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {RELATED.map(t => (
               <a key={t.href} href={t.href} className="block p-4 rounded-xl border hover:shadow-lg transition-shadow" style={{ background: C.surface, borderColor: C.border, textDecoration: "none", color: C.text }}>

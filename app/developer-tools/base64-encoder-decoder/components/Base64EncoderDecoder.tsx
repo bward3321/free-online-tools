@@ -272,7 +272,7 @@ export default function Base64EncoderDecoder({
   const copyBtn = (text: string, label: string, small?: boolean) => (
     <button
       onClick={() => copy(text, label)}
-      className={`${small ? "px-2 py-1 text-xs" : "px-3 py-1.5 text-sm"} rounded-lg font-semibold transition-colors`}
+      className={`${small ? "px-2 py-1 text-sm" : "px-3 py-1.5 text-sm"} rounded-lg font-semibold transition-colors`}
       style={{ backgroundColor: copied === label ? `${C.encode}30` : `${C.accent}20`, color: copied === label ? C.encode : C.accent }}
     >
       {copied === label ? "Copied!" : "Copy"}
@@ -302,7 +302,7 @@ export default function Base64EncoderDecoder({
         {/* ── Header ── */}
         {!articleMode && (
           <>
-            <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+            <nav className="flex items-center gap-1 text-sm mb-4" style={{ color: "var(--text-muted)" }}>
               <a href="/" className="hover:underline" style={{ color: C.accent }}>Home</a>
               <span>/</span><span>Developer Tools</span>
             </nav>
@@ -370,14 +370,14 @@ export default function Base64EncoderDecoder({
             <label className="flex items-center gap-2 text-sm cursor-pointer">
               <input type="checkbox" checked={urlSafe} onChange={() => setUrlSafe((v) => !v)} className="accent-[#8BE9FD]" />
               <span>URL-safe Base64</span>
-              <span className="text-xs" style={{ color: "var(--text-muted)" }}>(-&nbsp;_ instead of +&nbsp;/)</span>
+              <span style={{ color: "var(--text-muted)" }}>(-&nbsp;_ instead of +&nbsp;/)</span>
             </label>
             {dir === "encode" && (
               <>
                 <label className="flex items-center gap-2 text-sm cursor-pointer">
                   <input type="checkbox" checked={lineBreaks} onChange={() => setLineBreaks((v) => !v)} className="accent-[#8BE9FD]" />
                   <span>Line breaks</span>
-                  <span className="text-xs" style={{ color: "var(--text-muted)" }}>(76 chars, MIME)</span>
+                  <span style={{ color: "var(--text-muted)" }}>(76 chars, MIME)</span>
                 </label>
                 <label className="flex items-center gap-2 text-sm cursor-pointer">
                   <input type="checkbox" checked={padding} onChange={() => setPadding((v) => !v)} className="accent-[#8BE9FD]" />
@@ -413,14 +413,14 @@ export default function Base64EncoderDecoder({
                 <span className="text-sm font-semibold" style={{ color: dir === "encode" ? C.encode : C.decode }}>
                   {dir === "encode" ? "Plain Text" : "Base64 Input"}
                 </span>
-                <span className="text-xs" style={{ color: "var(--text-muted)" }}>{fmtBytes(inBytes)}</span>
+                <span style={{ color: "var(--text-muted)" }}>{fmtBytes(inBytes)}</span>
               </div>
               <textarea
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder={dir === "encode" ? "Enter text to encode..." : "Paste Base64 to decode..."}
                 className="w-full rounded-xl border p-4 resize-y focus:outline-none"
-                style={{ backgroundColor: editorBg, borderColor: "var(--border)", color: "var(--text)", fontFamily: MONO, fontSize: "14px", lineHeight: "1.6", minHeight: "280px" }}
+                style={{ backgroundColor: editorBg, borderColor: "var(--border)", color: "var(--text)", fontFamily: MONO, fontSize: "15px", lineHeight: "1.6", minHeight: "280px" }}
                 aria-label={dir === "encode" ? "Text to encode" : "Base64 to decode"}
               />
             </div>
@@ -454,7 +454,7 @@ export default function Base64EncoderDecoder({
                 style={{
                   backgroundColor: editorBg,
                   borderColor: error ? C.error : "var(--border)",
-                  fontFamily: MONO, fontSize: "14px", lineHeight: "1.6",
+                  fontFamily: MONO, fontSize: "15px", lineHeight: "1.6",
                   minHeight: "280px", whiteSpace: "pre-wrap", wordBreak: "break-all",
                 }}
                 role="region"
@@ -509,7 +509,7 @@ export default function Base64EncoderDecoder({
                     <p>Base64 size: {fmtBytes(fileResult.base64Size)} <span style={{ color: "#FFB86C" }}>(+{((fileResult.base64Size - fileResult.fileSize) / fileResult.fileSize * 100).toFixed(1)}%)</span></p>
                     <button
                       onClick={() => { setFileResult(null); if (fileRef.current) fileRef.current.value = ""; }}
-                      className="mt-2 px-3 py-1.5 rounded-lg text-xs font-semibold"
+                      className="mt-2 px-3 py-1.5 rounded-lg font-semibold text-sm"
                       style={{ backgroundColor: `${C.error}20`, color: C.error }}
                     >
                       Remove &amp; Upload New
@@ -531,7 +531,7 @@ export default function Base64EncoderDecoder({
                       <span className="text-sm font-semibold">{block.label}</span>
                       {copyBtn(block.value, block.label, true)}
                     </div>
-                    <div className="p-4 overflow-auto max-h-[200px]" style={{ fontFamily: MONO, fontSize: "13px", lineHeight: "1.5", wordBreak: "break-all", color: "var(--text-muted)" }}>
+                    <div className="p-4 overflow-auto max-h-[200px]" style={{ fontFamily: MONO, fontSize: "15px", lineHeight: "1.5", wordBreak: "break-all", color: "var(--text-muted)" }}>
                       {block.value.length > 600 ? (
                         <>{block.value.slice(0, 600)}<span style={{ color: C.accent }}>&hellip; ({fmtBytes(block.value.length)} total &mdash; click Copy for full output)</span></>
                       ) : block.value}
@@ -554,7 +554,7 @@ export default function Base64EncoderDecoder({
                 onChange={(e) => setDecInput(e.target.value)}
                 placeholder="Paste a Base64 string or data URI (data:image/png;base64,...) here..."
                 className="w-full rounded-xl border p-4 resize-y focus:outline-none"
-                style={{ backgroundColor: editorBg, borderColor: "var(--border)", color: "var(--text)", fontFamily: MONO, fontSize: "14px", lineHeight: "1.6", minHeight: "180px" }}
+                style={{ backgroundColor: editorBg, borderColor: "var(--border)", color: "var(--text)", fontFamily: MONO, fontSize: "15px", lineHeight: "1.6", minHeight: "180px" }}
               />
             </div>
             {!decInput.trim().startsWith("data:") && decInput.trim() && (
@@ -638,13 +638,13 @@ export default function Base64EncoderDecoder({
           <>
             <article className="space-y-6 my-10">
               <section className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <h2 className="text-2xl font-bold mb-3">What Is Base64 Encoding?</h2>
+                <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">What Is Base64 Encoding?</h2>
                 <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>
                   Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format. It uses a 64-character alphabet &mdash; <strong style={{ color: "var(--text)" }}>A-Z, a-z, 0-9, +, and /</strong> &mdash; plus <strong style={{ color: "var(--text)" }}>=</strong> for padding. Every 3 bytes of input become 4 characters of output, making it safe to transmit binary data through text-only channels like JSON APIs, email (MIME), XML, HTML, and URL parameters.
                 </p>
               </section>
               <section className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <h2 className="text-2xl font-bold mb-3">When Developers Use Base64</h2>
+                <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">When Developers Use Base64</h2>
                 <div className="space-y-2" style={{ fontSize: "17px", color: "var(--text-muted)" }}>
                   {[
                     ["Data URIs", "Embed images directly in HTML or CSS without extra HTTP requests \u2014 ideal for small icons and sprites"],
@@ -659,19 +659,19 @@ export default function Base64EncoderDecoder({
                 </div>
               </section>
               <section className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <h2 className="text-2xl font-bold mb-3">Base64 Is NOT Encryption</h2>
+                <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Base64 Is NOT Encryption</h2>
                 <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>
                   A critical distinction: Base64 is <strong style={{ color: "var(--text)" }}>encoding</strong>, not <strong style={{ color: "var(--text)" }}>encryption</strong>. It provides zero security &mdash; anyone can decode a Base64 string instantly. It&apos;s designed for data representation and transport, not protection. If you need to protect sensitive data, use proper encryption (AES-256, RSA) first, then optionally Base64-encode the encrypted output for text-safe transport. Never rely on Base64 alone to hide passwords, API keys, or personal data.
                 </p>
               </section>
               <section className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <h2 className="text-2xl font-bold mb-3">Full UTF-8 Support</h2>
+                <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Full UTF-8 Support</h2>
                 <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>
                   The native JavaScript <code style={{ color: C.accent }}>btoa()</code> function only handles Latin-1 characters. This tool uses <code style={{ color: C.accent }}>TextEncoder</code> and <code style={{ color: C.accent }}>TextDecoder</code> to properly encode and decode the full range of Unicode characters including emoji ({"\uD83C\uDF0D"}), Chinese/Japanese/Korean text, Arabic, Cyrillic, accented characters (&Ntilde;, &uuml;), and any other UTF-8 content. Your Base64 output will always be correct, regardless of the input language.
                 </p>
               </section>
               <section className="rounded-xl border p-6" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-                <h2 className="text-2xl font-bold mb-3">100% Client-Side &mdash; Your Data Stays Private</h2>
+                <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">100% Client-Side &mdash; Your Data Stays Private</h2>
                 <p className="leading-relaxed" style={{ fontSize: "17px", color: "var(--text-muted)" }}>
                   All encoding and decoding runs entirely in your browser using native JavaScript APIs. No data is ever sent to a server, stored, or logged. This makes it safe to encode sensitive values like API keys, authentication tokens, and credentials. Close the tab and everything is gone.
                 </p>
@@ -680,12 +680,12 @@ export default function Base64EncoderDecoder({
 
             {/* FAQs */}
             <div className="mb-10">
-              <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Frequently Asked Questions</h2>
               <div className="space-y-2">
                 {FAQS.map((f, i) => (
                   <details key={i} className="rounded-xl border group" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                     <summary className="px-5 py-4 cursor-pointer font-semibold" style={{ fontSize: "16px" }}>{f.q}</summary>
-                    <div className="px-5 pb-4" style={{ fontSize: "16px", color: "var(--text-muted)" }}>{f.a}</div>
+                    <div className="px-5 pb-4" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>{f.a}</div>
                   </details>
                 ))}
               </div>
@@ -693,7 +693,7 @@ export default function Base64EncoderDecoder({
 
             {/* Related tools */}
             <div>
-              <h2 className="text-2xl font-bold mb-4">Related Tools</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Related Tools</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {RELATED.map((r) => (
                   <a key={r.href} href={r.href} className="block rounded-xl border p-4 hover:shadow-lg transition-shadow" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>

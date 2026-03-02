@@ -10,7 +10,7 @@ export default function JumpNav({ categories }: { categories: { id: string; emoj
           className="inline-flex items-center gap-1.5 rounded-full border transition-colors hover:border-[var(--color-accent,#8BE9FD)]"
           style={{
             padding: "8px 18px",
-            fontSize: "14px",
+            fontSize: "15px",
             fontWeight: 500,
             backgroundColor: "var(--surface)",
             borderColor: "var(--border)",

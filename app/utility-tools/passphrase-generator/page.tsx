@@ -33,20 +33,20 @@ export default function PassphraseGeneratorPage() {
       }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Utility Tools</span>
           </nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Passphrase Generator &mdash; Create Memorable, Uncrackable Passphrases</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Generate random word passphrases that are both strong and easy to remember. Powered by the EFF Diceware wordlist with 7,776 carefully curated words.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Why Passphrases Beat Passwords</h2>
-              <p className="leading-relaxed mb-3" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The famous XKCD comic illustrated it perfectly: <strong style={{ color: "var(--text)" }}>&ldquo;correct horse battery staple&rdquo;</strong> is both easier to remember and harder to crack than <strong style={{ color: "var(--text)" }}>&ldquo;Tr0ub4dor&3&rdquo;</strong>. Random words provide high entropy while remaining memorable because our brains are wired to remember narratives, not arbitrary character strings.</p>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Each word from the EFF wordlist adds approximately 12.9 bits of entropy (log&#8322;(7,776) &asymp; 12.92). Five words provide ~64.6 bits &mdash; equivalent to a strong random password. Six words (~77.5 bits) would take centuries to crack even with dedicated hardware.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Why Passphrases Beat Passwords</h2>
+              <p className="leading-relaxed mb-3" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The famous XKCD comic illustrated it perfectly: <strong style={{ color: "var(--text)" }}>&ldquo;correct horse battery staple&rdquo;</strong> is both easier to remember and harder to crack than <strong style={{ color: "var(--text)" }}>&ldquo;Tr0ub4dor&3&rdquo;</strong>. Random words provide high entropy while remaining memorable because our brains are wired to remember narratives, not arbitrary character strings.</p>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Each word from the EFF wordlist adds approximately 12.9 bits of entropy (log&#8322;(7,776) &asymp; 12.92). Five words provide ~64.6 bits &mdash; equivalent to a strong random password. Six words (~77.5 bits) would take centuries to crack even with dedicated hardware.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">How Many Words Do You Need?</h2>
-              <div className="space-y-2" style={{ fontSize: "16px", color: "var(--text-muted)" }}>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">How Many Words Do You Need?</h2>
+              <div className="space-y-2" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>
                 {[
                   "4 words (~51.7 bits) — Moderate security for low-value accounts",
                   "5 words (~64.6 bits) — Strong security, recommended minimum for important accounts",
@@ -59,7 +59,7 @@ export default function PassphraseGeneratorPage() {
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#0596691a", borderColor: "#05966940" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Generate your passphrase below &mdash; passphrase mode is already selected.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Generate your passphrase below &mdash; passphrase mode is already selected.</p>
           </div>
         </div>
       </div>

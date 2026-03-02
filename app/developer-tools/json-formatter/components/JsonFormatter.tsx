@@ -148,7 +148,7 @@ function TreeNode({ label, value, path, dark, onCopyPath, depth = 0 }: { label?:
   };
 
   return (
-    <div style={{ paddingLeft: depth > 0 ? 20 : 0, fontSize: "14px", fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace" }}>
+    <div style={{ paddingLeft: depth > 0 ? 20 : 0, fontSize: "15px", fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace" }}>
       <div className="flex items-center gap-1 py-0.5 cursor-pointer rounded hover:bg-[var(--surface-alt)]" style={{ minHeight: 26 }} onClick={() => { if (isExpandable) setOpen(!open); else onCopyPath(path); }}>
         {isExpandable ? <span style={{ width: 16, textAlign: "center", color: "var(--text-muted)", fontSize: 12 }}>{open ? "▼" : "▶"}</span> : <span style={{ width: 16 }} />}
         {label !== undefined && <span style={{ color: ck }}>&quot;{label}&quot;</span>}
@@ -370,7 +370,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
         {/* Header */}
         {!articleMode && (
           <>
-            <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+            <nav className="flex items-center gap-1 text-sm mb-4" style={{ color: "var(--text-muted)" }}>
               <a href="/" className="hover:underline" style={{ color: accent }}>Home</a><span>/</span><span>Developer Tools</span>
             </nav>
             <div className="flex items-start justify-between mb-3">
@@ -391,7 +391,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
         <div className="flex flex-wrap gap-1 mb-4">
           {tabs.map(([t, label]) => (
             <button key={t} onClick={() => setTab(t)} className="px-3 py-2 rounded-lg font-semibold transition-colors" style={{
-              fontSize: "14px",
+              fontSize: "15px",
               backgroundColor: tab === t ? (dark ? "#44475A" : "#E8E8FF") : "transparent",
               color: tab === t ? (dark ? accent : "#4F46E5") : "var(--text-muted)",
               border: `1px solid ${tab === t ? (dark ? "#6272A4" : "#4F46E5") : "transparent"}`,
@@ -430,7 +430,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
 
         {/* ═══════════ STATS BAR ═══════════ */}
         {tab !== "compare" && input.trim() && (
-          <div className="flex flex-wrap gap-4 mb-3 px-1" style={{ fontSize: "13px", color: "var(--text-muted)" }}>
+          <div className="flex flex-wrap gap-4 mb-3 px-1" style={{ fontSize: "15px", color: "var(--text-muted)" }}>
             <span>Lines: {lineCount}</span>
             <span>Size: {sizeLabel}</span>
             {parsed.valid && parsed.stats && (
@@ -451,21 +451,21 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="font-semibold text-sm block mb-1" style={{ color: "var(--text-muted)" }}>Original JSON</label>
-                <textarea value={compareLeft} onChange={(e) => setCompareLeft(e.target.value)} placeholder="Paste first JSON here..." className="w-full rounded-xl border p-3 focus:outline-none" style={{ fontSize: "14px", fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace", minHeight: 300, backgroundColor: edBg, borderColor: edBorder, color: edText, resize: "vertical" }} />
+                <textarea value={compareLeft} onChange={(e) => setCompareLeft(e.target.value)} placeholder="Paste first JSON here..." className="w-full rounded-xl border p-3 focus:outline-none" style={{ fontSize: "15px", fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace", minHeight: 300, backgroundColor: edBg, borderColor: edBorder, color: edText, resize: "vertical" }} />
               </div>
               <div>
                 <label className="font-semibold text-sm block mb-1" style={{ color: "var(--text-muted)" }}>Modified JSON</label>
-                <textarea value={compareRight} onChange={(e) => setCompareRight(e.target.value)} placeholder="Paste second JSON here..." className="w-full rounded-xl border p-3 focus:outline-none" style={{ fontSize: "14px", fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace", minHeight: 300, backgroundColor: edBg, borderColor: edBorder, color: edText, resize: "vertical" }} />
+                <textarea value={compareRight} onChange={(e) => setCompareRight(e.target.value)} placeholder="Paste second JSON here..." className="w-full rounded-xl border p-3 focus:outline-none" style={{ fontSize: "15px", fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace", minHeight: 300, backgroundColor: edBg, borderColor: edBorder, color: edText, resize: "vertical" }} />
               </div>
             </div>
             <button onClick={runDiff} className="px-5 py-2 rounded-lg font-bold" style={{ backgroundColor: dark ? "#44475A" : "#E8E8FF", color: dark ? accent : "#4F46E5", fontSize: "15px" }}>Compare</button>
-            {diffError && <div className="rounded-lg p-3" style={{ backgroundColor: "#FF555520", color: "#FF5555", fontSize: "14px" }}>{diffError}</div>}
+            {diffError && <div className="rounded-lg p-3" style={{ backgroundColor: "#FF555520", color: "#FF5555", fontSize: "15px" }}>{diffError}</div>}
             {diffs.length > 0 && (
               <div className="rounded-xl border p-4" style={{ backgroundColor: edBg, borderColor: edBorder }}>
-                <div className="mb-3" style={{ fontSize: "14px", color: "var(--text-muted)" }}>
+                <div className="mb-3" style={{ fontSize: "15px", color: "var(--text-muted)" }}>
                   {diffs.filter((d) => d.type === "added").length} additions, {diffs.filter((d) => d.type === "removed").length} removals, {diffs.filter((d) => d.type === "modified").length} modifications
                 </div>
-                <div className="space-y-1 max-h-[400px] overflow-y-auto" style={{ fontSize: "14px", fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace" }}>
+                <div className="space-y-1 max-h-[400px] overflow-y-auto" style={{ fontSize: "15px", fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace" }}>
                   {diffs.map((d, i) => (
                     <div key={i} className="rounded px-3 py-1" style={{ backgroundColor: d.type === "added" ? "#50FA7B15" : d.type === "removed" ? "#FF555515" : "#FFB86C15" }}>
                       <span style={{ color: d.type === "added" ? "#50FA7B" : d.type === "removed" ? "#FF5555" : "#FFB86C" }}>
@@ -480,7 +480,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
                 </div>
               </div>
             )}
-            {diffs.length === 0 && compareLeft && compareRight && !diffError && <div style={{ fontSize: "14px", color: "#50FA7B" }}>✅ No differences found — the JSON documents are identical.</div>}
+            {diffs.length === 0 && compareLeft && compareRight && !diffError && <div style={{ fontSize: "15px", color: "#50FA7B" }}>✅ No differences found — the JSON documents are identical.</div>}
           </div>
         )}
 
@@ -499,7 +499,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
                 placeholder={tab === "csv-to-json" ? "Paste CSV data here..." : "Paste JSON here..."}
                 className="w-full rounded-xl border p-3 focus:outline-none focus:ring-1"
                 style={{
-                  fontSize: "14px",
+                  fontSize: "15px",
                   fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace",
                   lineHeight: 1.5,
                   minHeight: 400,
@@ -521,7 +521,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
                   {tab === "tree" ? "Tree View" : tab === "minify" ? "Minified Output" : tab === "json-to-csv" ? "CSV Output" : tab === "csv-to-json" ? "JSON Output" : tab === "json-to-yaml" ? "YAML Output" : tab === "json-to-ts" ? "TypeScript Output" : "Formatted Output"}
                 </label>
                 {tab === "minify" && parsed.valid && (
-                  <span style={{ fontSize: "13px", color: "#50FA7B" }}>
+                  <span style={{ fontSize: "15px", color: "#50FA7B" }}>
                     {sizeLabel} → {(new Blob([parsed.minified]).size / 1024).toFixed(1)} KB ({Math.round((1 - new Blob([parsed.minified]).size / inputSize) * 100)}% smaller)
                   </span>
                 )}
@@ -531,7 +531,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
                 <div className="rounded-xl border p-3 overflow-auto" style={{ backgroundColor: edBg, borderColor: edBorder, minHeight: 400, maxHeight: 600 }}>
                   {parsed.valid && parsed.obj !== null ? (
                     <>
-                      {pathCopied && <div className="mb-2 text-xs" style={{ color: "#50FA7B" }}>Copied: {pathCopied}</div>}
+                      {pathCopied && <div className="mb-2 text-sm" style={{ color: "#50FA7B" }}>Copied: {pathCopied}</div>}
                       <TreeNode value={parsed.obj} path="" dark={dark} onCopyPath={handleCopyPath} />
                     </>
                   ) : (
@@ -543,7 +543,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
                   {(tab === "json-to-csv" || tab === "json-to-yaml" || tab === "json-to-ts") && (
                     <div className="flex items-center gap-3 px-3 py-2 border-b" style={{ borderColor: edBorder }}>
                       {tab === "json-to-csv" && (
-                        <select value={csvDelimiter} onChange={(e) => setCsvDelimiter(e.target.value)} className="rounded border px-2 py-1 text-xs" style={{ backgroundColor: edBg, borderColor: edBorder, color: edText }}>
+                        <select value={csvDelimiter} onChange={(e) => setCsvDelimiter(e.target.value)} className="rounded border px-2 py-1 text-sm" style={{ backgroundColor: edBg, borderColor: edBorder, color: edText }}>
                           <option value=",">Comma</option>
                           <option value=";">Semicolon</option>
                           <option value={"\t"}>Tab</option>
@@ -553,14 +553,14 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
                   )}
                   {tab === "csv-to-json" && (
                     <div className="flex items-center gap-3 px-3 py-2 border-b" style={{ borderColor: edBorder }}>
-                      <select value={csvDelimiter} onChange={(e) => setCsvDelimiter(e.target.value)} className="rounded border px-2 py-1 text-xs" style={{ backgroundColor: edBg, borderColor: edBorder, color: edText }}>
+                      <select value={csvDelimiter} onChange={(e) => setCsvDelimiter(e.target.value)} className="rounded border px-2 py-1 text-sm" style={{ backgroundColor: edBg, borderColor: edBorder, color: edText }}>
                         <option value=",">Comma</option>
                         <option value=";">Semicolon</option>
                         <option value={"\t"}>Tab</option>
                       </select>
                     </div>
                   )}
-                  <pre className="p-3 whitespace-pre-wrap" style={{ fontSize: "14px", fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace", color: edText, margin: 0 }}>
+                  <pre className="p-3 whitespace-pre-wrap" style={{ fontSize: "15px", fontFamily: "'JetBrains Mono','Fira Code','Consolas',monospace", color: edText, margin: 0 }}>
                     {(tab === "json-to-csv" || tab === "json-to-yaml" || tab === "json-to-ts" || tab === "csv-to-json") ? (
                       <code>{outputText || "Enter data in the input panel..."}</code>
                     ) : (
@@ -595,12 +595,12 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
                   <span style={{ fontSize: "20px" }}>❌</span>
                   <span className="font-semibold" style={{ fontSize: "15px", color: "#FF5555" }}>Invalid JSON</span>
                 </div>
-                <p style={{ fontSize: "14px", color: dark ? "#F8F8F2" : "var(--text)", fontFamily: "monospace" }}>{parsed.error}</p>
+                <p style={{ fontSize: "15px", color: dark ? "#F8F8F2" : "var(--text)", fontFamily: "monospace" }}>{parsed.error}</p>
                 <button onClick={handleFix} className="px-4 py-2 rounded-lg font-bold text-sm" style={{ backgroundColor: dark ? "#44475A" : "#E8E8FF", color: dark ? "#FFB86C" : "#B45309" }}>
                   🔧 Try to Fix
                 </button>
                 {fixResult && (
-                  <div style={{ fontSize: "14px", color: fixResult.success ? "#50FA7B" : "#FFB86C" }}>
+                  <div style={{ fontSize: "15px", color: fixResult.success ? "#50FA7B" : "#FFB86C" }}>
                     {fixResult.success ? `✅ Fixed! ${fixResult.fixes.length} issue${fixResult.fixes.length === 1 ? "" : "s"} repaired: ${fixResult.fixes.join(", ")}` : `Could not auto-fix. Attempted: ${fixResult.fixes.join(", ")}`}
                   </div>
                 )}
@@ -612,7 +612,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
         {/* ═══════════ FAQs ═══════════ */}
         {!articleMode && (
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Frequently Asked Questions</h2>
             <div className="space-y-3">
               {[
                 ["Is my JSON data safe?", "All processing happens entirely in your browser using JavaScript. No data is sent to any server, stored, or logged. Your JSON never leaves your device."],
@@ -626,7 +626,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
               ].map(([q, a]) => (
                 <details key={q} className="rounded-xl border" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                   <summary className="p-4 cursor-pointer font-semibold" style={{ fontSize: "16px" }}>{q}</summary>
-                  <p className="px-4 pb-4" style={{ fontSize: "16px", color: "var(--text-muted)" }}>{a}</p>
+                  <p className="px-4 pb-4" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>{a}</p>
                 </details>
               ))}
             </div>
@@ -635,7 +635,7 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
 
         {/* ═══════════ Related tools ═══════════ */}
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Related Tools</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Related Tools</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {[
               ["Password Generator", "/utility-tools/password-generator", "Generate strong passwords, passphrases, and PINs"],
@@ -646,14 +646,14 @@ export default function JsonFormatter({ title = "JSON Formatter & Validator", su
             ].map(([name, href, desc]) => (
               <a key={name} href={href} className="block rounded-xl border p-4 hover:shadow-md transition-shadow" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <h3 className="font-semibold mb-1" style={{ fontSize: "16px" }}>{name}</h3>
-                <p style={{ fontSize: "14px", color: "var(--text-muted)" }}>{desc}</p>
+                <p style={{ fontSize: "15px", color: "var(--text-muted)" }}>{desc}</p>
               </a>
             ))}
           </div>
         </section>
 
         {/* Footer */}
-        <footer className="text-center pt-6 pb-8 border-t" style={{ borderColor: "var(--border)", color: "var(--text-muted)", fontSize: "14px" }}>
+        <footer className="text-center pt-6 pb-8 border-t" style={{ borderColor: "var(--border)", color: "var(--text-muted)", fontSize: "15px" }}>
           <p>© {new Date().getFullYear()} <a href="/" style={{ color: accent }} className="hover:underline">EveryFreeTool.com</a> — Free tools, no signup, no nonsense.</p>
         </footer>
       </div>

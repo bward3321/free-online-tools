@@ -450,7 +450,7 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
   const inputStyle: React.CSSProperties = { background: C.surfaceAlt, border: `1px solid ${C.border}`, borderRadius: "8px", color: C.text, fontFamily: "monospace", fontSize: "16px", padding: "8px 12px", outline: "none", width: "100%" };
   const smallInputStyle: React.CSSProperties = { ...inputStyle, width: "70px", textAlign: "center" as const };
   const copyBtn = (label: string) => (
-    <button onClick={() => copy(label === "hex" ? hex : label === "rgb" ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : label === "hsl" ? `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)` : label === "rgba" ? `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${alpha})` : label === "hsv" ? `hsv(${hsv.h}, ${hsv.s}%, ${hsv.v}%)` : label === "cmyk" ? `cmyk(${cmyk.c}%, ${cmyk.m}%, ${cmyk.y}%, ${cmyk.k}%)` : label === "css" ? `--color: ${hex};` : label, label)} style={{ padding: "4px 10px", borderRadius: "6px", fontSize: "12px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: "transparent", color: copied === label ? C.green : C.muted, transition: "all 0.15s", flexShrink: 0 }}>
+    <button onClick={() => copy(label === "hex" ? hex : label === "rgb" ? `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` : label === "hsl" ? `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)` : label === "rgba" ? `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${alpha})` : label === "hsv" ? `hsv(${hsv.h}, ${hsv.s}%, ${hsv.v}%)` : label === "cmyk" ? `cmyk(${cmyk.c}%, ${cmyk.m}%, ${cmyk.y}%, ${cmyk.k}%)` : label === "css" ? `--color: ${hex};` : label, label)} style={{ padding: "4px 10px", borderRadius: "6px", fontSize: "15px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: "transparent", color: copied === label ? C.green : C.muted, transition: "all 0.15s", flexShrink: 0 }}>
       {copied === label ? "\u2705" : "\uD83D\uDCCB"}
     </button>
   );
@@ -460,7 +460,7 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
   );
 
   const harmonyBtn = (id: Harmony, label: string) => (
-    <button key={id} onClick={() => setHarmony(id)} style={{ padding: "4px 12px", borderRadius: "6px", fontSize: "13px", fontWeight: 600, cursor: "pointer", border: `1px solid ${harmony === id ? hex : C.border}`, background: harmony === id ? hex + "22" : "transparent", color: harmony === id ? C.text : C.muted, transition: "all 0.15s" }}>{label}</button>
+    <button key={id} onClick={() => setHarmony(id)} style={{ padding: "4px 12px", borderRadius: "6px", fontSize: "15px", fontWeight: 600, cursor: "pointer", border: `1px solid ${harmony === id ? hex : C.border}`, background: harmony === id ? hex + "22" : "transparent", color: harmony === id ? C.text : C.muted, transition: "all 0.15s" }}>{label}</button>
   );
 
   const swatchBtn = (color: string, size = 36) => (
@@ -498,7 +498,7 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
       <div className="max-w-[1100px] mx-auto px-4" style={{ paddingTop: articleMode ? "0" : "32px", paddingBottom: "48px" }}>
         {!articleMode && (
           <>
-            <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: C.muted }}>
+            <nav className="flex items-center gap-1 text-sm mb-4" style={{ color: C.muted }}>
               <a href="/" className="hover:underline" style={{ color: dark ? "#8BE9FD" : "#059669" }}>Home</a>
               <span>/</span><span>Design Tools</span>
             </nav>
@@ -544,14 +544,14 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
 
             {/* Native picker + use current color for contrast */}
             <div className="flex gap-2 mt-3 flex-wrap">
-              <button onClick={() => nativeInputRef.current?.click()} style={{ padding: "8px 14px", borderRadius: "8px", fontSize: "13px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: C.surface, color: C.text }}>
+              <button onClick={() => nativeInputRef.current?.click()} style={{ padding: "8px 14px", borderRadius: "8px", fontSize: "15px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: C.surface, color: C.text }}>
                 {"\uD83D\uDDA5\uFE0F"} System Color Picker
               </button>
               <input ref={nativeInputRef} type="color" value={hex} onChange={e => setFromHex(e.target.value)} className="hidden" />
-              <button onClick={() => { setFgHex(hex); setActiveTab("contrast"); }} style={{ padding: "8px 14px", borderRadius: "8px", fontSize: "13px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: C.surface, color: C.text }}>
+              <button onClick={() => { setFgHex(hex); setActiveTab("contrast"); }} style={{ padding: "8px 14px", borderRadius: "8px", fontSize: "15px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: C.surface, color: C.text }}>
                 Use as Foreground
               </button>
-              <button onClick={() => { setBgHex(hex); setActiveTab("contrast"); }} style={{ padding: "8px 14px", borderRadius: "8px", fontSize: "13px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: C.surface, color: C.text }}>
+              <button onClick={() => { setBgHex(hex); setActiveTab("contrast"); }} style={{ padding: "8px 14px", borderRadius: "8px", fontSize: "15px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: C.surface, color: C.text }}>
                 Use as Background
               </button>
             </div>
@@ -559,14 +559,14 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
             {/* History */}
             {history.length > 0 && (
               <div className="mt-4">
-                <div style={{ fontSize: "13px", color: C.muted, marginBottom: "6px" }}>Recent</div>
+                <div style={{ fontSize: "15px", color: C.muted, marginBottom: "6px" }}>Recent</div>
                 <div className="flex gap-1.5 flex-wrap">{history.map(c => swatchBtn(c, 28))}</div>
               </div>
             )}
 
             {/* Quick presets */}
             <div className="mt-4">
-              <div style={{ fontSize: "13px", color: C.muted, marginBottom: "6px" }}>Presets</div>
+              <div style={{ fontSize: "15px", color: C.muted, marginBottom: "6px" }}>Presets</div>
               <div className="flex gap-1.5 flex-wrap">{PRESET_COLORS.map(c => swatchBtn(c, 28))}</div>
             </div>
           </div>
@@ -576,7 +576,7 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
             {/* HEX */}
             <div style={cardStyle}>
               <div className="flex items-center justify-between mb-2">
-                <span style={{ fontSize: "13px", fontWeight: 600, color: C.muted }}>HEX</span>
+                <span style={{ fontSize: "15px", fontWeight: 600, color: C.muted }}>HEX</span>
                 {copyBtn("hex")}
               </div>
               <input
@@ -598,7 +598,7 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
             {/* RGB */}
             <div style={cardStyle}>
               <div className="flex items-center justify-between mb-2">
-                <span style={{ fontSize: "13px", fontWeight: 600, color: C.muted }}>RGB</span>
+                <span style={{ fontSize: "15px", fontWeight: 600, color: C.muted }}>RGB</span>
                 {copyBtn("rgb")}
               </div>
               <div className="flex gap-2">
@@ -609,13 +609,13 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
                   </div>
                 ))}
               </div>
-              <div style={{ fontSize: "12px", fontFamily: "monospace", color: C.muted, marginTop: "6px" }}>rgb({rgb.r}, {rgb.g}, {rgb.b})</div>
+              <div style={{ fontSize: "15px", fontFamily: "monospace", color: C.muted, marginTop: "6px" }}>rgb({rgb.r}, {rgb.g}, {rgb.b})</div>
             </div>
 
             {/* HSL */}
             <div style={cardStyle}>
               <div className="flex items-center justify-between mb-2">
-                <span style={{ fontSize: "13px", fontWeight: 600, color: C.muted }}>HSL</span>
+                <span style={{ fontSize: "15px", fontWeight: 600, color: C.muted }}>HSL</span>
                 {copyBtn("hsl")}
               </div>
               <div className="flex gap-2">
@@ -632,13 +632,13 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
                   <input type="number" min={0} max={100} value={hsl.l} onChange={e => setFromHsl(hsl.h, hsl.s, Math.max(0, Math.min(100, +e.target.value || 0)))} style={smallInputStyle} />
                 </div>
               </div>
-              <div style={{ fontSize: "12px", fontFamily: "monospace", color: C.muted, marginTop: "6px" }}>hsl({hsl.h}, {hsl.s}%, {hsl.l}%)</div>
+              <div style={{ fontSize: "15px", fontFamily: "monospace", color: C.muted, marginTop: "6px" }}>hsl({hsl.h}, {hsl.s}%, {hsl.l}%)</div>
             </div>
 
             {/* HSV */}
             <div style={cardStyle}>
               <div className="flex items-center justify-between mb-2">
-                <span style={{ fontSize: "13px", fontWeight: 600, color: C.muted }}>HSV / HSB</span>
+                <span style={{ fontSize: "15px", fontWeight: 600, color: C.muted }}>HSV / HSB</span>
                 {copyBtn("hsv")}
               </div>
               <div className="flex gap-2">
@@ -660,7 +660,7 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
             {/* CMYK */}
             <div style={cardStyle}>
               <div className="flex items-center justify-between mb-2">
-                <span style={{ fontSize: "13px", fontWeight: 600, color: C.muted }}>CMYK <span style={{ fontSize: "10px", fontWeight: 400 }}>(approx)</span></span>
+                <span style={{ fontSize: "15px", fontWeight: 600, color: C.muted }}>CMYK <span style={{ fontSize: "10px", fontWeight: 400 }}>(approx)</span></span>
                 {copyBtn("cmyk")}
               </div>
               <div className="flex gap-2">
@@ -676,23 +676,23 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
             {/* RGBA */}
             <div style={cardStyle}>
               <div className="flex items-center justify-between mb-2">
-                <span style={{ fontSize: "13px", fontWeight: 600, color: C.muted }}>RGBA</span>
+                <span style={{ fontSize: "15px", fontWeight: 600, color: C.muted }}>RGBA</span>
                 {copyBtn("rgba")}
               </div>
               <div className="flex gap-2 items-end">
-                <div style={{ fontSize: "12px", fontFamily: "monospace", color: C.muted }}>rgba({rgb.r}, {rgb.g}, {rgb.b},</div>
+                <div style={{ fontSize: "15px", fontFamily: "monospace", color: C.muted }}>rgba({rgb.r}, {rgb.g}, {rgb.b},</div>
                 <input type="number" min={0} max={1} step={0.01} value={alpha} onChange={e => setAlpha(Math.max(0, Math.min(1, +e.target.value || 0)))} style={{ ...smallInputStyle, width: "60px" }} autoFocus={defaultFocusFormat === "rgba"} />
-                <div style={{ fontSize: "12px", fontFamily: "monospace", color: C.muted }}>)</div>
+                <div style={{ fontSize: "15px", fontFamily: "monospace", color: C.muted }}>)</div>
               </div>
             </div>
 
             {/* CSS Variable */}
             <div style={cardStyle}>
               <div className="flex items-center justify-between mb-2">
-                <span style={{ fontSize: "13px", fontWeight: 600, color: C.muted }}>CSS Variable</span>
+                <span style={{ fontSize: "15px", fontWeight: 600, color: C.muted }}>CSS Variable</span>
                 {copyBtn("css")}
               </div>
-              <div style={{ fontSize: "14px", fontFamily: "monospace", color: C.text }}>--color: {hex};</div>
+              <div style={{ fontSize: "15px", fontFamily: "monospace", color: C.text }}>--color: {hex};</div>
             </div>
           </div>
         </div>
@@ -709,14 +709,14 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
           <div style={{ ...cardStyle, marginBottom: "24px" }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
-                <label style={{ fontSize: "14px", fontWeight: 600, display: "block", marginBottom: "6px" }}>Foreground (Text)</label>
+                <label style={{ fontSize: "15px", fontWeight: 600, display: "block", marginBottom: "6px" }}>Foreground (Text)</label>
                 <div className="flex gap-2 items-center">
                   <div style={{ width: 48, height: 48, borderRadius: "8px", background: fgHex, border: `1px solid ${C.border}`, flexShrink: 0 }} />
                   <input value={fgHex} onChange={e => { const v = e.target.value; setFgHex(v); }} style={inputStyle} />
                 </div>
               </div>
               <div>
-                <label style={{ fontSize: "14px", fontWeight: 600, display: "block", marginBottom: "6px" }}>Background</label>
+                <label style={{ fontSize: "15px", fontWeight: 600, display: "block", marginBottom: "6px" }}>Background</label>
                 <div className="flex gap-2 items-center">
                   <div style={{ width: 48, height: 48, borderRadius: "8px", background: bgHex, border: `1px solid ${C.border}`, flexShrink: 0 }} />
                   <input value={bgHex} onChange={e => { const v = e.target.value; setBgHex(v); }} style={inputStyle} />
@@ -724,20 +724,20 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
               </div>
             </div>
             <div className="flex justify-center mb-4">
-              <button onClick={() => { const tmp = fgHex; setFgHex(bgHex); setBgHex(tmp); }} style={{ padding: "6px 16px", borderRadius: "8px", fontSize: "14px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: C.surface, color: C.text }}>{"\u21C4"} Swap</button>
+              <button onClick={() => { const tmp = fgHex; setFgHex(bgHex); setBgHex(tmp); }} style={{ padding: "6px 16px", borderRadius: "8px", fontSize: "15px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: C.surface, color: C.text }}>{"\u21C4"} Swap</button>
             </div>
 
             {/* Live preview */}
             <div style={{ padding: "24px", borderRadius: "12px", background: bgHex, border: `1px solid ${C.border}`, marginBottom: "16px" }}>
               <p style={{ color: fgHex, fontSize: "24px", marginBottom: "8px" }}>The quick brown fox jumps over the lazy dog.</p>
               <p style={{ color: fgHex, fontSize: "18px", marginBottom: "8px" }}>The quick brown fox jumps over the lazy dog.</p>
-              <p style={{ color: fgHex, fontSize: "14px", marginBottom: "4px" }}>The quick brown fox jumps over the lazy dog.</p>
-              <p style={{ color: fgHex, fontSize: "12px" }}>The quick brown fox jumps over the lazy dog.</p>
+              <p style={{ color: fgHex, fontSize: "15px", marginBottom: "4px" }}>The quick brown fox jumps over the lazy dog.</p>
+              <p style={{ color: fgHex, fontSize: "15px" }}>The quick brown fox jumps over the lazy dog.</p>
             </div>
 
             {/* Ratio */}
             <div className="text-center mb-4">
-              <div style={{ fontSize: "14px", color: C.muted, marginBottom: "4px" }}>Contrast Ratio</div>
+              <div style={{ fontSize: "15px", color: C.muted, marginBottom: "4px" }}>Contrast Ratio</div>
               <div style={{ fontSize: "28px", fontWeight: 700, color: contrastRatio >= 7 ? C.green : contrastRatio >= 4.5 ? "#50FA7B" : contrastRatio >= 3 ? "#FFB86C" : C.red }}>
                 {contrastRatio.toFixed(2)}:1
               </div>
@@ -753,7 +753,7 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
               ].map(item => (
                 <div key={item.label} style={{ padding: "10px", borderRadius: "8px", background: item.pass ? C.green + "18" : C.red + "18", border: `1px solid ${item.pass ? C.green + "44" : C.red + "44"}`, textAlign: "center" }}>
                   <div style={{ fontSize: "16px", fontWeight: 700, color: item.pass ? C.green : C.red }}>{item.pass ? "\u2705 PASS" : "\u274C FAIL"}</div>
-                  <div style={{ fontSize: "12px", color: C.muted, marginTop: "2px" }}>{item.label}</div>
+                  <div style={{ fontSize: "15px", color: C.muted, marginTop: "2px" }}>{item.label}</div>
                 </div>
               ))}
             </div>
@@ -763,7 +763,7 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
               const suggestion = suggestCompliant(fgRgb, bgRgb);
               if (!suggestion) return null;
               return (
-                <div style={{ marginTop: "12px", padding: "12px", borderRadius: "8px", background: C.surfaceAlt, fontSize: "14px" }}>
+                <div style={{ marginTop: "12px", padding: "12px", borderRadius: "8px", background: C.surfaceAlt, fontSize: "15px" }}>
                   <span style={{ color: C.muted }}>{"\uD83D\uDCA1"} Try </span>
                   <button onClick={() => setFgHex(suggestion.hex)} style={{ fontFamily: "monospace", fontWeight: 700, color: C.text, background: "none", border: "none", cursor: "pointer", textDecoration: "underline" }}>{suggestion.hex}</button>
                   <span style={{ color: C.muted }}> for AA compliance ({suggestion.ratio.toFixed(1)}:1)</span>
@@ -785,14 +785,14 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
               {paletteColors.map((c, i) => (
                 <button key={i} onClick={() => setFromHex(c)} style={{ width: 80, borderRadius: "10px", overflow: "hidden", border: `2px solid ${c === hex ? C.text : C.border}`, cursor: "pointer", background: "none", padding: 0 }}>
                   <div style={{ height: 60, background: c }} />
-                  <div style={{ padding: "6px", fontSize: "12px", fontFamily: "monospace", textAlign: "center", background: C.surface, color: C.text }}>{c}</div>
+                  <div style={{ padding: "6px", fontSize: "15px", fontFamily: "monospace", textAlign: "center", background: C.surface, color: C.text }}>{c}</div>
                 </button>
               ))}
             </div>
 
             {/* Tints & Shades */}
             <div>
-              <div style={{ fontSize: "14px", fontWeight: 600, marginBottom: "8px" }}>Tints &amp; Shades</div>
+              <div style={{ fontSize: "15px", fontWeight: 600, marginBottom: "8px" }}>Tints &amp; Shades</div>
               <div className="flex gap-1" style={{ overflowX: "auto" }}>
                 {tintsAndShades.map((c, i) => (
                   <button key={i} onClick={() => setFromHex(c)} title={c} style={{ minWidth: 48, flex: 1, borderRadius: "6px", overflow: "hidden", border: `2px solid ${c === hex ? C.text : "transparent"}`, cursor: "pointer", background: "none", padding: 0 }}>
@@ -817,7 +817,7 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
               >
                 <div style={{ fontSize: "32px", marginBottom: "8px" }}>{"\uD83D\uDDBC\uFE0F"}</div>
                 <div style={{ fontSize: "16px", fontWeight: 600 }}>Drop an image here or click to upload</div>
-                <div style={{ fontSize: "13px", color: C.muted, marginTop: "4px" }}>PNG, JPG, GIF, WebP</div>
+                <div style={{ fontSize: "15px", color: C.muted, marginTop: "4px" }}>PNG, JPG, GIF, WebP</div>
               </div>
             ) : (
               <div>
@@ -829,11 +829,11 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
                   />
                 </div>
                 <div className="flex gap-2 mb-3">
-                  <button onClick={() => { setImgSrc(null); setDominantColors([]); }} style={{ padding: "6px 14px", borderRadius: "6px", fontSize: "13px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: C.surface, color: C.text }}>Upload Different Image</button>
+                  <button onClick={() => { setImgSrc(null); setDominantColors([]); }} style={{ padding: "6px 14px", borderRadius: "6px", fontSize: "15px", fontWeight: 600, cursor: "pointer", border: `1px solid ${C.border}`, background: C.surface, color: C.text }}>Upload Different Image</button>
                 </div>
                 {dominantColors.length > 0 && (
                   <div>
-                    <div style={{ fontSize: "14px", fontWeight: 600, marginBottom: "8px" }}>Dominant Colors</div>
+                    <div style={{ fontSize: "15px", fontWeight: 600, marginBottom: "8px" }}>Dominant Colors</div>
                     <div className="flex flex-wrap gap-2">
                       {dominantColors.map((c, i) => (
                         <button key={i} onClick={() => setFromHex(c.hex)} style={{ borderRadius: "8px", overflow: "hidden", border: `2px solid ${C.border}`, cursor: "pointer", background: "none", padding: 0, width: 72 }}>
@@ -851,14 +851,14 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
 
         {/* ─── FAQs ─── */}
         <div className="mt-10">
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-2">
             {FAQS.map((faq, i) => (
               <details key={i} className="group" style={{ borderRadius: "10px", border: `1px solid ${C.border}`, background: C.surface }}>
                 <summary className="cursor-pointer px-5 py-4 font-semibold" style={{ fontSize: "16px", listStyle: "none" }}>
                   <span className="flex items-center justify-between"><span>{faq.q}</span><span className="ml-2 transition-transform group-open:rotate-180" style={{ color: C.muted }}>{"\u25BC"}</span></span>
                 </summary>
-                <div className="px-5 pb-4" style={{ fontSize: "16px", lineHeight: 1.7, color: C.muted }}>{faq.a}</div>
+                <div className="px-5 pb-4" style={{ fontSize: "17px", lineHeight: 1.7, color: C.muted }}>{faq.a}</div>
               </details>
             ))}
           </div>
@@ -866,7 +866,7 @@ export default function ColorPicker({ title, subtitle, defaultTab, defaultFocusF
 
         {/* ─── Related Tools ─── */}
         <div className="mt-10">
-          <h2 className="text-2xl font-bold mb-4">Related Tools</h2>
+          <h2 className="text-[22px] sm:text-[28px] font-bold mb-4">Related Tools</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {RELATED.map(t => (
               <a key={t.href} href={t.href} className="block p-4 rounded-xl border hover:shadow-lg transition-shadow" style={{ background: C.surface, borderColor: C.border, textDecoration: "none", color: C.text }}>

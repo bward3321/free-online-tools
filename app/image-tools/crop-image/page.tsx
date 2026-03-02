@@ -58,7 +58,7 @@ function SEOContent() {
         className="rounded-2xl border p-6 md:p-8 mb-12"
         style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}
       >
-        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>
+        <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>
           How to Crop Images Effectively
         </h2>
         <div className="prose max-w-none space-y-4 text-sm leading-relaxed" style={{ color: "var(--text)" }}>
@@ -99,7 +99,7 @@ function SEOContent() {
       </div>
 
       <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
+        <h2 className="text-[22px] sm:text-[28px] font-bold mb-6" style={{ color: "var(--text)" }}>Frequently Asked Questions</h2>
         <div className="space-y-3">
           {[
             { q: "What aspect ratio should I use for passport photos?", a: "Standard passport photos use a 35mm \u00d7 45mm format, which is approximately a 7:9 ratio. Our Passport preset automatically sets this ratio. Make sure the face is centered with the correct amount of headroom as specified by your country\u2019s requirements." },

@@ -20,25 +20,25 @@ export default function Sha1HashGeneratorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#8BE9FD" }}>Home</a><span>/</span><span>Developer Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">SHA-1 Hash Generator &mdash; Generate SHA-1 Hashes Online</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>Generate SHA-1 hashes for any text or file. SHA-1 produces a 160-bit (40 hex character) hash. Deprecated for security but still used in Git and legacy systems.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">About SHA-1</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>SHA-1 (Secure Hash Algorithm 1) was published by NIST in 1995 as part of the Digital Signature Standard. It processes input in 512-bit blocks and produces a 160-bit hash value, typically rendered as a 40-character hexadecimal string. For over two decades, SHA-1 was the workhorse of internet security &mdash; used in SSL/TLS certificates, PGP signatures, SSH, and IPsec protocols.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">About SHA-1</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>SHA-1 (Secure Hash Algorithm 1) was published by NIST in 1995 as part of the Digital Signature Standard. It processes input in 512-bit blocks and produces a 160-bit hash value, typically rendered as a 40-character hexadecimal string. For over two decades, SHA-1 was the workhorse of internet security &mdash; used in SSL/TLS certificates, PGP signatures, SSH, and IPsec protocols.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">The SHAttered Attack</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>In February 2017, Google and CWI Amsterdam published the <strong style={{ color: "var(--text)" }}>SHAttered attack</strong>, demonstrating the first practical SHA-1 collision. They produced two different PDF files with identical SHA-1 hashes. The attack required about 6,500 CPU-years and 110 GPU-years of computation. Since then, SHA-1 has been <strong style={{ color: "var(--text)" }}>officially deprecated</strong> by all major browser vendors, certificate authorities, and security standards bodies.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">The SHAttered Attack</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>In February 2017, Google and CWI Amsterdam published the <strong style={{ color: "var(--text)" }}>SHAttered attack</strong>, demonstrating the first practical SHA-1 collision. They produced two different PDF files with identical SHA-1 hashes. The attack required about 6,500 CPU-years and 110 GPU-years of computation. Since then, SHA-1 has been <strong style={{ color: "var(--text)" }}>officially deprecated</strong> by all major browser vendors, certificate authorities, and security standards bodies.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">SHA-1 in Git</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Git&apos;s most visible use of SHA-1 is for commit identifiers &mdash; those 40-character hex strings like <code style={{ color: "#8BE9FD" }}>aaf4c61d</code>. Git is transitioning to SHA-256 via the <code style={{ color: "#8BE9FD" }}>extensions.objectFormat</code> config option, but SHA-1 remains the default. For Git&apos;s use case, SHA-1&apos;s collision vulnerability is a limited risk since Git performs additional checks, but migration to SHA-256 is recommended for new repositories.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">SHA-1 in Git</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Git&apos;s most visible use of SHA-1 is for commit identifiers &mdash; those 40-character hex strings like <code style={{ color: "#8BE9FD" }}>aaf4c61d</code>. Git is transitioning to SHA-256 via the <code style={{ color: "#8BE9FD" }}>extensions.objectFormat</code> config option, but SHA-1 remains the default. For Git&apos;s use case, SHA-1&apos;s collision vulnerability is a limited risk since Git performs additional checks, but migration to SHA-256 is recommended for new repositories.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#F1FA8C1a", borderColor: "#F1FA8C40" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Enter text below to generate its SHA-1 hash.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Enter text below to generate its SHA-1 hash.</p>
           </div>
         </div>
       </div>

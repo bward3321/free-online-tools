@@ -346,7 +346,7 @@ function SplitView({
     >
       <div className="flex items-center justify-between px-4 py-3 border-b" style={{ borderColor: "var(--border)" }}>
         <span className="text-sm font-medium" style={{ color: "var(--text)" }}>Before / After Comparison</span>
-        <div className="flex gap-4 text-xs tabular-nums" style={{ color: "var(--text-muted)" }}>
+        <div className="flex gap-4 text-sm tabular-nums" style={{ color: "var(--text-muted)" }}>
           <span>Original: {formatFileSize(originalSize)}</span>
           <span>Compressed: {formatFileSize(processedSize)}</span>
         </div>
@@ -408,10 +408,10 @@ function SplitView({
           </svg>
         </div>
         {/* Labels */}
-        <div className="absolute top-3 left-3 px-2 py-1 rounded text-xs font-semibold z-10" style={{ backgroundColor: "rgba(0,0,0,0.6)", color: "white" }}>
+        <div className="absolute top-3 left-3 px-2 py-1 rounded font-semibold text-sm z-10" style={{ backgroundColor: "rgba(0,0,0,0.6)", color: "white" }}>
           Processed
         </div>
-        <div className="absolute top-3 right-3 px-2 py-1 rounded text-xs font-semibold z-10" style={{ backgroundColor: "rgba(0,0,0,0.6)", color: "white" }}>
+        <div className="absolute top-3 right-3 px-2 py-1 rounded font-semibold text-sm z-10" style={{ backgroundColor: "rgba(0,0,0,0.6)", color: "white" }}>
           Original
         </div>
       </div>
@@ -824,10 +824,10 @@ function ImageCard({
       </div>
       {/* Info */}
       <div className="p-3">
-        <p className="text-xs font-medium truncate mb-1" style={{ color: "var(--text)" }}>
+        <p className="font-medium text-sm truncate mb-1" style={{ color: "var(--text)" }}>
           {image.name}
         </p>
-        <div className="flex items-center justify-between text-xs tabular-nums" style={{ color: "var(--text-muted)" }}>
+        <div className="flex items-center justify-between text-sm tabular-nums" style={{ color: "var(--text-muted)" }}>
           <span>{formatFileSize(image.originalSize)}</span>
           {image.status === "done" && image.processedSize != null && (
             <span className="flex items-center gap-1">
@@ -849,7 +849,7 @@ function ImageCard({
               e.stopPropagation();
               onDownload();
             }}
-            className="mt-2 w-full py-1.5 rounded-lg text-xs font-medium border hover:opacity-80"
+            className="mt-2 w-full py-1.5 rounded-lg font-medium text-sm border hover:opacity-80"
             style={{
               borderColor: "var(--color-accent)",
               color: "var(--color-accent)",
@@ -1415,7 +1415,7 @@ export default function ImageToolkit({
                     >
                       Target Size
                       {compressMode === "target" && (
-                        <span className="ml-1.5 text-xs px-1.5 py-0.5 rounded-full text-white" style={{ backgroundColor: "var(--color-accent)" }}>
+                        <span className="ml-1.5 text-sm px-1.5 py-0.5 rounded-full text-white" style={{ backgroundColor: "var(--color-accent)" }}>
                           Recommended
                         </span>
                       )}
@@ -1469,7 +1469,7 @@ export default function ImageToolkit({
                             }}
                           >
                             <span>{preset.label}</span>
-                            <span className="block text-xs opacity-70">{preset.desc}</span>
+                            <span className="block text-sm opacity-70">{preset.desc}</span>
                           </button>
                         ))}
                       </div>
@@ -1481,7 +1481,7 @@ export default function ImageToolkit({
                           <label className="text-sm font-medium" style={{ color: "var(--text)" }}>
                             Quality: {quality}%
                           </label>
-                          <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+                          <span style={{ color: "var(--text-muted)" }}>
                             {quality <= 20 ? "Low" : quality <= 50 ? "Medium" : quality <= 80 ? "High" : "Maximum"}
                           </span>
                         </div>
@@ -1493,7 +1493,7 @@ export default function ImageToolkit({
                           onChange={(e) => setQuality(parseInt(e.target.value))}
                           className="w-full accent-[var(--color-accent)]"
                         />
-                        <div className="flex justify-between text-xs mt-1" style={{ color: "var(--text-muted)" }}>
+                        <div className="flex justify-between text-sm mt-1" style={{ color: "var(--text-muted)" }}>
                           <span>Low</span>
                           <span>Medium</span>
                           <span>High</span>
@@ -1523,7 +1523,7 @@ export default function ImageToolkit({
                       ))}
                     </div>
                     {outputFormat === "jpg" && (
-                      <p className="text-xs mt-2" style={{ color: "#f59e0b" }}>
+                      <p style={{ color: "#f59e0b" }}>
                         Converting PNG to JPG will remove transparency.
                       </p>
                     )}
@@ -1579,7 +1579,7 @@ export default function ImageToolkit({
                   {resizeMode === "dimensions" && (
                     <div className="space-y-4">
                       {selectedImage && (
-                        <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+                        <p style={{ color: "var(--text-muted)" }}>
                           Original size: {selectedImage.originalWidth} &times; {selectedImage.originalHeight} px
                         </p>
                       )}
@@ -1640,7 +1640,7 @@ export default function ImageToolkit({
                         <div className="flex items-center justify-between mb-2">
                           <label className="text-sm font-medium" style={{ color: "var(--text)" }}>Scale: {resizePct}%</label>
                           {selectedImage && (
-                            <span className="text-xs tabular-nums" style={{ color: "var(--text-muted)" }}>
+                            <span className="tabular-nums" style={{ color: "var(--text-muted)" }}>
                               Result: {Math.round(selectedImage.originalWidth * resizePct / 100)} &times; {Math.round(selectedImage.originalHeight * resizePct / 100)} px
                             </span>
                           )}
@@ -1653,7 +1653,7 @@ export default function ImageToolkit({
                           onChange={(e) => setResizePct(parseInt(e.target.value))}
                           className="w-full accent-[var(--color-accent)]"
                         />
-                        <div className="flex justify-between text-xs mt-1" style={{ color: "var(--text-muted)" }}>
+                        <div className="flex justify-between text-sm mt-1" style={{ color: "var(--text-muted)" }}>
                           <span>10%</span>
                           <span>50%</span>
                           <span>100%</span>
@@ -1681,7 +1681,7 @@ export default function ImageToolkit({
                           }}
                         >
                           <span className="block text-sm font-medium" style={{ color: "var(--text)" }}>{preset.label}</span>
-                          <span className="block text-xs tabular-nums" style={{ color: "var(--text-muted)" }}>{preset.w} &times; {preset.h}</span>
+                          <span className="block text-sm tabular-nums" style={{ color: "var(--text-muted)" }}>{preset.w} &times; {preset.h}</span>
                         </button>
                       ))}
                     </div>
@@ -1743,7 +1743,7 @@ export default function ImageToolkit({
                           <span className="block text-sm font-semibold mb-1" style={{ color: convertFormat === fmt ? "var(--color-accent)" : "var(--text)" }}>
                             {label}
                           </span>
-                          <span className="block text-xs" style={{ color: "var(--text-muted)" }}>{desc}</span>
+                          <span className="block text-sm" style={{ color: "var(--text-muted)" }}>{desc}</span>
                         </button>
                       ))}
                     </div>
@@ -1920,7 +1920,7 @@ export default function ImageToolkit({
                 </svg>
                 <div>
                   <div className="font-medium text-sm" style={{ color: "var(--text)" }}>{tool.name}</div>
-                  <div className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>{tool.desc}</div>
+                  <div style={{ color: "var(--text-muted)" }}>{tool.desc}</div>
                 </div>
               </Link>
             ))}
@@ -1928,7 +1928,7 @@ export default function ImageToolkit({
         </div>
 
         {/* Footer */}
-        <footer className="border-t pt-8 pb-4 text-center text-xs" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+        <footer className="border-t pt-8 pb-4 text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
           <p>Free Online Tools &mdash; Free calculators and tools for everyone.</p>
           <p className="mt-1">No signup required. No ads. No tracking.</p>
         </footer>

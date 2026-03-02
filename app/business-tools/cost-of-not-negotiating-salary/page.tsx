@@ -32,7 +32,7 @@ export default function CostOfNotNegotiatingPage() {
       {/* Article-first layout: deep content, then calculator embedded */}
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)" }}>
             <a href="/" className="hover:underline" style={{ color: "#DC2626" }}>Home</a>
             <span>/</span>
             <span>Business Tools</span>
@@ -46,7 +46,7 @@ export default function CostOfNotNegotiatingPage() {
 
           <article className="space-y-6 mb-12">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>The Psychology of Not Negotiating</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3" style={{ color: "var(--text)" }}>The Psychology of Not Negotiating</h2>
               <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--text-muted)" }}>
                 Negotiation avoidance comes from deeply human emotions: fear of rejection, gratitude for being selected, impostor syndrome (&ldquo;I should just be happy they picked me&rdquo;), and social conditioning that frames asking for more as greedy. Women face an additional barrier &mdash; Carnegie Mellon research found only 7% of female graduates negotiate initial offers versus 57% of men.
               </p>
@@ -56,7 +56,7 @@ export default function CostOfNotNegotiatingPage() {
             </section>
 
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>The Math at Different Salary Levels</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3" style={{ color: "var(--text)" }}>The Math at Different Salary Levels</h2>
               <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--text-muted)" }}>
                 The compounding effect scales with your salary. Here&apos;s what a 7% negotiation gap costs over 20 years with 3.5% annual raises:
               </p>
@@ -88,7 +88,7 @@ export default function CostOfNotNegotiatingPage() {
             </section>
 
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3" style={{ color: "var(--text)" }}>Negotiation Scripts That Work</h2>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3" style={{ color: "var(--text)" }}>Negotiation Scripts That Work</h2>
               <div className="space-y-3 text-sm" style={{ color: "var(--text-muted)" }}>
                 <div className="p-3 rounded-lg" style={{ backgroundColor: "var(--bg)" }}>
                   <p className="font-semibold mb-1" style={{ color: "var(--text)" }}>For a new job offer:</p>

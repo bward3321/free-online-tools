@@ -20,25 +20,25 @@ export default function OnlineTextEditorPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(f => ({ "@type": "Question", name: f.name, acceptedAnswer: { "@type": "Answer", text: f.text } })) }) }} />
       <div className="min-h-screen" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
         <div className="max-w-[800px] mx-auto px-4 py-8 md:py-12">
-          <nav className="flex items-center gap-1 text-xs mb-4" style={{ color: "var(--text-muted)" }}><a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Writing Tools</span></nav>
+          <nav className="flex items-center gap-1 mb-4" style={{ color: "var(--text-muted)", fontSize: "15px" }}><a href="/" className="hover:underline" style={{ color: "#059669" }}>Home</a><span>/</span><span>Writing Tools</span></nav>
           <h1 className="text-3xl md:text-4xl font-bold mb-3">Free Online Text Editor with Formatting</h1>
           <p className="text-lg mb-8" style={{ color: "var(--text-muted)" }}>A simple, free text editor that runs entirely in your browser. Use the formatting toolbar or write in Markdown. See your formatted text in real-time, then export as HTML, Markdown, or rich text.</p>
           <article className="space-y-6 mb-10">
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Simple Text Editing Online</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>Sometimes you just need a clean text editor without installing anything. Whether you&apos;re on a public computer, a Chromebook, or just want a quick scratchpad, this editor gives you a distraction-free writing environment with formatting tools. No accounts, no downloads, no ads. Open the page and start typing.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Simple Text Editing Online</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>Sometimes you just need a clean text editor without installing anything. Whether you&apos;re on a public computer, a Chromebook, or just want a quick scratchpad, this editor gives you a distraction-free writing environment with formatting tools. No accounts, no downloads, no ads. Open the page and start typing.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Formatting Without Complexity</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>The toolbar provides one-click formatting for the most common needs: bold, italic, headings, bullet lists, numbered lists, links, and code blocks. You don&apos;t need to know any syntax &mdash; click a button and the formatting is applied. The preview pane shows you exactly how your text will look when exported.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Formatting Without Complexity</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>The toolbar provides one-click formatting for the most common needs: bold, italic, headings, bullet lists, numbered lists, links, and code blocks. You don&apos;t need to know any syntax &mdash; click a button and the formatting is applied. The preview pane shows you exactly how your text will look when exported.</p>
             </section>
             <section className="rounded-xl border p-5" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-              <h2 className="text-xl font-bold mb-3">Export Your Way</h2>
-              <p className="leading-relaxed" style={{ fontSize: "16px", color: "var(--text-muted)" }}>When you&apos;re done writing, export in the format you need. Copy as rich text to paste formatted content into Gmail, Google Docs, or Notion. Copy as HTML for web publishing. Download as a .md file for documentation. Download as .html for a standalone formatted document. All exports work with one click.</p>
+              <h2 className="text-[22px] sm:text-[28px] font-bold mb-3">Export Your Way</h2>
+              <p className="leading-relaxed" style={{ fontSize: "17px", lineHeight: "1.7", color: "var(--text-muted)" }}>When you&apos;re done writing, export in the format you need. Copy as rich text to paste formatted content into Gmail, Google Docs, or Notion. Copy as HTML for web publishing. Download as a .md file for documentation. Download as .html for a standalone formatted document. All exports work with one click.</p>
             </section>
           </article>
           <div className="rounded-xl border p-4 mb-8 text-center" style={{ backgroundColor: "#0596691a", borderColor: "#05966940" }}>
-            <p className="font-semibold" style={{ fontSize: "16px" }}>Start typing in the editor below.</p>
+            <p className="font-semibold" style={{ fontSize: "17px" }}>Start typing in the editor below.</p>
           </div>
         </div>
       </div>

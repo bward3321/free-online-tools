@@ -282,19 +282,19 @@ function ScenarioChart({ currentSalary, negotiatedSalary, raiseRate, years }: { 
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
         <div className="p-3 rounded-xl border text-center" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-          <div className="text-xs font-medium mb-1" style={{ color: "#DC2626" }}>Never Negotiate</div>
+          <div className="font-medium text-sm mb-1" style={{ color: "#DC2626" }}>Never Negotiate</div>
           <div className="text-lg font-bold" style={{ color: "var(--text)" }}>{formatCurrency(neverTotal)}</div>
-          <div className="text-xs" style={{ color: "var(--text-muted)" }}>total earned</div>
+          <div style={{ color: "var(--text-muted)" }}>total earned</div>
         </div>
         <div className="p-3 rounded-xl border text-center" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-          <div className="text-xs font-medium mb-1" style={{ color: "#16A34A" }}>Negotiate Once</div>
+          <div className="font-medium text-sm mb-1" style={{ color: "#16A34A" }}>Negotiate Once</div>
           <div className="text-lg font-bold" style={{ color: "var(--text)" }}>{formatCurrency(onceTotal)}</div>
-          <div className="text-xs" style={{ color: "#16A34A" }}>+{formatCurrency(onceTotal - neverTotal)}</div>
+          <div style={{ color: "#16A34A" }}>+{formatCurrency(onceTotal - neverTotal)}</div>
         </div>
         <div className="p-3 rounded-xl border text-center" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
-          <div className="text-xs font-medium mb-1" style={{ color: "#1E40AF" }}>Negotiate Every 5 Yrs</div>
+          <div className="font-medium text-sm mb-1" style={{ color: "#1E40AF" }}>Negotiate Every 5 Yrs</div>
           <div className="text-lg font-bold" style={{ color: "var(--text)" }}>{formatCurrency(multiTotal)}</div>
-          <div className="text-xs" style={{ color: "#1E40AF" }}>+{formatCurrency(multiTotal - neverTotal)}</div>
+          <div style={{ color: "#1E40AF" }}>+{formatCurrency(multiTotal - neverTotal)}</div>
         </div>
       </div>
     </div>
@@ -394,7 +394,7 @@ export default function SalaryNegotiationCalculator({
         {/* Header */}
         <div className="flex items-start justify-between mb-6">
           <div>
-            <nav className="flex items-center gap-1 text-xs mb-3" style={{ color: "var(--text-muted)" }}>
+            <nav className="flex items-center gap-1 text-sm mb-3" style={{ color: "var(--text-muted)" }}>
               <Link href="/" className="hover:underline" style={{ color: "var(--color-accent)" }}>Home</Link>
               <span>/</span>
               <span>Business Tools</span>
@@ -405,7 +405,7 @@ export default function SalaryNegotiationCalculator({
             <p className="text-base md:text-lg max-w-2xl" style={{ color: "var(--text-muted)" }}>{subtitle}</p>
           </div>
           <div className="flex items-center gap-2 shrink-0 ml-4">
-            <span className="text-xs px-2 py-1 rounded-full border hidden sm:flex items-center gap-1" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+            <span className="px-2 py-1 text-sm rounded-full border hidden sm:flex items-center gap-1" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0110 0v4" /></svg>
               100% client-side
             </span>
@@ -443,7 +443,7 @@ export default function SalaryNegotiationCalculator({
                     aria-label="Current annual salary"
                   />
                 </div>
-                <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>Before taxes, base salary</p>
+                <p style={{ color: "var(--text-muted)" }}>Before taxes, base salary</p>
               </div>
 
               {/* Raise % */}
@@ -468,7 +468,7 @@ export default function SalaryNegotiationCalculator({
                     <button
                       key={p.value}
                       onClick={() => setRaisePercent(p.value)}
-                      className="px-3 py-1.5 rounded-lg text-xs font-medium border transition-all"
+                      className="px-3 py-1.5 rounded-lg font-medium text-sm border transition-all"
                       style={{
                         backgroundColor: raisePercent === p.value ? "#16A34A" : "var(--bg)",
                         color: raisePercent === p.value ? "#fff" : "var(--text)",
@@ -501,7 +501,7 @@ export default function SalaryNegotiationCalculator({
                   />
                   <div className="w-14 text-center text-lg font-bold" style={{ color: "var(--text)" }}>{raiseRate}%</div>
                 </div>
-                <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>US average is 3.5% for 2026. Applied to both scenarios.</p>
+                <p style={{ color: "var(--text-muted)" }}>US average is 3.5% for 2026. Applied to both scenarios.</p>
               </div>
 
               {/* Years */}
@@ -526,7 +526,7 @@ export default function SalaryNegotiationCalculator({
                     <button
                       key={p.value}
                       onClick={() => setYears(p.value)}
-                      className="px-3 py-1.5 rounded-lg text-xs font-medium border transition-all"
+                      className="px-3 py-1.5 rounded-lg font-medium text-sm border transition-all"
                       style={{
                         backgroundColor: years === p.value ? "var(--text)" : "var(--bg)",
                         color: years === p.value ? "var(--bg)" : "var(--text)",
@@ -552,21 +552,21 @@ export default function SalaryNegotiationCalculator({
                 {showAdvanced && (
                   <div className="mt-3 space-y-3 p-4 rounded-xl" style={{ backgroundColor: "var(--bg)" }}>
                     <div>
-                      <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-muted)" }}>Annual Bonus (% of salary)</label>
+                      <label className="block font-medium text-sm mb-1" style={{ color: "var(--text-muted)" }}>Annual Bonus (% of salary)</label>
                       <div className="flex items-center gap-2">
                         <input type="range" min="0" max="30" step="1" value={bonusRate} onChange={e => setBonusRate(parseInt(e.target.value))} className="flex-1 h-1.5 rounded-full appearance-none cursor-pointer" style={{ accentColor: "var(--text-muted)" }} />
                         <span className="w-10 text-right text-sm font-bold" style={{ color: "var(--text)" }}>{bonusRate}%</span>
                       </div>
                     </div>
                     <div>
-                      <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-muted)" }}>Employer 401(k) Match (%)</label>
+                      <label className="block font-medium text-sm mb-1" style={{ color: "var(--text-muted)" }}>Employer 401(k) Match (%)</label>
                       <div className="flex items-center gap-2">
                         <input type="range" min="0" max="10" step="0.5" value={matchRate} onChange={e => setMatchRate(parseFloat(e.target.value))} className="flex-1 h-1.5 rounded-full appearance-none cursor-pointer" style={{ accentColor: "var(--text-muted)" }} />
                         <span className="w-10 text-right text-sm font-bold" style={{ color: "var(--text)" }}>{matchRate}%</span>
                       </div>
                     </div>
                     <div>
-                      <label className="block text-xs font-medium mb-1" style={{ color: "var(--text-muted)" }}>Investment Return Rate (%)</label>
+                      <label className="block font-medium text-sm mb-1" style={{ color: "var(--text-muted)" }}>Investment Return Rate (%)</label>
                       <div className="flex items-center gap-2">
                         <input type="range" min="4" max="12" step="0.5" value={investReturn} onChange={e => setInvestReturn(parseFloat(e.target.value))} className="flex-1 h-1.5 rounded-full appearance-none cursor-pointer" style={{ accentColor: "var(--text-muted)" }} />
                         <span className="w-10 text-right text-sm font-bold" style={{ color: "var(--text)" }}>{investReturn}%</span>
@@ -598,7 +598,7 @@ export default function SalaryNegotiationCalculator({
             {/* Side-by-side comparison cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="rounded-xl border p-4" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", borderLeftWidth: 4, borderLeftColor: "#DC2626" }}>
-                <div className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: "#DC2626" }}>Without Negotiating</div>
+                <div className="font-semibold text-sm uppercase tracking-wider mb-3" style={{ color: "#DC2626" }}>Without Negotiating</div>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between"><span style={{ color: "var(--text-muted)" }}>Starting salary</span><span className="font-semibold" style={{ color: "var(--text)" }}>{formatCurrency(salary)}</span></div>
                   <div className="flex justify-between"><span style={{ color: "var(--text-muted)" }}>Salary in {years} years</span><span className="font-semibold" style={{ color: "var(--text)" }}>{formatCurrency(currentFutureSalary)}</span></div>
@@ -606,7 +606,7 @@ export default function SalaryNegotiationCalculator({
                 </div>
               </div>
               <div className="rounded-xl border p-4" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)", borderLeftWidth: 4, borderLeftColor: "#16A34A" }}>
-                <div className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: "#16A34A" }}>With Negotiating</div>
+                <div className="font-semibold text-sm uppercase tracking-wider mb-3" style={{ color: "#16A34A" }}>With Negotiating</div>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between"><span style={{ color: "var(--text-muted)" }}>Starting salary</span><span className="font-semibold" style={{ color: "var(--text)" }}>{formatCurrency(negotiatedSalary)} <span style={{ color: "#16A34A" }}>(+{formatCurrency(raiseAmount)})</span></span></div>
                   <div className="flex justify-between"><span style={{ color: "var(--text-muted)" }}>Salary in {years} years</span><span className="font-semibold" style={{ color: "var(--text)" }}>{formatCurrency(negotiatedFutureSalary)}</span></div>
@@ -642,9 +642,9 @@ export default function SalaryNegotiationCalculator({
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mt-5">
               {milestones.map(m => (
                 <div key={m.year} className="p-3 rounded-xl text-center" style={{ backgroundColor: "var(--bg)" }}>
-                  <div className="text-xs font-semibold uppercase mb-1" style={{ color: "#DC2626" }}>Year {m.year}</div>
+                  <div className="font-semibold text-sm uppercase mb-1" style={{ color: "#DC2626" }}>Year {m.year}</div>
                   <div className="text-lg font-bold mb-0.5" style={{ color: "var(--text)" }}>{formatCurrency(m.cumLoss)}</div>
-                  <div className="text-xs" style={{ color: "var(--text-muted)" }}>{m.callout}</div>
+                  <div style={{ color: "var(--text-muted)" }}>{m.callout}</div>
                 </div>
               ))}
             </div>
@@ -773,8 +773,8 @@ export default function SalaryNegotiationCalculator({
             ].map((item, i) => (
               <div key={i} className="rounded-xl border p-4 text-center" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <div className="text-2xl md:text-3xl font-extrabold mb-1" style={{ color: "#1E40AF" }}>{item.stat}</div>
-                <div className="text-xs leading-snug" style={{ color: "var(--text)" }}>{item.text}</div>
-                <div className="text-xs mt-1 italic" style={{ color: "var(--text-muted)" }}>({item.source})</div>
+                <div className="text-sm leading-snug" style={{ color: "var(--text)" }}>{item.text}</div>
+                <div className="text-sm mt-1 italic" style={{ color: "var(--text-muted)" }}>({item.source})</div>
               </div>
             ))}
           </div>
@@ -808,7 +808,7 @@ export default function SalaryNegotiationCalculator({
             ].map((tip, i) => (
               <div key={i} className="rounded-xl border p-4" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <h3 className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{tip.title}</h3>
-                <p className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{tip.text}</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>{tip.text}</p>
               </div>
             ))}
           </div>
@@ -817,7 +817,7 @@ export default function SalaryNegotiationCalculator({
         {/* ─── SEO CONTENT ─── */}
         {!articleMode && (
           <article className="mb-10">
-            <h2 className="text-2xl font-bold mb-4" style={{ color: "var(--text)" }}>The Hidden Cost of Not Negotiating Your Salary</h2>
+            <h2 className="text-[22px] sm:text-[28px] font-bold mb-4" style={{ color: "var(--text)" }}>The Hidden Cost of Not Negotiating Your Salary</h2>
             <div className="prose max-w-none space-y-4 text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
               <p>
                 Most people think of a salary negotiation as a one-time event with a fixed dollar outcome. You either get the raise or you don&apos;t. But that mental model is dangerously wrong. A raise isn&apos;t a one-time bonus &mdash; it&apos;s a permanent increase to your base, and every future raise, bonus, 401(k) match, and job offer compounds on that base forever.
@@ -906,14 +906,14 @@ export default function SalaryNegotiationCalculator({
               <Link key={i} href={tool.href} className="block rounded-xl border p-4 hover:shadow-md transition-shadow" style={{ backgroundColor: "var(--surface)", borderColor: "var(--border)" }}>
                 <div className="text-xl mb-1">{tool.emoji}</div>
                 <div className="text-sm font-semibold mb-0.5" style={{ color: "var(--text)" }}>{tool.name}</div>
-                <div className="text-xs" style={{ color: "var(--text-muted)" }}>{tool.desc}</div>
+                <div style={{ color: "var(--text-muted)" }}>{tool.desc}</div>
               </Link>
             ))}
           </div>
         </section>
 
         {/* ─── FOOTER ─── */}
-        <footer className="border-t pt-8 pb-4 text-center text-xs" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
+        <footer className="border-t pt-8 pb-4 text-center text-sm" style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}>
           <p className="font-medium mb-1" style={{ color: "var(--text)" }}>Free Online Tools</p>
           <p>Free calculators and tools for everyone. No signup, no ads, no data collection.</p>
         </footer>
