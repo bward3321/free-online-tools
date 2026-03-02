@@ -280,7 +280,7 @@ function applyQuickTemplate(key: string, base: InvoiceData): InvoiceData {
 }
 
 // ── Invoice Preview Component ──────────────────────────────────────────────────
-function InvoicePreview({ data, previewRef }: { data: InvoiceData; previewRef: React.RefObject<HTMLDivElement | null> }) {
+function InvoicePreview({ data, previewRef }: { data: InvoiceData; previewRef?: React.RefObject<HTMLDivElement | null> }) {
   const cur = data.currency;
   const accent = data.accentColor;
 
@@ -328,7 +328,7 @@ function InvoicePreview({ data, previewRef }: { data: InvoiceData; previewRef: R
 
   return (
     <div
-      ref={previewRef}
+      ref={previewRef || undefined}
       style={{
         width: "595px",
         minHeight: "842px",
@@ -1265,14 +1265,14 @@ export default function InvoiceGenerator({ title = "Free Invoice Generator", sub
           {/* Preview container */}
           <div style={{ borderRadius: "12px", overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,0.12)", border: "1px solid var(--border)" }}>
             <div style={{ transform: "scale(0.72)", transformOrigin: "top left", width: "138.9%", /* 1/0.72 */ }}>
-              <InvoicePreview data={data} previewRef={previewRef} />
+              <InvoicePreview data={data} />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Off-screen full-size preview for PDF capture */}
-      <div className="lg:hidden" style={{ position: "absolute", left: "-9999px", top: 0 }}>
+      {/* Off-screen full-size preview for PDF capture — always rendered, never display:none */}
+      <div aria-hidden style={{ position: "absolute", left: "-9999px", top: 0, pointerEvents: "none" }}>
         <InvoicePreview data={data} previewRef={previewRef} />
       </div>
 
@@ -1300,7 +1300,7 @@ export default function InvoiceGenerator({ title = "Free Invoice Generator", sub
           </div>
           <div style={{ padding: "16px", overflow: "auto" }}>
             <div style={{ maxWidth: "595px", margin: "0 auto", boxShadow: "0 4px 24px rgba(0,0,0,0.12)", borderRadius: "8px", overflow: "hidden" }}>
-              <InvoicePreview data={data} previewRef={previewRef} />
+              <InvoicePreview data={data} />
             </div>
           </div>
         </div>
