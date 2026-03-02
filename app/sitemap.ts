@@ -24,6 +24,7 @@ const mainToolRoutes = [
   "/developer-tools/regex-tester",
   "/writing-tools/markdown-editor",
   "/design-tools/css-gradient-generator",
+  "/writing-tools/lorem-ipsum-generator",
 ];
 
 // SEO variant routes — alternate entry points for the same tools
@@ -138,6 +139,12 @@ const variantRoutes = [
   "/design-tools/tailwind-gradient-generator",
   "/design-tools/text-gradient-generator",
   "/design-tools/animated-gradient-generator",
+  // Lorem Ipsum generator variants
+  "/writing-tools/placeholder-text-generator",
+  "/writing-tools/dummy-text-generator",
+  "/writing-tools/random-text-generator",
+  "/writing-tools/business-ipsum-generator",
+  "/writing-tools/hipster-ipsum-generator",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
